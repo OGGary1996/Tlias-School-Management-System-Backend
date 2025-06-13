@@ -1,4 +1,4 @@
-package com.kezhang.tliasbackend.result;
+package com.kezhang.tliasbackend.common;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -26,12 +26,19 @@ public class Result<T> {
                 .build();
     }
 
-    public static <T> Result<T> error(Integer code ,String message){
-        return Result.<T>builder()
-                .code(code)
+    public static Result<?> failure(String message){
+        return Result.builder()
+                .code(400)
                 .message(message)
                 .data(null)
                 .build();
     }
 
+    public static Result<?> error(String message) {
+        return Result.builder()
+                .code(500)
+                .message(message)
+                .data(null)
+                .build();
+    }
 }

@@ -5,15 +5,17 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Department {
+public class EmployeeHistory {
     private Integer id;
-    private String name;
-    private LocalDateTime createTime;
-    private LocalDateTime updateTime;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private String jobTitle;
+    private String companyName;
+    private Integer employeeId;
 }

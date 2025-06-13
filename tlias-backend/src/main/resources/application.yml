@@ -23,3 +23,9 @@ mybatis:
     configuration:
       map-underscore-to-camel-case: true
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # Use StdOutImpl for logging SQL statements
+
+pagehelper: # PageHelper configuration
+  helperDialect: mysql            # 设置数据库类型
+  reasonable: true                # 合理化分页参数，防止负数页码
+  supportMethodsArguments: true  # 支持通过方法参数传入分页信息
+  params: count=countSql          # 自动生成 count 语句

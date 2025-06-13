@@ -1,0 +1,78 @@
+2025-06-12 19:07:29 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 44458 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-12 19:07:29 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-12 19:07:29 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-12 19:07:29 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-12 19:07:29 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-12 19:07:29 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-12 19:07:29 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-12 19:07:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 363 ms
+2025-06-12 19:07:30 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-12 19:07:30 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-12 19:07:30 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-12 19:07:30 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.846 seconds (process running for 1.083)
+2025-06-12 19:08:16 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-12 19:08:16 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-12 19:08:16 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-12 19:08:16 [http-nio-8080-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'gender' for method parameter type Integer is present but converted to null]
+2025-06-12 19:22:59 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-12 19:23:01 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-12 19:23:02 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 44592 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-12 19:23:02 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-12 19:23:03 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-12 19:23:03 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-12 19:23:03 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-12 19:23:03 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-12 19:23:03 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-12 19:23:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 356 ms
+2025-06-12 19:23:03 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-12 19:23:03 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-12 19:23:03 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-12 19:23:03 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.844 seconds (process running for 1.057)
+2025-06-12 19:23:10 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-12 19:23:10 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-12 19:23:10 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-12 19:23:10 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. Name: ,Gender: null, StartDate: null, EndDate: null, Page: 1, PageSize: 10
+2025-06-12 19:23:10 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employees by condition started.
+2025-06-12 19:23:10 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-12 19:23:10 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3600c6d
+2025-06-12 19:23:10 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-12 19:23:11 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched 10 employees from the database based on the given conditions.
+2025-06-12 19:23:11 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting Employee entities to EmployeeResponseDTOs then convert to PageResult.
+2025-06-12 19:23:11 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted 10 Employee entities to EmployeeResponseDTOs completed.
+2025-06-12 19:23:11 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting EmployeeResponseDTOs to PageInfo.
+2025-06-12 19:23:11 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Returning PageResult with total: 10 and records size: 10
+2025-06-12 19:23:11 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 10, Records size: 10
+2025-06-12 19:23:35 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-12 19:23:37 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-12 19:23:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-12 19:23:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-12 22:10:08 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 45230 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-12 22:10:08 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-12 22:10:08 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-12 22:10:08 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-12 22:10:08 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-12 22:10:08 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-12 22:10:08 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-12 22:10:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 363 ms
+2025-06-12 22:10:08 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-12 22:10:08 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-12 22:10:08 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-12 22:10:08 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.837 seconds (process running for 1.053)
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. DTO: EmployeeQueryDTO(name=, gender=null, startDate=null, endDate=null, page=1, pageSize=10)
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employees by condition started.
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@709e7c72
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched 10 employees from the database based on the given conditions.
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting Employee entities to EmployeeResponseDTOs then convert to PageResult.
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted 10 Employee entities to EmployeeResponseDTOs completed.
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting EmployeeResponseDTOs to PageInfo.
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Returning PageResult with total: 10 and records size: 10
+2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 10, Records size: 10
+2025-06-12 22:11:25 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-12 22:11:27 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-12 22:11:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-12 22:11:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

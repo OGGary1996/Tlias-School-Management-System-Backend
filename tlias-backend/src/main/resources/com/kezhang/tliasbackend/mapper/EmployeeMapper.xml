@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kezhang.tliasbackend.mapper.EmployeeMapper">
+    <!-- 传统方式实现的分页查询 -->
+<!--    <select id="selectAllEmployees" resultType="com.kezhang.tliasbackend.entity.Employee">-->
+<!--        SELECT-->
+<!--            e.username,-->
+<!--            e.gender,-->
+<!--            e.image,-->
+<!--            d.name AS departmentName,-->
+<!--            e.job_title,-->
+<!--            e.entry_date,-->
+<!--            e.update_time-->
+<!--        FROM employee e-->
+<!--        LEFT JOIN department d ON e.department_id = d.id-->
+<!--        LIMIT #{offset}, #{limit}-->
+<!--        ORDER BY e.update_time DESC;-->
+<!--    </select>-->
+<!--    <select id="countAllEmployees" resultType="long">-->
+<!--        SELECT COUNT(*)-->
+<!--        FROM employee e-->
+<!--        LEFT JOIN department d ON e.department_id = d.id;-->
+<!--    </select>-->
+
+    <!-- 使用PageHelper实现分页查询 -->
+<!--    <select id="selectAllEmployees" resultType="com.kezhang.tliasbackend.entity.Employee">-->
+<!--        SELECT-->
+<!--            e.username,-->
+<!--            e.gender,-->
+<!--            e.image,-->
+<!--            d.name AS departmentName,-->
+<!--            e.job_title,-->
+<!--            e.entry_date,-->
+<!--            e.update_time-->
+<!--        FROM employee e-->
+<!--        LEFT JOIN department d ON e.department_id = d.id-->
+<!--        ORDER BY e.update_time DESC-->
+<!--        &lt;!&ndash; 这里注意不能有 ；分号，因为PageHelper拦截SQL之后会自动续上limit语句，分号会打断&ndash;&gt;-->
+<!--    </select>-->
+
+    <!-- 使用PageHelper 和条件查询-->
+    <select id="selectEmployeesByCondition" resultType="com.kezhang.tliasbackend.entity.Employee">
+        SELECT
+            e.username,
+            e.gender,
+            e.image,
+            d.name AS departmentName,
+            e.job_title,
+            e.entry_date,
+            e.update_time
+        FROM employee e
+        LEFT JOIN employee_history eh ON e.id = eh.employee_id
+        LEFT JOIN department d ON e.department_id = d.id
+        <where>
+            <if test="name != null and name != ''">
+                AND e.username LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="gender != null">
+                AND e.gender = #{gender}
+            </if>
+            <if test="startDate != null and endDate != null">
+                AND e.entry_data BETWEEN #{startDate} AND #{endDate}
+            </if>
+        </where>
+        ORDER BY e.update_time DESC
+    </select>
+
+
+</mapper>

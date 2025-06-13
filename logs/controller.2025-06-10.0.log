@@ -1,0 +1,2 @@
+2025-06-10 22:28:37 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.DepartmentController - Fetching all departments from the service started.
+2025-06-10 22:28:38 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.DepartmentController - Fetching all departments from the service completed. Total departments size: 11

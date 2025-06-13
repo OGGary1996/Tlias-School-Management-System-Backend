@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kezhang.tliasbackend.mapper.DepartmentMapper">
+    <select id="selectAllDepartments" resultType="com.kezhang.tliasbackend.entity.Department">
+        SELECT
+            id,
+            name,
+            create_time,
+            update_time
+        FROM department
+        ORDER BY update_time DESC;
+    </select>
+
+    <delete id="deleteDepartmentById" parameterType="Integer">
+        DELETE FROM department
+        WHERE id = #{id};
+    </delete>
+
+    <insert id="insertDepartment" parameterType="com.kezhang.tliasbackend.entity.Department">
+        INSERT INTO department (name)
+            VALUES (#{name});
+    </insert>
+
+    <select id="selectDepartmentById" parameterType="Integer" resultType="com.kezhang.tliasbackend.entity.Department">
+        SELECT
+            id,
+            name,
+            create_time,
+            update_time
+        FROM department
+        WHERE id = #{id};
+    </select>
+
+    <update id="updateDepartmentById" parameterType="com.kezhang.tliasbackend.entity.Department">
+        UPDATE department
+        SET name = #{name}
+        WHERE id = #{id};
+    </update>
+</mapper>

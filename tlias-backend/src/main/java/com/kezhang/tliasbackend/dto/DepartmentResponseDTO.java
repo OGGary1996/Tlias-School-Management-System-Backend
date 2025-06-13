@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,8 +21,8 @@ public class DepartmentResponseDTO {
     private String name;
 
     @Schema(description = "Creation time of the department", example = "2023-10-01T12:00:00Z")
-    private String createTime;
+    private LocalDateTime createTime;
 
     @Schema(description = "Last update time of the department", example = "2023-10-01T12:00:00Z")
-    private String updateTime;
+    private LocalDateTime updateTime;
 }

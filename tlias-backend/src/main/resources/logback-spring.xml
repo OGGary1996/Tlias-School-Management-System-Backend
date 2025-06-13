@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 定义变量 -->
+    <property name="LOG_PATH" value="logs"/>
+        <!-- 这个变量为Controller目录下所有Controller的日志 -->
+    <property name="LOG_FILE_CONTROLLER" value="${LOG_PATH}/controller.log"/>
+        <!-- 这个变量为Service目录下所有Service的日志 -->
+    <property name="LOG_FILE_SERVICE" value="${LOG_PATH}/service.log"/>
+        <!-- 这个变量为Mapper目录下所有Mapper的日志 -->
+    <property name="LOG_FILE_MAPPER" value="${LOG_PATH}/mapper.log"/>
+        <!-- 这个变量为所有日志的总日志 -->
+    <property name="LOG_FILE" value="${LOG_PATH}/app.log"/>
+        <!-- 定义日志级别，在开发环境把所有日志的级别定为INFO级别 -->
+    <property name="LOG_LEVEL" value="INFO"/>
+
+    <!-- 定义输出位置-->
+    <!-- 1. 输出到控制台 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 2. 输出到文件 -->
+    <!-- 2.0 输出到总日志文件 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/app.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 2.1 输出到 LOG_FILE_CONTROLLER-->
+    <appender name="FILE_CONTROLLER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE_CONTROLLER}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/controller.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 2.2 输出到 LOG_FILE_SERVICE-->
+    <appender name="FILE_SERVICE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE_SERVICE}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/service.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 2.3 输出到 LOG_FILE_MAPPER-->
+    <appender name="FILE_MAPPER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE_MAPPER}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/mapper.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 配置各项日志的引用 -->
+    <!-- Controller、Service、Mapper的日志分别输出到不同的文件 -->
+    <logger name="com.kezhang.tliasbackend.controller" level="${LOG_LEVEL}" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE_CONTROLLER"/>
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <logger name="com.kezhang.tliasbackend.service" level="${LOG_LEVEL}" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE_SERVICE"/>
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <logger name="com.kezhang.tliasbackend.mapper" level="${LOG_LEVEL}" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE_MAPPER"/>
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <!-- 其他包的日志只输出到控制台和总日志文件 -->
+    <root level="${LOG_LEVEL}">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
