@@ -24,6 +24,13 @@ mybatis:
       map-underscore-to-camel-case: true
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # Use StdOutImpl for logging SQL statements
 
+# MyBatis transaction management 日志级别
+logging:
+    level:
+      org.apache.ibatis.transaction: INFO
+      org.mybatis.spring.SqlSessionUtils: INFO
+      org.springframework.jdbc.datasource.DataSourceTransactionManager: INFO
+
 pagehelper: # PageHelper configuration
   helperDialect: mysql            # 设置数据库类型
   reasonable: true                # 合理化分页参数，防止负数页码

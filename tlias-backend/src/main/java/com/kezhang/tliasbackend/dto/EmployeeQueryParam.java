@@ -7,7 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
 
@@ -16,7 +15,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 @Schema(description = "DTO for querying employees with optional filters")
-public class EmployeeQueryDTO {
+public class EmployeeQueryParam {
     @Schema(description = "Name of the employee", example = "John Doe")
     private String name; // 员工姓名
 

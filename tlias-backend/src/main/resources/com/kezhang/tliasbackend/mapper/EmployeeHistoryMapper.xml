@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kezhang.tliasbackend.mapper.EmployeeHistoryMapper">
+    <insert id="batchInsertEmployeeHistory" parameterType="com.kezhang.tliasbackend.entity.EmployeeHistory">
+        INSERT INTO employee_history (start_date, end_date, job_title, company_name, employee_id)
+        VALUES
+        <foreach collection="employeeHistoryList" item="employeeHistory" separator=",">
+            (#{employeeHistory.startDate},#{employeeHistory.endDate},#{employeeHistory.jobTitle},#{employeeHistory.companyName},#{employeeHistory.employeeId})
+        </foreach>
+    </insert>
+</mapper>

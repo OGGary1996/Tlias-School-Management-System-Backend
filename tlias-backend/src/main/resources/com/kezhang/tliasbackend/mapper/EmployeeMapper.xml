@@ -5,7 +5,8 @@
 
 <mapper namespace="com.kezhang.tliasbackend.mapper.EmployeeMapper">
     <!-- 传统方式实现的分页查询 -->
-<!--    <select id="selectAllEmployees" resultType="com.kezhang.tliasbackend.entity.Employee">-->
+    <!-- 因为涉及到多表查询，所以将返回类型指定为DTO而不是entity，entity中的单表字段覆盖不了多表查询的结果-->
+<!--    <select id="selectAllEmployees" resultType="com.kezhang.tliasbackend.dto.EmployeeResponseDTO">-->
 <!--        SELECT-->
 <!--            e.username,-->
 <!--            e.gender,-->
@@ -26,7 +27,8 @@
 <!--    </select>-->
 
     <!-- 使用PageHelper实现分页查询 -->
-<!--    <select id="selectAllEmployees" resultType="com.kezhang.tliasbackend.entity.Employee">-->
+    <!-- 因为涉及到多表查询，所以将返回类型指定为DTO而不是entity，entity中的单表字段覆盖不了多表查询的结果-->
+<!--    <select id="selectAllEmployees" resultType="com.kezhang.tliasbackend.dto.EmployeeResponseDTO">-->
 <!--        SELECT-->
 <!--            e.username,-->
 <!--            e.gender,-->
@@ -42,9 +44,10 @@
 <!--    </select>-->
 
     <!-- 使用PageHelper 和条件查询-->
-    <select id="selectEmployeesByCondition" resultType="com.kezhang.tliasbackend.entity.Employee">
+    <!-- 因为涉及到多表查询，所以将返回类型指定为DTO而不是entity，entity中的单表字段覆盖不了多表查询的结果-->
+    <select id="selectEmployeesByCondition" resultType="com.kezhang.tliasbackend.dto.EmployeeResponseDTO">
         SELECT
-            e.username,
+            e.name,
             e.gender,
             e.image,
             d.name AS departmentName,
@@ -52,11 +55,10 @@
             e.entry_date,
             e.update_time
         FROM employee e
-        LEFT JOIN employee_history eh ON e.id = eh.employee_id
         LEFT JOIN department d ON e.department_id = d.id
         <where>
             <if test="name != null and name != ''">
-                AND e.username LIKE CONCAT('%', #{name}, '%')
+                AND e.name LIKE CONCAT('%', #{name}, '%')
             </if>
             <if test="gender != null">
                 AND e.gender = #{gender}
@@ -67,6 +69,12 @@
         </where>
         ORDER BY e.update_time DESC
     </select>
+
+    <insert id="insertEmployee" parameterType="com.kezhang.tliasbackend.entity.Employee" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO employee (username,name, gender, phone, job_title, department_id, salary, image, entry_date)
+        VALUES
+            (#{username}, #{name}, #{gender}, #{phone}, #{jobTitle}, #{departmentId}, #{salary}, #{image}, #{entryDate})
+    </insert>
 
 
 </mapper>

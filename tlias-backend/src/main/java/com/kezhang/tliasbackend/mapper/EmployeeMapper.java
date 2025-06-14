@@ -1,11 +1,9 @@
 package com.kezhang.tliasbackend.mapper;
 
-import com.github.pagehelper.Page;
-import com.kezhang.tliasbackend.dto.EmployeeQueryDTO;
+import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
+import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
 import com.kezhang.tliasbackend.entity.Employee;
-import org.apache.ibatis.annotations.Param;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public interface EmployeeMapper {
@@ -17,9 +15,9 @@ public interface EmployeeMapper {
 //     *
 //     * // @param offset The offset for pagination, calculated as (page - 1) * pageSize
 //     * // @param limit The maximum number of records to retrieve per page
-//     * // @return List of Employee objects containing employee details
+//     * // @return List of EmployeeResponseDTO objects containing employee details
 //     */
-//    List<Employee> selectAllEmployees(@Param("offset") Integer offset,@Param("limit") Integer limit);
+//    List<EmployeeResponseDTO> selectAllEmployees(@Param("offset") Integer offset,@Param("limit") Integer limit);
 //    long countAllEmployees();
 
 //    /*
@@ -29,9 +27,9 @@ public interface EmployeeMapper {
 //    * This method retrieves a list of Employee objects with pagination support.
 //    * no parameters are needed as PageHelper will handle pagination automatically.
 //    * no need to calculate total records or offset, PageHelper will do it for you.
-//    * @return Page<Employee> containing employee details
+//    * @return List<EmployeeResponseDTO> containing employee details
 //    * */
-//    List<Employee> selectAllEmployees();
+//    List<EmployeeResponseDTO> selectAllEmployees();
 
     /*
     * !!! 使用条件查询 + PageHelper插件实现的分页查询接口 !!!
@@ -44,12 +42,19 @@ public interface EmployeeMapper {
     * @param endDate Optional end date filter for employees
     * @param Page number to retrieve, starting from 1
     * @param pageSize Number of records per page
-    * @return List<Employee> containing employee details
+    * @return List<EmployeeResponseDTO> containing employee details
     * */
-//    List<Employee> selectEmployeesByCondition(@Param("name") String name,
+//    List<EmployeeResponseDTO> selectEmployeesByCondition(@Param("name") String name,
 //                                              @Param("gender") Integer gender,
 //                                              @Param("startDate") LocalDate startDate,
 //                                              @Param("endDate") LocalDate endDate);
 
-    List<Employee> selectEmployeesByCondition(EmployeeQueryDTO employeeQueryDTO);
+    List<EmployeeResponseDTO> selectEmployeesByCondition(EmployeeQueryParam employeeQueryParam);
+
+    /*
+    * Insert a new employee into the database.
+    * This method adds a new employee record.
+    * @param employee The Employee object containing the details of the employee to be inserted
+    * */
+    void insertEmployee(Employee employee);
 }

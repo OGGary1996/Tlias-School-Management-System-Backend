@@ -2,7 +2,8 @@ package com.kezhang.tliasbackend.controller;
 
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.common.Result;
-import com.kezhang.tliasbackend.dto.EmployeeQueryDTO;
+import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
+import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
 import com.kezhang.tliasbackend.service.EmployeeService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -10,8 +11,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDate;
 
 
 @Slf4j
@@ -67,11 +66,27 @@ public class EmployeeController {
 //    }
     @Operation(summary = "List employees by condition", description = "Retrieve a list of employees based on optional filters such as name")
     @GetMapping
-    public Result<?> listEmployeesByCondition(EmployeeQueryDTO employeeQueryDTO) {
-        log.info("Fetching employees by condition started. DTO: {}",employeeQueryDTO);
-        PageResult<EmployeeResponseDTO> employeeResponseDTOPageResult = employeeService.selectEmployeesByCondition(employeeQueryDTO);
+    public Result<?> listEmployeesByCondition(EmployeeQueryParam employeeQueryParam) {
+        log.info("Fetching employees by condition started. DTO: {}",employeeQueryParam);
+        PageResult<EmployeeResponseDTO> employeeResponseDTOPageResult = employeeService.selectEmployeesByCondition(employeeQueryParam);
         log.info("Fetched employees by condition completed. Total records: {}, Records size: {}", employeeResponseDTOPageResult.getTotal(), employeeResponseDTOPageResult.getRecords().size());
 
         return Result.success(employeeResponseDTOPageResult);
+    }
+
+    /**
+     * 插入员工信息接口
+     *
+     * @param employeeInsertDTO 员工信息 DTO，注意DTO中包含了员工历史信息的子 DTO
+     * @return 成功或失败的结果
+     */
+    @Operation(summary = "Insert employee", description = "Insert a new employee into the database")
+    @PostMapping
+    public Result<?> createEmployee(@RequestBody EmployeeInsertDTO employeeInsertDTO){
+       log.info("Inserting new employee started. DTO: {}", employeeInsertDTO);
+       employeeService.insertEmployee(employeeInsertDTO);
+       log.info("Inserting new employee completed.");
+
+       return Result.success(null);
     }
 }

@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @Schema(name = "EmployeeResponseDTO", description = "Response DTO for Employee")
 public class EmployeeResponseDTO {
     @Schema(description = "Name of employee", example = "John Doe")
-    private String username;         // 来自 e.username
+    private String name;         // 来自 e.username
     @Schema(description = "Gender of employee", example = "1/0")
     private Integer gender;          // 来自 e.gender
     @Schema(description = "Profile image of employee")

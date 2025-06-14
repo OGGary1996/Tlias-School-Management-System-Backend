@@ -2,11 +2,9 @@ package com.kezhang.tliasbackend.service;
 
 
 import com.kezhang.tliasbackend.common.PageResult;
-import com.kezhang.tliasbackend.dto.EmployeeQueryDTO;
+import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
+import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
-
-import java.time.LocalDate;
-import java.util.List;
 
 public interface EmployeeService {
 //    /*
@@ -39,6 +37,13 @@ public interface EmployeeService {
 //                                                               LocalDate startDate, LocalDate endDate,
 //                                                               Integer page, Integer pageSize);
 
-    PageResult<EmployeeResponseDTO> selectEmployeesByCondition(EmployeeQueryDTO employeeQueryDTO);
+    PageResult<EmployeeResponseDTO> selectEmployeesByCondition(EmployeeQueryParam employeeQueryParam);
+
+    /*
+    * Insert a new employee into the database.
+    * @Param employeeInsertDTO The DTO containing the details of the employee to be inserted
+    * employeeInsertDTO has a sub DTO of employeeHistoryInsertDTO,
+    * */
+    void insertEmployee(EmployeeInsertDTO employeeInsertDTO);
 
 }
