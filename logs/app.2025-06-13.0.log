@@ -1,0 +1,303 @@
+2025-06-13 15:52:19 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 48582 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-13 15:52:19 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-13 15:52:20 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-13 15:52:20 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-13 15:52:20 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-13 15:52:20 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-13 15:52:20 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-13 15:52:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 381 ms
+2025-06-13 15:52:20 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-13 15:52:20 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-13 15:52:20 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-13 15:52:20 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.87 seconds (process running for 1.12)
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. DTO: EmployeeQueryDTO(name=, gender=null, startDate=null, endDate=null, page=1, pageSize=10)
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employees by condition started.
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@99df999
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched 10 employees from the database based on the given conditions.
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting Employee entities to EmployeeResponseDTOs then convert to PageResult.
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted 10 Employee entities to EmployeeResponseDTOs completed.
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting EmployeeResponseDTOs to PageInfo.
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Returning PageResult with total: 10 and records size: 10
+2025-06-13 15:52:29 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 10, Records size: 10
+2025-06-13 15:52:37 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. DTO: EmployeeQueryDTO(name=, gender=null, startDate=null, endDate=null, page=2, pageSize=10)
+2025-06-13 15:52:37 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employees by condition started.
+2025-06-13 15:52:37 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched 10 employees from the database based on the given conditions.
+2025-06-13 15:52:37 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting Employee entities to EmployeeResponseDTOs then convert to PageResult.
+2025-06-13 15:52:37 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted 10 Employee entities to EmployeeResponseDTOs completed.
+2025-06-13 15:52:37 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting EmployeeResponseDTOs to PageInfo.
+2025-06-13 15:52:37 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Returning PageResult with total: 10 and records size: 10
+2025-06-13 15:52:37 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 10, Records size: 10
+2025-06-13 15:54:47 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. DTO: EmployeeQueryDTO(name=, gender=null, startDate=null, endDate=null, page=1, pageSize=10)
+2025-06-13 15:54:47 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employees by condition started.
+2025-06-13 15:54:47 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched 10 employees from the database based on the given conditions.
+2025-06-13 15:54:47 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting Employee entities to EmployeeResponseDTOs then convert to PageResult.
+2025-06-13 15:54:47 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted 10 Employee entities to EmployeeResponseDTOs completed.
+2025-06-13 15:54:47 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting EmployeeResponseDTOs to PageInfo.
+2025-06-13 15:54:47 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Returning PageResult with total: 10 and records size: 10
+2025-06-13 15:54:47 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 10, Records size: 10
+2025-06-13 15:56:46 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-13 15:56:48 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-13 15:56:48 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-13 15:56:48 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-13 15:56:50 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 48661 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-13 15:56:50 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-13 15:56:50 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-13 15:56:50 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-13 15:56:50 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-13 15:56:50 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-13 15:56:50 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-13 15:56:50 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 354 ms
+2025-06-13 15:56:50 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-13 15:56:50 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-13 15:56:50 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-13 15:56:50 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.834 seconds (process running for 1.057)
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. DTO: EmployeeQueryDTO(name=, gender=null, startDate=null, endDate=null, page=1, pageSize=10)
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employees by condition started.
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cb66594
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched 10 employees from the database based on the given conditions, detail:Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=50, pages=5, reasonable=true, pageSizeZero=false}[Employee(id=null, username=null, password=null, name=John Smith, gender=1, phone=null, jobTitle=3, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=JohnSmith, entryDate=2020-06-15, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Sarah Johnson, gender=0, phone=null, jobTitle=4, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=SarahJohnson, entryDate=2021-03-22, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Michael Brown, gender=1, phone=null, jobTitle=2, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=MichaelBrown, entryDate=2019-08-10, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Emma Davis, gender=0, phone=null, jobTitle=7, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=EmmaDavis, entryDate=2022-01-05, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Robert Wilson, gender=1, phone=null, jobTitle=4, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=RobertWilson, entryDate=2020-11-30, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Jennifer Lee, gender=0, phone=null, jobTitle=0, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=JenniferLee, entryDate=2015-09-01, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=David Miller, gender=1, phone=null, jobTitle=1, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=DavidMiller, entryDate=2017-08-15, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Lisa Garcia, gender=0, phone=null, jobTitle=0, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=LisaGarcia, entryDate=2014-05-20, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Thomas Anderson, gender=1, phone=null, jobTitle=2, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=ThomasAnderson, entryDate=2021-07-12, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Patricia Martinez, gender=0, phone=null, jobTitle=3, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=PatriciaMartinez, entryDate=2018-03-28, createTime=null, updateTime=2025-06-13T15:47:34)]
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting Employee entities to EmployeeResponseDTOs then convert to PageResult.
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted 10 Employee entities to EmployeeResponseDTOs completed.
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting EmployeeResponseDTOs to PageInfo.
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Returning PageResult with total: 10 and records size: 10
+2025-06-13 15:56:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 10, Records size: 10
+2025-06-13 15:58:55 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-13 15:58:57 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-13 15:58:57 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-13 15:58:57 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-13 15:58:59 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 48678 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-13 15:58:59 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-13 15:58:59 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-13 15:58:59 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-13 15:58:59 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-13 15:58:59 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-13 15:58:59 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-13 15:58:59 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 346 ms
+2025-06-13 15:58:59 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-13 15:58:59 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-13 15:58:59 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-13 15:58:59 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.822 seconds (process running for 1.09)
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. DTO: EmployeeQueryDTO(name=, gender=null, startDate=null, endDate=null, page=1, pageSize=10)
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employees by condition started.
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@158f8985
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched 10 employees from the database based on the given conditions, detail:Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=50, pages=5, reasonable=true, pageSizeZero=false}[Employee(id=null, username=null, password=null, name=John Smith, gender=1, phone=null, jobTitle=3, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=JohnSmith, entryDate=2020-06-15, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Sarah Johnson, gender=0, phone=null, jobTitle=4, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=SarahJohnson, entryDate=2021-03-22, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Michael Brown, gender=1, phone=null, jobTitle=2, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=MichaelBrown, entryDate=2019-08-10, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Emma Davis, gender=0, phone=null, jobTitle=7, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=EmmaDavis, entryDate=2022-01-05, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Robert Wilson, gender=1, phone=null, jobTitle=4, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=RobertWilson, entryDate=2020-11-30, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Jennifer Lee, gender=0, phone=null, jobTitle=0, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=JenniferLee, entryDate=2015-09-01, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=David Miller, gender=1, phone=null, jobTitle=1, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=DavidMiller, entryDate=2017-08-15, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Lisa Garcia, gender=0, phone=null, jobTitle=0, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=LisaGarcia, entryDate=2014-05-20, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Thomas Anderson, gender=1, phone=null, jobTitle=2, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=ThomasAnderson, entryDate=2021-07-12, createTime=null, updateTime=2025-06-13T15:47:34), Employee(id=null, username=null, password=null, name=Patricia Martinez, gender=0, phone=null, jobTitle=3, departmentId=null, salary=null, image=https://i.pravatar.cc/250?u=PatriciaMartinez, entryDate=2018-03-28, createTime=null, updateTime=2025-06-13T15:47:34)]
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting Employee entities to EmployeeResponseDTOs then convert to PageResult.
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted 10 Employee entities to EmployeeResponseDTOs completed, detail:[EmployeeResponseDTO(name=John Smith, gender=1, image=https://i.pravatar.cc/250?u=JohnSmith, departmentName=null, jobTitle=3, entryDate=2020-06-15, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Sarah Johnson, gender=0, image=https://i.pravatar.cc/250?u=SarahJohnson, departmentName=null, jobTitle=4, entryDate=2021-03-22, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Michael Brown, gender=1, image=https://i.pravatar.cc/250?u=MichaelBrown, departmentName=null, jobTitle=2, entryDate=2019-08-10, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Emma Davis, gender=0, image=https://i.pravatar.cc/250?u=EmmaDavis, departmentName=null, jobTitle=7, entryDate=2022-01-05, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Robert Wilson, gender=1, image=https://i.pravatar.cc/250?u=RobertWilson, departmentName=null, jobTitle=4, entryDate=2020-11-30, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Jennifer Lee, gender=0, image=https://i.pravatar.cc/250?u=JenniferLee, departmentName=null, jobTitle=0, entryDate=2015-09-01, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=David Miller, gender=1, image=https://i.pravatar.cc/250?u=DavidMiller, departmentName=null, jobTitle=1, entryDate=2017-08-15, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Lisa Garcia, gender=0, image=https://i.pravatar.cc/250?u=LisaGarcia, departmentName=null, jobTitle=0, entryDate=2014-05-20, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Thomas Anderson, gender=1, image=https://i.pravatar.cc/250?u=ThomasAnderson, departmentName=null, jobTitle=2, entryDate=2021-07-12, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Patricia Martinez, gender=0, image=https://i.pravatar.cc/250?u=PatriciaMartinez, departmentName=null, jobTitle=3, entryDate=2018-03-28, updateTime=2025-06-13T15:47:34)]
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting EmployeeResponseDTOs to PageInfo.
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Returning PageResult with total: 10 and records size: 10
+2025-06-13 15:59:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 10, Records size: 10
+2025-06-13 16:08:44 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-13 16:08:46 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-13 16:08:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-13 16:08:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-13 16:08:48 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 48784 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-13 16:08:48 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-13 16:08:48 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-13 16:08:48 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-13 16:08:48 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-13 16:08:48 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-13 16:08:48 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-13 16:08:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 386 ms
+2025-06-13 16:08:48 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-13 16:08:48 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-13 16:08:48 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-13 16:08:48 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.888 seconds (process running for 1.18)
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. DTO: EmployeeQueryDTO(name=, gender=null, startDate=null, endDate=null, page=1, pageSize=10)
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employees by condition started.
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6dcd51b2
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched 10 employeeDTOs from the database based on the given conditions, detail:Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=50, pages=5, reasonable=true, pageSizeZero=false}[EmployeeResponseDTO(name=John Smith, gender=1, image=https://i.pravatar.cc/250?u=JohnSmith, departmentName=Admissions, jobTitle=3, entryDate=2020-06-15, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Sarah Johnson, gender=0, image=https://i.pravatar.cc/250?u=SarahJohnson, departmentName=Admissions, jobTitle=4, entryDate=2021-03-22, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Michael Brown, gender=1, image=https://i.pravatar.cc/250?u=MichaelBrown, departmentName=Admissions, jobTitle=2, entryDate=2019-08-10, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Emma Davis, gender=0, image=https://i.pravatar.cc/250?u=EmmaDavis, departmentName=Admissions, jobTitle=7, entryDate=2022-01-05, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Robert Wilson, gender=1, image=https://i.pravatar.cc/250?u=RobertWilson, departmentName=Admissions, jobTitle=4, entryDate=2020-11-30, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Jennifer Lee, gender=0, image=https://i.pravatar.cc/250?u=JenniferLee, departmentName=Academic Affairs, jobTitle=0, entryDate=2015-09-01, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=David Miller, gender=1, image=https://i.pravatar.cc/250?u=DavidMiller, departmentName=Academic Affairs, jobTitle=1, entryDate=2017-08-15, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Lisa Garcia, gender=0, image=https://i.pravatar.cc/250?u=LisaGarcia, departmentName=Academic Affairs, jobTitle=0, entryDate=2014-05-20, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Thomas Anderson, gender=1, image=https://i.pravatar.cc/250?u=ThomasAnderson, departmentName=Academic Affairs, jobTitle=2, entryDate=2021-07-12, updateTime=2025-06-13T15:47:34), EmployeeResponseDTO(name=Patricia Martinez, gender=0, image=https://i.pravatar.cc/250?u=PatriciaMartinez, departmentName=Academic Affairs, jobTitle=3, entryDate=2018-03-28, updateTime=2025-06-13T15:47:34)]
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting EmployeeResponseDTOs to PageInfo.
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Returning PageResult with total: 50 and records size: 10
+2025-06-13 16:08:52 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 50, Records size: 10
+2025-06-13 16:08:57 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-13 16:08:59 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-13 16:08:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-13 16:08:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-13 18:12:24 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 49703 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-13 18:12:24 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-13 18:12:24 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-13 18:12:24 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-13 18:12:24 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-13 18:12:24 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-13 18:12:24 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-13 18:12:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 368 ms
+2025-06-13 18:12:24 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-13 18:12:25 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-13 18:12:25 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-13 18:12:25 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.876 seconds (process running for 1.105)
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee started. DTO: EmployeeInsertDTO(username=KeZhang, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://i.pravatar.cc/250?u=KeZhang, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@605a8ba2
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting new employee started. DTO: EmployeeInsertDTO(username=KeZhang, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://i.pravatar.cc/250?u=KeZhang, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted new employee to entity: Employee(id=null, username=KeZhang, password=null, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://i.pravatar.cc/250?u=KeZhang, entryDate=2024-06-01, createTime=null, updateTime=null)
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting new employee into the database started.
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted new employee into the database successfully. Employee ID: 51
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId started.
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId successfully. EmployeeHistoryList: [EmployeeHistory(id=null, startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba, employeeId=51), EmployeeHistory(id=null, startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance, employeeId=51)]
+2025-06-13 18:18:02 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting employeeHistoryList into the database started.
+2025-06-13 18:18:02 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException: 
+### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'startDate' not found. Available parameters are [employeeHistoryList, collection, list]
+### The error may exist in com/kezhang/tliasbackend/mapper/EmployeeHistoryMapper.xml
+### The error may involve com.kezhang.tliasbackend.mapper.EmployeeHistoryMapper.batchInsertEmployeeHistory-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO employee_history (start_date, end_date, job_title, company_name, employee_id)         VALUES                        (?,?, ?, ?, ?)          ,              (?,?, ?, ?, ?)
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'startDate' not found. Available parameters are [employeeHistoryList, collection, list]] with root cause
+org.apache.ibatis.binding.BindingException: Parameter 'startDate' not found. Available parameters are [employeeHistoryList, collection, list]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:210)
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:46)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy97.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy76.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.batchInsertEmployeeHistory(Unknown Source)
+	at com.kezhang.tliasbackend.service.impl.EmployeeServiceImpl.insertEmployee(EmployeeServiceImpl.java:161)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.kezhang.tliasbackend.service.impl.EmployeeServiceImpl$$SpringCGLIB$$0.insertEmployee(<generated>)
+	at com.kezhang.tliasbackend.controller.EmployeeController.createEmployee(EmployeeController.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-13 18:24:12 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-13 18:24:14 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-13 18:24:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-13 18:24:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-13 18:24:15 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 49760 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-13 18:24:15 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-13 18:24:15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-13 18:24:15 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-13 18:24:15 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-13 18:24:15 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-13 18:24:15 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-13 18:24:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 363 ms
+2025-06-13 18:24:15 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-13 18:24:16 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-13 18:24:16 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-13 18:24:16 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.913 seconds (process running for 1.138)
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee started. DTO: EmployeeInsertDTO(username=KeZhang, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://i.pravatar.cc/250?u=KeZhang, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3af54dee
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting new employee started. DTO: EmployeeInsertDTO(username=KeZhang, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://i.pravatar.cc/250?u=KeZhang, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted new employee to entity: Employee(id=null, username=KeZhang, password=null, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://i.pravatar.cc/250?u=KeZhang, entryDate=2024-06-01, createTime=null, updateTime=null)
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting new employee into the database started.
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted new employee into the database successfully. Employee ID: 52
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId started.
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId successfully. EmployeeHistoryList: [EmployeeHistory(id=null, startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba, employeeId=52), EmployeeHistory(id=null, startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance, employeeId=52)]
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting employeeHistoryList into the database started.
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted employeeHistoryList into the database successfully. Size: 2
+2025-06-13 18:24:19 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee completed.
+2025-06-13 18:25:14 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-13 18:25:16 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-13 18:25:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-13 18:25:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-13 20:13:08 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 50561 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-13 20:13:08 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-13 20:13:08 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-13 20:13:08 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-13 20:13:08 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-13 20:13:08 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-13 20:13:08 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-13 20:13:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 381 ms
+2025-06-13 20:13:09 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-13 20:13:09 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-13 20:13:09 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-13 20:13:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.909 seconds (process running for 1.154)
+2025-06-13 21:19:22 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-13 21:19:24 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete

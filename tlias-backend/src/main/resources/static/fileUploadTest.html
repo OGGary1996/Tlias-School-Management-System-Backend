@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test of File Upload</title>
+    <script src="./fileUploadTest.js" defer></script>
+</head>
+<body>
+<div id="imageUpload">
+    <form id="fileInputForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept="image/*" />
+        <button type="button" onclick="uploadAvatar()">上传头像</button>
+    </form>
+<img id="preview" src="" alt="头像预览" width="150" />
+</div>
+
+
+</body>
+</html>

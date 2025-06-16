@@ -1,9 +1,12 @@
+# Spring Boot application configuration file
+# port: 8080
 server:
     port: 8080
 
 spring:
     application:
       name: tlias-backend
+    # Database configuration
     datasource:
       url: jdbc:mysql://localhost:3306/tlias_db?serverTimezone=UTC&useSSL=false
       username: root
@@ -16,7 +19,38 @@ spring:
         idle-timeout: 30000
         connection-timeout: 30000
         max-lifetime: 1800000
+    # 定义静态资源路径映射（前端可以通过路径访问静态资源，比如头像的访问预览，static路径下的index.html文件）
+    web:
+      resources:
+        # 这个配置会使uploads/目录下的所有文件 和 /static/下的所有文件 可以从根URL路径直接访问
+        # 例如，如果该目录下的 根目录 有一个名为abc.png的文件，它可以通过`http://localhost:8080/abc.png`访问。
+        static-locations: classpath:/static/,file:/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/
+        add-mappings: true  # 添加静态资源映射
+    # 文件上传配置
+    servlet:
+      multipart:
+        max-file-size: 10MB  # 最大文件上传大小
+        max-request-size: 10MB  # 最大请求大小
 
+# 定义文件上传到 ！服务器本地！的相关变量
+uploads:
+  # 文件全局上传路径，需要在实际的Controller层代码中指定各个业务逻辑中不同的子路径作为拼接
+  path: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/
+  # 文件访问路径前缀，根据上面的static-locations配置而定，以下配置表示在static-locations中的根目录下
+  # 需要在需要在实际的Controller层代码中指定各个业务逻辑中不同的子路径作为拼接
+  url-prefix: http://localhost:8080/
+
+# 定义文件上传到 ！阿里云OSS ！的相关配置
+aliyun:
+  oss:
+    bucket-name: tlias-school-management-system
+    endpoint: oss-us-west-1.aliyuncs.com
+    #关于OSS支持的Region与Endpoint的对应关系，
+    # 请参见https://www.alibabacloud.com/help/zh/oss/user-guide/regions-and-endpoints。
+    region: us-west-1
+    dir: tlias/  # 文件存储目录
+
+# MyBatis configuration
 mybatis:
     mapper-locations: classpath:mapper/*.xml
     type-aliases-package: com.kezhang.tlias.entity
@@ -31,6 +65,7 @@ logging:
       org.mybatis.spring.SqlSessionUtils: INFO
       org.springframework.jdbc.datasource.DataSourceTransactionManager: INFO
 
+# PageHelper configuration
 pagehelper: # PageHelper configuration
   helperDialect: mysql            # 设置数据库类型
   reasonable: true                # 合理化分页参数，防止负数页码
