@@ -20,7 +20,7 @@ public interface DepartmentService {
     * @param id the id of the department to be deleted
     * @return the number of rows affected by the deletion
     * */
-    Integer deleteDepartmentById(Integer id);
+    void deleteDepartmentById(Integer id);
 
     /*
     * Insert a new department.
@@ -28,7 +28,7 @@ public interface DepartmentService {
     * @param departmentInsertDTO the DTO containing department creation details
     * @return the number of rows affected by the insertion
     * */
-    Integer insertDepartment(DepartmentInsertDTO departmentInsertDTO);
+    void insertDepartment(DepartmentInsertDTO departmentInsertDTO);
 
     /*
     * Select a department by id.
@@ -48,5 +48,5 @@ public interface DepartmentService {
     *
     * @return the number of rows affected by the update
     * */
-    Integer updateDepartmentById(DepartmentUpdateDTO departmentUpdateDTO);
+    void updateDepartmentById(DepartmentUpdateDTO departmentUpdateDTO);
 }

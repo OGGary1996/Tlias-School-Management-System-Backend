@@ -1,9 +1,9 @@
 package com.kezhang.tliasbackend.utils;
 
 import com.aliyuncs.exceptions.ClientException;
+import com.kezhang.tliasbackend.constant.AliyunOssProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 

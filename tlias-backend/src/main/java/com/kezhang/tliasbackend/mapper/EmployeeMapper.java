@@ -84,5 +84,5 @@ public interface EmployeeMapper {
     * Update an existing employee's information and history.
     * @param employeeUpdateCallbackDTO The DTO containing the updated details of the employee
     * */
-    void updateEmployeeById(Employee employee);
+    Integer updateEmployeeById(Employee employee);
 }

@@ -1,9 +1,11 @@
 package com.kezhang.tliasbackend.service.impl;
 
+import com.kezhang.tliasbackend.constant.ErrorCodeEnum;
 import com.kezhang.tliasbackend.dto.DepartmentInsertDTO;
 import com.kezhang.tliasbackend.dto.DepartmentResponseDTO;
 import com.kezhang.tliasbackend.dto.DepartmentUpdateDTO;
 import com.kezhang.tliasbackend.entity.Department;
+import com.kezhang.tliasbackend.exception.DepartmentNotFoundException;
 import com.kezhang.tliasbackend.mapper.DepartmentMapper;
 import com.kezhang.tliasbackend.service.DepartmentService;
 import lombok.extern.slf4j.Slf4j;
@@ -46,11 +48,16 @@ public class DepartmentServiceImpl implements DepartmentService {
     *  2. 返回受影响的行数
     * */
     @Override
-    public Integer deleteDepartmentById(Integer id) {
+    public void deleteDepartmentById(Integer id) {
         log.info("Deleting department with ID: {}", id);
         Integer i = departmentMapper.deleteDepartmentById(id);
+        if (i == 0){
+            throw new DepartmentNotFoundException(
+                    ErrorCodeEnum.DEPARTMENT_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.DEPARTMENT_NOT_FOUND.getMessage());
+        }
+
         log.info("Deletion of department with ID: {} completed. Rows affected: {}", id, i);
-        return i;
     }
 
 
@@ -61,7 +68,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     * 3. 返回受影响的行数
     * */
     @Override
-    public Integer insertDepartment(DepartmentInsertDTO departmentInsertDTO) {
+    public void insertDepartment(DepartmentInsertDTO departmentInsertDTO) {
         log.debug("Starting convert DepartmentInsertDTO to Department entity.");
         Department department = new Department();
         BeanUtils.copyProperties(departmentInsertDTO, department);
@@ -69,7 +76,6 @@ public class DepartmentServiceImpl implements DepartmentService {
         log.info("Inserting department with name: {}", department.getName());
         Integer i = departmentMapper.insertDepartment(department);
         log.info("Insertion completed. Rows affected: {}", i);
-        return i;
     }
 
     /*
@@ -82,6 +88,11 @@ public class DepartmentServiceImpl implements DepartmentService {
     public DepartmentResponseDTO getDepartmentById(Integer id) {
         log.info("Retrieved department with ID: {}", id);
         Department department  = departmentMapper.selectDepartmentById(id);
+        if (department == null) {
+            throw new DepartmentNotFoundException(
+                    ErrorCodeEnum.DEPARTMENT_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.DEPARTMENT_NOT_FOUND.getMessage());
+        }
         log.info("getDepartmentById completed. Department details: {}", department);
 
         log.debug("Starting convert Department entity to DepartmentResponseDTO.");
@@ -98,7 +109,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     * 3. 返回受影响的行数
     * */
     @Override
-    public Integer updateDepartmentById(DepartmentUpdateDTO departmentUpdateDTO) {
+    public void updateDepartmentById(DepartmentUpdateDTO departmentUpdateDTO) {
         log.debug("Starting convert DepartmentUpdateDTO to Department entity.");
         Department department = new Department();
         BeanUtils.copyProperties(departmentUpdateDTO, department);
@@ -106,7 +117,11 @@ public class DepartmentServiceImpl implements DepartmentService {
 
         log.info("Updating department with ID: {}", department.getId());
         Integer i = departmentMapper.updateDepartmentById(department);
+        if (i == 0) {
+            throw new DepartmentNotFoundException(
+                    ErrorCodeEnum.DEPARTMENT_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.DEPARTMENT_NOT_FOUND.getMessage());
+        }
         log.info("Update completed. Rows affected: {}", i);
-        return i;
     }
 }

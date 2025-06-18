@@ -26,17 +26,9 @@ public class Result<T> {
                 .build();
     }
 
-    public static Result<?> failure(String message){
+    public static Result<?> error(Integer code,String message) {
         return Result.builder()
-                .code(400)
-                .message(message)
-                .data(null)
-                .build();
-    }
-
-    public static Result<?> error(String message) {
-        return Result.builder()
-                .code(500)
+                .code(code)
                 .message(message)
                 .data(null)
                 .build();

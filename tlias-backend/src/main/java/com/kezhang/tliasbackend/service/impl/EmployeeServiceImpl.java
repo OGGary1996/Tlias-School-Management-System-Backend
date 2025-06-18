@@ -4,9 +4,11 @@ import com.aliyuncs.exceptions.ClientException;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.kezhang.tliasbackend.common.PageResult;
+import com.kezhang.tliasbackend.constant.ErrorCodeEnum;
 import com.kezhang.tliasbackend.dto.*;
 import com.kezhang.tliasbackend.entity.Employee;
 import com.kezhang.tliasbackend.entity.EmployeeHistory;
+import com.kezhang.tliasbackend.exception.EmployeeNotFoundException;
 import com.kezhang.tliasbackend.mapper.DepartmentMapper;
 import com.kezhang.tliasbackend.mapper.EmployeeHistoryMapper;
 import com.kezhang.tliasbackend.mapper.EmployeeMapper;
@@ -180,6 +182,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void deleteEmployee(List<Integer> ids) throws ClientException {
         // 首先获取到员工头像的URL列表
         List<String> imageUrls = employeeMapper.getEmployeeImageUrlsByIds(ids);
+        if (imageUrls == null || imageUrls.isEmpty()) {
+            throw new EmployeeNotFoundException(
+                    ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getMessage());
+        }
         log.info("Deleting employee started. IDs: {}, Image URLs: {}", ids, imageUrls);
         // 遍历调用AliyunOssUtil中的删除方法，删除OSS资源
         for (String imageUrl : imageUrls){
@@ -214,6 +221,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         log.info("Fetching employee by ID: {}", id);
         // 1. 操作 EmployeeMapper 并手动映射结果
         EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO = employeeMapper.selectEmployeeById(id);
+        if (employeeUpdateCallbackDTO == null) {
+            log.error("Employee not found with ID: {}", id);
+            throw new EmployeeNotFoundException(
+                    ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getMessage());
+        }
         log.info("Fetched employee by ID: {}, EmployeeUpdateCallbackDTO: {}", id, employeeUpdateCallbackDTO);
         // 2. 返回结果
         return employeeUpdateCallbackDTO;
@@ -244,7 +257,13 @@ public class EmployeeServiceImpl implements EmployeeService {
         log.info("Converted employeeUpdateCallbackDTO to Employee entity: {}", employee);
 
         // 3. 更新员工信息
-        employeeMapper.updateEmployeeById(employee);
+        Integer i = employeeMapper.updateEmployeeById(employee);
+        if (i == 0) {
+            log.error("Failed to update employee information. Employee ID: {}", employee.getId());
+            throw new EmployeeNotFoundException(
+                    ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getMessage());
+        }
         log.info("Updated employee information successfully. Employee ID: {}", employee.getId());
 
         // 4. 删除原有的员工历史信息,并添加上新的员工历史信息
