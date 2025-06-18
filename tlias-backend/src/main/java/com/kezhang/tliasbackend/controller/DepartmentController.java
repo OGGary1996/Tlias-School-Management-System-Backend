@@ -1,6 +1,6 @@
 package com.kezhang.tliasbackend.controller;
 
-import com.kezhang.tliasbackend.dto.DepartmentCreateDTO;
+import com.kezhang.tliasbackend.dto.DepartmentInsertDTO;
 import com.kezhang.tliasbackend.dto.DepartmentResponseDTO;
 import com.kezhang.tliasbackend.common.Result;
 import com.kezhang.tliasbackend.dto.DepartmentUpdateDTO;
@@ -44,9 +44,9 @@ public class DepartmentController {
 
     @PostMapping
     @Operation(summary = "Create a new department", description = "Insert a new department into the system")
-    public Result<?> createDepartment(@RequestBody @Valid DepartmentCreateDTO departmentCreateDTO){
-        log.info("Creating a new department with details: {}", departmentCreateDTO);
-        int row = departmentService.insertDepartment(departmentCreateDTO);
+    public Result<?> createDepartment(@RequestBody @Valid DepartmentInsertDTO departmentInsertDTO){
+        log.info("Creating a new department with details: {}", departmentInsertDTO);
+        int row = departmentService.insertDepartment(departmentInsertDTO);
         log.info("Creation of new department completed. Rows affected: {}", row);
         return Result.success(null);
     }

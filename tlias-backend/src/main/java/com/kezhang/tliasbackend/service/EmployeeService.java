@@ -1,10 +1,14 @@
 package com.kezhang.tliasbackend.service;
 
 
+import com.aliyuncs.exceptions.ClientException;
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
 import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
+import com.kezhang.tliasbackend.dto.EmployeeUpdateCallbackDTO;
+
+import java.util.List;
 
 public interface EmployeeService {
 //    /*
@@ -45,5 +49,22 @@ public interface EmployeeService {
     * employeeInsertDTO has a sub DTO of employeeHistoryInsertDTO,
     * */
     void insertEmployee(EmployeeInsertDTO employeeInsertDTO);
+
+    /*
+    * Delete employees by their IDs.(employee + employee_history + oss)
+    * @Param ids List of employee IDs to be deleted
+    * */
+    void deleteEmployee(List<Integer> ids) throws ClientException;
+
+    /*
+    * Select an employee by their ID.
+    * @Param id The ID of the employee to be selected
+    * */
+    EmployeeUpdateCallbackDTO selectEmployeeById(Integer id);
+
+    /*
+    * Update an existing employee's information and history. (employee + employee_history)
+    * */
+    void updateEmployee(EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO);
 
 }

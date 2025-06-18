@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 @Schema(description = "DTO for update&callback a exist employee's history")
-public class EmployeeHistoryUpdateDTO {
+public class EmployeeHistoryUpdateCallbackDTO {
 
     @Schema(description = "Employee's previous job start date", example = "2023-12-31")
     private LocalDate startDate; // 开始日期
@@ -27,6 +27,6 @@ public class EmployeeHistoryUpdateDTO {
     @Schema(description = "Employee's previous company name")
     private String companyName; // 公司名称
 
-    @Schema(description = "Employee's previous job description")
-    private String employeeId; // 职位描述
+    @Schema(description = "Employee's id", example = "1")
+    private Integer employeeId;
 }

@@ -70,11 +70,106 @@
         ORDER BY e.update_time DESC
     </select>
 
+    <!-- 插入多条员工记录 -->
     <insert id="insertEmployee" parameterType="com.kezhang.tliasbackend.entity.Employee" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO employee (username,name, gender, phone, job_title, department_id, salary, image, entry_date)
         VALUES
             (#{username}, #{name}, #{gender}, #{phone}, #{jobTitle}, #{departmentId}, #{salary}, #{image}, #{entryDate})
     </insert>
 
+    <!-- 获取员工信息的image Urls 以供删除OSS-->
+    <select id="getEmployeeImageUrlsByIds">
+        SELECT image FROM employee
+        WHERE id IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+    <!-- 删除员工-->
+    <delete id="deleteEmployeeByIds">
+        DELETE FROM employee
+        WHERE id IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- 员工信息回显-->
+    <!-- 使用多表查询，并且手动指定ResultMap封装嵌套DTO（一条主表信息，多个员工经历信息组成的集合） -->
+    <resultMap id="EmployeeUpdateCallbackDTOMap" type="com.kezhang.tliasbackend.dto.EmployeeUpdateCallbackDTO">
+        <!--主表信息封装-->
+        <result column="username" property="username"/>
+        <result column="name" property="name"/>
+        <result column="gender" property="gender"/>
+        <result column="phone" property="phone"/>
+        <result column="job_title" property="jobTitle"/>
+        <result column="salary" property="salary"/>
+        <result column="departmentName" property="departmentName"/>
+        <result column="entry_date" property="entryDate"/>
+        <result column="image" property="image"/>
+        <!-- 嵌套集合 List<EmployeeHistoryUpdateCallbackDTO> 封装-->
+        <collection property="employeeHistoryUpdateCallbackDTOList" ofType="com.kezhang.tliasbackend.dto.EmployeeHistoryUpdateCallbackDTO">
+            <result column="start_date" property="startDate" />
+            <result column="end_date" property="endDate" />
+            <result column="previousJobTitle" property="jobTitle"/>
+            <result column="previousCompanyName" property="companyName"/>
+            <result column="employee_id" property="employeeId"/>
+        </collection>
+    </resultMap>
+    <select id="selectEmployeeById" resultMap="EmployeeUpdateCallbackDTOMap">
+        SELECT
+            e.username,
+            e.name,
+            e.gender,
+            e.phone,
+            e.job_title,
+            e.salary,
+            d.name AS departmentName,
+            e.entry_date,
+            e.image,
+            eh.start_date,
+            eh.end_date,
+            eh.job_title AS previousJobTitle,
+            eh.company_name AS previousCompanyName,
+            eh.employee_id
+        FROM employee e
+        LEFT JOIN department d ON e.department_id = d.id
+        LEFT JOIN employee_history eh ON e.id = eh.employee_id
+        WHERE e.id = #{id}
+    </select>
+
+    <!-- 修改员工信息 -->
+    <update id="updateEmployeeById" parameterType="com.kezhang.tliasbackend.entity.Employee">
+        UPDATE employee
+        <set>
+            <if test="username != null and username != ''">
+                username = #{username},</if>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+            <if test="phone != null and phone != ''">
+                phone = #{phone},
+            </if>
+            <if test="jobTitle != null and jobTitle != ''">
+                job_title = #{jobTitle},
+            </if>
+            <if test="salary != null">
+                salary = #{salary},
+            </if>
+            <if test="departmentId != null">
+                department_id = #{departmentId},
+            </if>
+            <if test="entryDate != null">
+                entry_date = #{entryDate},
+            </if>
+            <if test="image != null and image != ''">
+                image = #{image},
+            </if>
+        </set>
+        WHERE id = #{id};
+</update>
 
 </mapper>

@@ -1,16 +1,20 @@
 package com.kezhang.tliasbackend.controller;
 
+import com.aliyuncs.exceptions.ClientException;
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.common.Result;
 import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
 import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
+import com.kezhang.tliasbackend.dto.EmployeeUpdateCallbackDTO;
 import com.kezhang.tliasbackend.service.EmployeeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @Slf4j
@@ -88,5 +92,47 @@ public class EmployeeController {
        log.info("Inserting new employee completed.");
 
        return Result.success(null);
+    }
+
+    /*
+    * 删除员工信息接口（员工信息 + 员工过往经历 + OSS头像删除）
+    * @param id 员工IDList
+    * @return 成功或失败的结果
+    * */
+    @Operation(summary = "Delete employee", description = "Delete an employee by their ID")
+    @DeleteMapping
+    public Result<?> deleteEmployee(@RequestParam("ids") List<Integer> ids) throws ClientException {
+        log.info("Deleting employee started. IDs: {}", ids);
+        employeeService.deleteEmployee(ids);
+        log.info("Deleting employee completed.");
+
+        return Result.success(null);
+    }
+
+    /*
+    * 修改用户时的回显接口
+    * @param id 员工ID
+    * @return Result
+    * */
+    @Operation(summary = "Get employee by ID", description = "Retrieve an employee's details by their ID")
+    @GetMapping("/{id}")
+    public Result<?> getEmployeeById(@PathVariable("id") Integer id){
+        log.info("Fetching employee by ID: {}", id);
+        EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO = employeeService.selectEmployeeById(id);
+        log.info("Fetched employee by ID completed. Employee details: {}", employeeUpdateCallbackDTO);
+        return Result.success(employeeUpdateCallbackDTO);
+    }
+    /*
+    * 修改员工时的修改接口（员工信息 + 员工过往经历修改）
+    * @param employeeUpdateCallbackDTO 员工信息 DTO，注意DTO中包含了员工历史信息的子 DTO
+    * @return 成功或失败的结果
+    * */
+    @Operation(summary = "Update employee", description = "Update an existing employee's details")
+    @PutMapping
+    public Result<?> updateEmployee(@RequestBody EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO){
+        log.info("Updating employee started. DTO: {}", employeeUpdateCallbackDTO);
+        employeeService.updateEmployee(employeeUpdateCallbackDTO);
+        log.info("Updating employee completed.");
+        return Result.success(null);
     }
 }

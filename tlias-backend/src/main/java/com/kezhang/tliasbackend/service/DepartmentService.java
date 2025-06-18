@@ -1,6 +1,6 @@
 package com.kezhang.tliasbackend.service;
 
-import com.kezhang.tliasbackend.dto.DepartmentCreateDTO;
+import com.kezhang.tliasbackend.dto.DepartmentInsertDTO;
 import com.kezhang.tliasbackend.dto.DepartmentResponseDTO;
 import com.kezhang.tliasbackend.dto.DepartmentUpdateDTO;
 
@@ -25,10 +25,10 @@ public interface DepartmentService {
     /*
     * Insert a new department.
     *
-    * @param departmentCreateDTO the DTO containing department creation details
+    * @param departmentInsertDTO the DTO containing department creation details
     * @return the number of rows affected by the insertion
     * */
-    Integer insertDepartment(DepartmentCreateDTO departmentCreateDTO);
+    Integer insertDepartment(DepartmentInsertDTO departmentInsertDTO);
 
     /*
     * Select a department by id.

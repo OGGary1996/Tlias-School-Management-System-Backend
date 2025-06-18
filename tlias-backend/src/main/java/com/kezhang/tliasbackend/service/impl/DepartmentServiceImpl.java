@@ -1,6 +1,6 @@
 package com.kezhang.tliasbackend.service.impl;
 
-import com.kezhang.tliasbackend.dto.DepartmentCreateDTO;
+import com.kezhang.tliasbackend.dto.DepartmentInsertDTO;
 import com.kezhang.tliasbackend.dto.DepartmentResponseDTO;
 import com.kezhang.tliasbackend.dto.DepartmentUpdateDTO;
 import com.kezhang.tliasbackend.entity.Department;
@@ -61,10 +61,10 @@ public class DepartmentServiceImpl implements DepartmentService {
     * 3. 返回受影响的行数
     * */
     @Override
-    public Integer insertDepartment(DepartmentCreateDTO departmentCreateDTO) {
-        log.debug("Starting convert DepartmentCreateDTO to Department entity.");
+    public Integer insertDepartment(DepartmentInsertDTO departmentInsertDTO) {
+        log.debug("Starting convert DepartmentInsertDTO to Department entity.");
         Department department = new Department();
-        BeanUtils.copyProperties(departmentCreateDTO, department);
+        BeanUtils.copyProperties(departmentInsertDTO, department);
         log.debug("Conversion completed. Inserting department into the database.");
         log.info("Inserting department with name: {}", department.getName());
         Integer i = departmentMapper.insertDepartment(department);

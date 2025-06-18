@@ -14,7 +14,7 @@ function uploadAvatar() {
   formData.append("file", file);
 
   // 定义请求头、请求体（注意Content-Type并不是JSON）
-  fetch('/file/upload/employee/image/local',{
+  fetch('/file/upload/employee/image/oss',{
     method: 'POST',
     body: formData,
     // 不需要设置Content-Type，浏览器会自动设置为multipart/form-data

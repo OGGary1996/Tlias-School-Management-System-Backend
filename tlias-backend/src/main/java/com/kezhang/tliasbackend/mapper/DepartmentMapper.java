@@ -51,4 +51,11 @@ public interface DepartmentMapper {
     * @return the number of rows affected by the update
     * */
     Integer updateDepartmentById(Department department);
+
+    /*
+    * Select a department id by its name.
+    * @param departmentName the name of the department to be selected
+    * @return the id of the department if found, otherwise null
+    * */
+    Integer selectDepartmentIdByName(String name);
 }

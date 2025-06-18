@@ -1,23 +1,24 @@
 package com.kezhang.tliasbackend.service.impl;
 
+import com.aliyuncs.exceptions.ClientException;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.kezhang.tliasbackend.common.PageResult;
-import com.kezhang.tliasbackend.dto.EmployeeHistoryInsertDTO;
-import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
-import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
-import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
+import com.kezhang.tliasbackend.dto.*;
 import com.kezhang.tliasbackend.entity.Employee;
 import com.kezhang.tliasbackend.entity.EmployeeHistory;
+import com.kezhang.tliasbackend.mapper.DepartmentMapper;
 import com.kezhang.tliasbackend.mapper.EmployeeHistoryMapper;
 import com.kezhang.tliasbackend.mapper.EmployeeMapper;
 import com.kezhang.tliasbackend.service.EmployeeService;
+import com.kezhang.tliasbackend.utils.AliyunOssUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.List;
 
 @Slf4j
@@ -25,10 +26,14 @@ import java.util.List;
 public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeMapper employeeMapper;
     private final EmployeeHistoryMapper employeeHistoryMapper;
+    private final AliyunOssUtil aliyunOssUtil;
+    private final DepartmentMapper departmentMapper;
     @Autowired
-    public EmployeeServiceImpl(EmployeeMapper employeeMapper, EmployeeHistoryMapper employeeHistoryMapper) {
+    public EmployeeServiceImpl(EmployeeMapper employeeMapper, EmployeeHistoryMapper employeeHistoryMapper, AliyunOssUtil aliyunOssUtil, DepartmentMapper departmentMapper) {
         this.employeeMapper = employeeMapper;
         this.employeeHistoryMapper = employeeHistoryMapper;
+        this.aliyunOssUtil = aliyunOssUtil;
+        this.departmentMapper = departmentMapper;
     }
 
 
@@ -161,5 +166,111 @@ public class EmployeeServiceImpl implements EmployeeService {
         log.info("Inserting employeeHistoryList into the database started.");
         employeeHistoryMapper.batchInsertEmployeeHistory(employeeHistorieList);
         log.info("Inserted employeeHistoryList into the database successfully. Size: {}", employeeHistorieList.size());
+    }
+
+    /*
+    * 流程：
+    *  1. 将员工的ID传递到Mapper层的deleteEmployee方法中
+    *  2. 在Mapper层中执行删除操作，此时需要注意：需要删除的表是 employee 和 employee_history，
+    *  3. 在删除员工信息之前，需要先删除员工头像（OSS），因为删除OSS的数据需要头像的url，如果先删除员工信息，则无法获取头像的url
+    *  4. 删除员工信息后，删除员工历史信息
+    * */
+    @Transactional // 如果有RuntimeException，则回滚事务,所有删除操作全部回滚
+    @Override
+    public void deleteEmployee(List<Integer> ids) throws ClientException {
+        // 首先获取到员工头像的URL列表
+        List<String> imageUrls = employeeMapper.getEmployeeImageUrlsByIds(ids);
+        log.info("Deleting employee started. IDs: {}, Image URLs: {}", ids, imageUrls);
+        // 遍历调用AliyunOssUtil中的删除方法，删除OSS资源
+        for (String imageUrl : imageUrls){
+            aliyunOssUtil.deleteFile(imageUrl);
+            log.info("Deleted OSS image file: {}", imageUrl);
+        }
+        // 删除员工信息
+        log.info("Deleting employee information started. IDs: {}", ids);
+        employeeMapper.deleteEmployeeByIds(ids);
+        log.info("Deleted employee information successfully. IDs: {}", ids);
+
+        // 删除员工历史信息
+        log.info("Deleting employee history information started. IDs: {}", ids);
+        employeeHistoryMapper.deleteEmployeeHistoryByEmployeeIds(ids);
+        log.info("Deleted employee history information successfully. IDs: {}", ids);
+    }
+
+    /*
+    * 流程：
+    * 方法1:
+    *  1. 操作两个Mapper，1: EmployeeMapper，2: EmployeeHistoryMapper
+    *  2. EmployeeMapper 因为涉及到多表查询，Employee Entity无法覆盖，直接返回 EmployeeUpdateCallbackDTO
+    *  3. EmployeeHistoryMapper返回 EmployeeHistory Entity实体列表，需要转换为 EmployeeHistoryUpdateCallbackDTO 列表
+    *  4. 最终将EmployeeHistoryUpdateCallbackDTO 添加进到 EmployeeUpdateCallbackDTO 中
+    * 方法2:
+    *  1. 操作一个Mapper，也就是EmployeeMapper，在其中指定ResultMap 手动映射多表查询结果到 EmployeeUpdateCallbackDTO
+    *  2. 其中涉及到DTO和子DTO，需要在ResultMap中手动映射多个结果字段到List<子DTO>中
+    *  2. 注意：ResultMap这种方式基本上只用于查询操作，不能用于插入、更新、删除等操作，其他的操作还是需要操作两个Mapper
+    * */
+    @Override
+    public EmployeeUpdateCallbackDTO selectEmployeeById(Integer id) {
+        log.info("Fetching employee by ID: {}", id);
+        // 1. 操作 EmployeeMapper 并手动映射结果
+        EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO = employeeMapper.selectEmployeeById(id);
+        log.info("Fetched employee by ID: {}, EmployeeUpdateCallbackDTO: {}", id, employeeUpdateCallbackDTO);
+        // 2. 返回结果
+        return employeeUpdateCallbackDTO;
+    }
+
+    /*
+    * 流程：
+    *  1. 首先调用DepartmentMapper中的查询方法，查询部门信息，获取部门ID
+    *  2. 跟别将EmployeeUpdateCallbackDTO 转换为 Employee 实体对象,EmployeeHistoryUpdateCallbackDTO集合 转换为 EmployeeHistory 实体对象集合
+    *  3. 将 departmentId 设置到 Employee 实体对象中
+    *  4. 调用EmployeeMapper的updateEmployee方法更新员工信息，
+    *  5. 删除原有的员工历史信息,然后对新的数据进行判空，如果为空，则不执行后续的插入操作，如果不为空，则执行后续的插入操作
+    *  5. 调用EmployeeHistoryMapper的updateEmployeeHistory方法插入员工历史信息
+    *  6. 更新操作暂时采用先删后加的方式，先删除原有的员工历史信息，再插入新的员工历史信息
+    * */
+    @Transactional // 如果有RuntimeException，则回滚事务,所有更新操作全部回滚
+    @Override
+    public void updateEmployee(EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO) {
+        log.info("Updating employee started. DTO: {}", employeeUpdateCallbackDTO);
+
+        // 1. 根据departmentName，获取departmentId
+        Integer departmentId = departmentMapper.selectDepartmentIdByName(employeeUpdateCallbackDTO.getDepartmentName());
+
+        // 2. 将 EmployeeUpdateCallbackDTO 转换为 Employee 实体对象
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeUpdateCallbackDTO, employee);
+        employee.setDepartmentId(departmentId); // 设置部门ID
+        log.info("Converted employeeUpdateCallbackDTO to Employee entity: {}", employee);
+
+        // 3. 更新员工信息
+        employeeMapper.updateEmployeeById(employee);
+        log.info("Updated employee information successfully. Employee ID: {}", employee.getId());
+
+        // 4. 删除原有的员工历史信息,并添加上新的员工历史信息
+        // 复用 EmployeeHistoryMapper 的 deleteEmployeeHistoryByEmployeeIds 方法，只需要把 employeeId 作为List 传递进去即可
+        List<Integer> ids = Collections.singletonList(employee.getId());
+        log.info("Deleting old employee history information started. Employee ID: {}", employee.getId());
+        employeeHistoryMapper.deleteEmployeeHistoryByEmployeeIds(ids);
+        log.info("Deleted old employee history information successfully. Employee ID: {}", employee.getId());
+
+        if (employeeUpdateCallbackDTO.getEmployeeHistoryUpdateCallbackDTOList() == null || employeeUpdateCallbackDTO.getEmployeeHistoryUpdateCallbackDTOList().isEmpty()) {
+            log.info("No employee history records to update for employee ID: {}", employee.getId());
+            // 如果员工没有历史记录，转换过程中的 stream 会抛出 NullPointerException，所以：
+            // 如果为空，不需要执行后续的插入的操作,只需要执行了之前的删除操作即可
+            return;
+        }
+
+        // 5. 判空结束，开始插入操作，将 EmployeeHistoryUpdateCallbackDTO 集合转换为 EmployeeHistory 实体对象集合
+        List<EmployeeHistory> employeeHistoryList = employeeUpdateCallbackDTO.getEmployeeHistoryUpdateCallbackDTOList().stream().map(employeeHistoryUpdateCallbackDTO -> {
+            EmployeeHistory employeeHistory = new EmployeeHistory();
+            BeanUtils.copyProperties(employeeHistoryUpdateCallbackDTO, employeeHistory);
+            return employeeHistory;
+        }).toList();
+        log.info("Converted employeeHistoryUpdateCallbackDTOList to EmployeeHistory entity list: {}", employeeHistoryList);
+
+        // 5. 补充员工历史信息
+        employeeHistoryMapper.batchInsertEmployeeHistory(employeeHistoryList);
+        log.info("Inserted new employee history information successfully. Employee ID: {}, History Size: {}", employee.getId(), employeeHistoryList.size());
     }
 }

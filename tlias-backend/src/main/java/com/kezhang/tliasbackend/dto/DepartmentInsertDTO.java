@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Schema(description = "Department Create DTO")
-public class DepartmentCreateDTO {
+public class DepartmentInsertDTO {
     @Schema(description = "Name of the department", example = "Human Resources")
     @NotNull(message = "Department name cannot be null")
     @NotBlank(message = "Department name cannot be blank")

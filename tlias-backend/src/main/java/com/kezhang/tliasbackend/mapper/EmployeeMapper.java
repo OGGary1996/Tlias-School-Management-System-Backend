@@ -2,6 +2,7 @@ package com.kezhang.tliasbackend.mapper;
 
 import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
+import com.kezhang.tliasbackend.dto.EmployeeUpdateCallbackDTO;
 import com.kezhang.tliasbackend.entity.Employee;
 
 import java.util.List;
@@ -57,4 +58,31 @@ public interface EmployeeMapper {
     * @param employee The Employee object containing the details of the employee to be inserted
     * */
     void insertEmployee(Employee employee);
+
+    // 删除员工信息的操作，隶属于删除操作的一部分，另一部分在 EmployeeHistoryMapper 中实现
+    /*
+    * 1. Get employee image URLs by their IDs.
+    * @param ids List of employee IDs to retrieve image URLs for
+    * */
+    List<String> getEmployeeImageUrlsByIds(List<Integer> ids);
+    /*
+    * 2. Delete employees by their IDs.
+    * @param ids List of employee IDs to be deleted
+    * */
+    void deleteEmployeeByIds(List<Integer> ids);
+
+    // 查询员工信息（回显），属于修改操作的一部分
+    /*
+    * Select an employee by their ID.
+    * @param id The ID of the employee to be selected
+    * @return List of Employee entity containing employee details
+    * */
+    EmployeeUpdateCallbackDTO selectEmployeeById(Integer id);
+
+    // 更新员工信息的操作，隶属于修改操作的一部分,另一部分在 EmployeeHistoryMapper 中实现
+    /*
+    * Update an existing employee's information and history.
+    * @param employeeUpdateCallbackDTO The DTO containing the updated details of the employee
+    * */
+    void updateEmployeeById(Employee employee);
 }

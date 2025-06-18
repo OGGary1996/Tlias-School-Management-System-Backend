@@ -10,17 +10,17 @@ import java.io.IOException;
 
 @Slf4j
 @Component
-public class LocalDriveStorage {
+public class LocalDriveUtil {
     // 配置文件注入
 //    @Value("${uploads.path}")
 //    private String uploadsPath;
 //
 //    @Value("${uploads.url-prefix}")
 //    private String uploadsUrlPrefix;
-    private final LocalDriveStorageProperties localDriveStorageProperties;
+    private final LocalDriveUtilProperties localDriveUtilProperties;
     @Autowired
-    public LocalDriveStorage(LocalDriveStorageProperties localDriveStorageProperties) {
-        this.localDriveStorageProperties = localDriveStorageProperties;
+    public LocalDriveUtil(LocalDriveUtilProperties localDriveUtilProperties) {
+        this.localDriveUtilProperties = localDriveUtilProperties;
     }
 
 
@@ -35,8 +35,8 @@ public class LocalDriveStorage {
     * 5. 返回文件的访问路径给前端
     * */
     public String saveFile(MultipartFile file, String servicePath) throws IOException {
-        String uploadsPath = localDriveStorageProperties.getPath();
-        String uploadsUrlPrefix = localDriveStorageProperties.getUrlPrefix();
+        String uploadsPath = localDriveUtilProperties.getPath();
+        String uploadsUrlPrefix = localDriveUtilProperties.getUrlPrefix();
 
         // 1. 获取文件的原始文件名以及文件的扩展名
         String originalFilename = file.getOriginalFilename();
@@ -73,8 +73,8 @@ public class LocalDriveStorage {
     *  3. 删除文件
     * */
     public void deleteFile(String fileUrl) {
-        String uploadsPath = localDriveStorageProperties.getPath();
-        String uploadsUrlPrefix = localDriveStorageProperties.getUrlPrefix();
+        String uploadsPath = localDriveUtilProperties.getPath();
+        String uploadsUrlPrefix = localDriveUtilProperties.getUrlPrefix();
     
         String filePath = uploadsPath + fileUrl.substring(uploadsUrlPrefix.length());
         log.info("File to be deleted: {}", filePath);
