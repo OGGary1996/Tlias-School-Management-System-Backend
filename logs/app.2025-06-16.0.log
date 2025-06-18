@@ -1,0 +1,565 @@
+2025-06-16 15:45:59 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 61254 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 15:45:59 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 15:45:59 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 15:45:59 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 15:45:59 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 15:45:59 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 15:45:59 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 15:45:59 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 393 ms
+2025-06-16 15:45:59 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 15:46:00 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 15:46:00 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 15:46:00 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.966 seconds (process running for 1.235)
+2025-06-16 15:46:15 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 15:46:15 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 15:46:15 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-16 15:47:27 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File original filename: 28F30ED6-8E8B-4613-9115-6BBA68235315_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 15:47:27 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File will be saved to: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/8ad107de-7d3b-4724-86c9-2534a8fc4d69.jpeg
+2025-06-16 15:47:27 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - Directory created: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06
+2025-06-16 15:47:27 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File saved successfully: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/8ad107de-7d3b-4724-86c9-2534a8fc4d69.jpeg
+2025-06-16 15:47:27 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.controller.FileManageController - Image uploaded successfully, URL: http://localhost:8080/employee/image/2025/06/8ad107de-7d3b-4724-86c9-2534a8fc4d69.jpeg
+2025-06-16 15:48:50 [http-nio-8080-exec-4] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File original filename: 9A6CBEEE-9D4B-47A8-B0EE-FC365EB9B016_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 15:48:50 [http-nio-8080-exec-4] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File will be saved to: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg
+2025-06-16 15:48:50 [http-nio-8080-exec-4] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File saved successfully: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg
+2025-06-16 15:48:50 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.controller.FileManageController - Image uploaded successfully, URL: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg
+2025-06-16 15:58:14 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.controller.FileManageController - Deleting file at path: local
+2025-06-16 15:58:14 [http-nio-8080-exec-5] ERROR com.kezhang.tliasbackend.utils.AliyunOssUtil - File path does not start with the expected prefix: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/
+2025-06-16 15:58:14 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 15:58:14 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@79fb2271
+2025-06-16 15:58:14 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: The parameter "key" is null.] with root cause
+java.lang.NullPointerException: The parameter "key" is null.
+	at com.aliyun.oss.common.utils.CodingUtils.assertParameterNotNull(CodingUtils.java:35)
+	at com.aliyun.oss.internal.OSSObjectOperation.deleteObject(OSSObjectOperation.java:493)
+	at com.aliyun.oss.OSSClient.deleteObject(OSSClient.java:761)
+	at com.aliyun.oss.OSSClient.deleteObject(OSSClient.java:756)
+	at com.kezhang.tliasbackend.utils.AliyunOssUtil.deleteFile(AliyunOssUtil.java:135)
+	at com.kezhang.tliasbackend.controller.FileManageController.employeeImageDelete(FileManageController.java:89)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-16 16:00:43 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 16:00:45 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 16:00:47 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 61454 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 16:00:47 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 16:00:47 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 16:00:47 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:00:47 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 16:00:47 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 16:00:47 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 16:00:47 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 381 ms
+2025-06-16 16:00:48 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 16:00:48 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:00:48 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 16:00:48 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.882 seconds (process running for 1.099)
+2025-06-16 16:01:04 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 16:01:04 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 16:01:04 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-16 16:02:50 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 16:02:52 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 16:02:54 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 61464 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 16:02:54 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 16:02:54 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 16:02:54 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:02:54 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 16:02:54 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 16:02:54 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 16:02:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 372 ms
+2025-06-16 16:02:55 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 16:02:55 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:02:55 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 16:02:55 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.875 seconds (process running for 1.108)
+2025-06-16 16:02:57 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 16:02:57 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 16:02:57 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-16 16:02:57 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.FileManageController - Deleting file at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:02:57 [http-nio-8080-exec-1] WARN  com.kezhang.tliasbackend.utils.LocalDriveUtil - File not found for deletion: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:02:57 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.FileManageController - File deleted successfully at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:05:32 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 16:05:34 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 16:05:35 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 61506 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 16:05:35 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 16:05:36 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 16:05:36 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:05:36 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 16:05:36 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 16:05:36 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 16:05:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 362 ms
+2025-06-16 16:05:36 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 16:05:36 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:05:36 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 16:05:36 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.874 seconds (process running for 1.094)
+2025-06-16 16:05:39 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 16:05:39 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 16:05:39 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-16 16:05:39 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.FileManageController - Deleting file at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:05:39 [http-nio-8080-exec-1] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File to be deleted: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:05:39 [http-nio-8080-exec-1] WARN  com.kezhang.tliasbackend.utils.LocalDriveUtil - File not found for deletion: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:05:39 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.FileManageController - File deleted successfully at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:09:10 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 16:09:12 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 16:09:13 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 61532 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 16:09:13 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 16:09:13 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 16:09:13 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:09:13 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 16:09:13 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 16:09:14 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 16:09:14 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 361 ms
+2025-06-16 16:09:14 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 16:09:14 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:09:14 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 16:09:14 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.875 seconds (process running for 1.098)
+2025-06-16 16:09:16 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 16:09:16 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 16:09:16 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-16 16:09:16 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.FileManageController - Deleting file at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:09:16 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File to be deleted: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:09:16 [http-nio-8080-exec-2] WARN  com.kezhang.tliasbackend.utils.LocalDriveUtil - File not found for deletion: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:09:16 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.FileManageController - File deleted successfully at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:11:30 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 16:11:32 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 16:11:34 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 61556 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 16:11:34 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 16:11:34 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 16:11:34 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:11:34 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 16:11:34 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 16:11:34 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 16:11:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 361 ms
+2025-06-16 16:11:34 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 16:11:34 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:11:34 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 16:11:34 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.876 seconds (process running for 1.138)
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.FileManageController - Deleting file at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - Delete request received for URL: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - Using uploads path: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - Using URL prefix: http://localhost:8080/
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - Relative path extracted: employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - Full physical path calculated: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - Parent directory exists: true
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File absolute path: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File exists: false
+2025-06-16 16:11:37 [http-nio-8080-exec-2] WARN  com.kezhang.tliasbackend.utils.LocalDriveUtil - File not found for deletion: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - Files in directory: [8ad107de-7d3b-4724-86c9-2534a8fc4d69.jpeg, ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg]
+2025-06-16 16:11:37 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.FileManageController - File deleted successfully at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:13:29 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 16:13:31 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 16:13:32 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 61576 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 16:13:32 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 16:13:33 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 16:13:33 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:13:33 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 16:13:33 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 16:13:33 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 16:13:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 337 ms
+2025-06-16 16:13:33 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 16:13:33 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:13:33 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 16:13:33 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.826 seconds (process running for 1.044)
+2025-06-16 16:13:37 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 16:13:37 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 16:13:37 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-16 16:13:37 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.FileManageController - Deleting file at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:13:37 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File to be deleted: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:13:37 [http-nio-8080-exec-2] WARN  com.kezhang.tliasbackend.utils.LocalDriveUtil - File not found for deletion: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:13:37 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.FileManageController - File deleted successfully at path: http://localhost:8080/employee/image/2025/06/ecb939f0-6299-48b8-a4bd-4bb00334477b.jpeg"
+2025-06-16 16:16:22 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 16:16:24 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 16:31:19 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 62987 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 16:31:19 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 16:31:19 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 16:31:19 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:31:19 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 16:31:19 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 16:31:19 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 16:31:19 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 349 ms
+2025-06-16 16:31:19 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 16:31:19 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 16:31:19 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 16:31:19 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.84 seconds (process running for 1.046)
+2025-06-16 16:31:22 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 16:31:22 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 16:31:22 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-16 16:31:31 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: 28F30ED6-8E8B-4613-9115-6BBA68235315_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 16:31:31 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/employee/image/2025/06/a62d5181-7b3d-4621-9830-acc29baf5d23.jpeg
+2025-06-16 16:31:31 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 16:31:31 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@6e4ee4bc
+2025-06-16 16:31:32 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-16 16:31:32 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.FileManageController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/a62d5181-7b3d-4621-9830-acc29baf5d23.jpeg
+2025-06-16 16:33:02 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: 28F30ED6-8E8B-4613-9115-6BBA68235315_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 16:33:02 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/employee/image/2025/06/c1f8621a-1de7-494d-a8cf-aba345798b4f.jpeg
+2025-06-16 16:33:02 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 16:33:02 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@6e12810c
+2025-06-16 16:33:02 [http-nio-8080-exec-5] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-16 16:33:02 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.controller.FileManageController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/c1f8621a-1de7-494d-a8cf-aba345798b4f.jpeg
+2025-06-16 16:33:11 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: 9191BE6F-3459-4A74-8273-B01101E9BFF4_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 16:33:11 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/employee/image/2025/06/8926c781-ab2c-4dab-943e-4a4cbd04e893.jpeg
+2025-06-16 16:33:11 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 16:33:11 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@65999133
+2025-06-16 16:33:11 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-16 16:33:11 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.FileManageController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/8926c781-ab2c-4dab-943e-4a4cbd04e893.jpeg
+2025-06-16 16:33:16 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: 090304ED-6AA7-4F46-AA1F-3FCAF4CFC6CC_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 16:33:16 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/employee/image/2025/06/b8fe37de-8fb2-461f-a0ee-1b55fb6bfc3e.jpeg
+2025-06-16 16:33:16 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 16:33:16 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@534ed6a7
+2025-06-16 16:33:17 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-16 16:33:17 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.controller.FileManageController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b8fe37de-8fb2-461f-a0ee-1b55fb6bfc3e.jpeg
+2025-06-16 16:37:41 [http-nio-8080-exec-10] INFO  c.k.tliasbackend.controller.FileManageController - Deleting file at path: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/8926c781-ab2c-4dab-943e-4a4cbd04e893.jpeg
+2025-06-16 16:37:41 [http-nio-8080-exec-10] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File name to delete: tlias/employee/image/2025/06/8926c781-ab2c-4dab-943e-4a4cbd04e893.jpeg
+2025-06-16 16:37:41 [http-nio-8080-exec-10] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 16:37:41 [http-nio-8080-exec-10] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@341eb5bc
+2025-06-16 16:37:42 [http-nio-8080-exec-10] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File deleted successfully at path: tlias/employee/image/2025/06/8926c781-ab2c-4dab-943e-4a4cbd04e893.jpeg
+2025-06-16 16:37:42 [http-nio-8080-exec-10] INFO  c.k.tliasbackend.controller.FileManageController - File deleted successfully at path: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/8926c781-ab2c-4dab-943e-4a4cbd04e893.jpeg
+2025-06-16 16:39:31 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 16:39:33 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 18:27:20 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 65704 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 18:27:20 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 18:27:20 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 18:27:20 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 18:27:20 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 18:27:20 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 18:27:21 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 18:27:21 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 352 ms
+2025-06-16 18:27:21 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 18:27:21 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 18:27:21 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 18:27:21 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.834 seconds (process running for 1.063)
+2025-06-16 18:27:45 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 18:27:45 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 18:27:45 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-06-16 18:27:51 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: 28F30ED6-8E8B-4613-9115-6BBA68235315_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 18:27:51 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/employee/image/2025/06/b4c0b68f-d356-4072-846a-9686393e9823.jpeg
+2025-06-16 18:27:51 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 18:27:51 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@c7109c2
+2025-06-16 18:27:52 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-16 18:27:52 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.FileManageController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b4c0b68f-d356-4072-846a-9686393e9823.jpeg
+2025-06-16 18:27:58 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: 9191BE6F-3459-4A74-8273-B01101E9BFF4_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 18:27:58 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/employee/image/2025/06/2bebb6ce-2ffb-494f-aa9c-cb8392b8abf3.jpeg
+2025-06-16 18:27:58 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 18:27:58 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@681308fa
+2025-06-16 18:27:59 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-16 18:27:59 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.controller.FileManageController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/2bebb6ce-2ffb-494f-aa9c-cb8392b8abf3.jpeg
+2025-06-16 18:28:00 [http-nio-8080-exec-8] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: 9191BE6F-3459-4A74-8273-B01101E9BFF4_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 18:28:00 [http-nio-8080-exec-8] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg
+2025-06-16 18:28:00 [http-nio-8080-exec-8] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 18:28:00 [http-nio-8080-exec-8] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@6dacada7
+2025-06-16 18:28:00 [http-nio-8080-exec-8] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-16 18:28:00 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.controller.FileManageController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg
+2025-06-16 18:28:07 [http-nio-8080-exec-9] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: 090304ED-6AA7-4F46-AA1F-3FCAF4CFC6CC_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 18:28:07 [http-nio-8080-exec-9] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/employee/image/2025/06/62b43e66-2565-403b-8649-ec3cb8821438.jpeg
+2025-06-16 18:28:07 [http-nio-8080-exec-9] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 18:28:07 [http-nio-8080-exec-9] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@15910de5
+2025-06-16 18:28:08 [http-nio-8080-exec-9] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-16 18:28:08 [http-nio-8080-exec-9] INFO  c.k.tliasbackend.controller.FileManageController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/62b43e66-2565-403b-8649-ec3cb8821438.jpeg
+2025-06-16 18:28:12 [http-nio-8080-exec-10] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: A4A17873-21C9-4034-BCE6-E41C5A532C15_1_105_c.jpeg, extension name: .jpeg
+2025-06-16 18:28:12 [http-nio-8080-exec-10] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg
+2025-06-16 18:28:12 [http-nio-8080-exec-10] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 18:28:12 [http-nio-8080-exec-10] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@270a606d
+2025-06-16 18:28:12 [http-nio-8080-exec-10] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-16 18:28:12 [http-nio-8080-exec-10] INFO  c.k.tliasbackend.controller.FileManageController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg
+2025-06-16 18:36:01 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 18:36:03 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 18:36:05 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 65943 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 18:36:05 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 18:36:05 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 18:36:05 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 18:36:05 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 18:36:05 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 18:36:05 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 18:36:05 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 345 ms
+2025-06-16 18:36:05 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 18:36:06 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 18:36:06 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 18:36:06 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.845 seconds (process running for 1.233)
+2025-06-16 18:37:42 [http-nio-8080-exec-1] INFO  org.apache.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/file/delete/employee/image/oss?ids=[52] ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:478)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-16 18:38:09 [http-nio-8080-exec-4] INFO  org.apache.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/employee?ids=[52] ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:478)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.controller.EmployeeController - Deleting employee started. IDs: [52]
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12ba96d4
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleting employee started. IDs: [52], Image URLs: [https://i.pravatar.cc/250?u=KeZhang]
+2025-06-16 18:38:58 [http-nio-8080-exec-8] WARN  com.kezhang.tliasbackend.utils.AliyunOssUtil - File path does not start with the expected prefix: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleted OSS image file: https://i.pravatar.cc/250?u=KeZhang
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleting employee information started. IDs: [52]
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleted employee information successfully. IDs: [52]
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleting employee history information started. IDs: [52]
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleted employee history information successfully. IDs: [52]
+2025-06-16 18:38:58 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.controller.EmployeeController - Deleting employee completed.
+2025-06-16 18:41:32 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee started. DTO: EmployeeInsertDTO(username=KeZhang, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-16 18:41:32 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting new employee started. DTO: EmployeeInsertDTO(username=KeZhang, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-16 18:41:32 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted new employee to entity: Employee(id=null, username=KeZhang, password=null, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg, entryDate=2024-06-01, createTime=null, updateTime=null)
+2025-06-16 18:41:32 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting new employee into the database started.
+2025-06-16 18:41:32 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'image' at row 1
+### The error may exist in com/kezhang/tliasbackend/mapper/EmployeeMapper.xml
+### The error may involve com.kezhang.tliasbackend.mapper.EmployeeMapper.insertEmployee-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO employee (username,name, gender, phone, job_title, department_id, salary, image, entry_date)         VALUES             (?, ?, ?, ?, ?, ?, ?, ?, ?)
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'image' at row 1
+; Data truncation: Data too long for column 'image' at row 1] with root cause
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'image' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:96)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:382)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy100.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy98.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.insertEmployee(Unknown Source)
+	at com.kezhang.tliasbackend.service.impl.EmployeeServiceImpl.insertEmployee(EmployeeServiceImpl.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.kezhang.tliasbackend.service.impl.EmployeeServiceImpl$$SpringCGLIB$$0.insertEmployee(<generated>)
+	at com.kezhang.tliasbackend.controller.EmployeeController.createEmployee(EmployeeController.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-16 18:43:54 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 18:43:56 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 18:43:56 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-16 18:43:56 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-16 18:43:57 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 66144 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-16 18:43:57 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-16 18:43:57 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-16 18:43:57 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-16 18:43:57 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-16 18:43:57 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-16 18:43:57 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-16 18:43:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 347 ms
+2025-06-16 18:43:57 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-16 18:43:57 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-16 18:43:57 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-16 18:43:57 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.855 seconds (process running for 1.059)
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee started. DTO: EmployeeInsertDTO(username=KeZhang, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2820c61
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting new employee started. DTO: EmployeeInsertDTO(username=KeZhang, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted new employee to entity: Employee(id=null, username=KeZhang, password=null, name=Ke Zhang, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800.00, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg, entryDate=2024-06-01, createTime=null, updateTime=null)
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting new employee into the database started.
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted new employee into the database successfully. Employee ID: 53
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId started.
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId successfully. EmployeeHistoryList: [EmployeeHistory(id=null, startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba, employeeId=53), EmployeeHistory(id=null, startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance, employeeId=53)]
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting employeeHistoryList into the database started.
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted employeeHistoryList into the database successfully. Size: 2
+2025-06-16 18:44:09 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee completed.
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee started. DTO: EmployeeInsertDTO(username=NewUser, name=New User, gender=2, phone=0987654321, jobTitle=2, departmentId=2, salary=7200.00, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/62b43e66-2565-403b-8649-ec3cb8821438.jpeg, entryDate=2024-07-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2021-01-01, endDate=2022-12-31, jobTitle=Junior Developer, companyName=Tech Company), EmployeeHistoryInsertDTO(startDate=2023-01-01, endDate=2024-06-30, jobTitle=Software Engineer, companyName=Innovative Solutions)])
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting new employee started. DTO: EmployeeInsertDTO(username=NewUser, name=New User, gender=2, phone=0987654321, jobTitle=2, departmentId=2, salary=7200.00, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/62b43e66-2565-403b-8649-ec3cb8821438.jpeg, entryDate=2024-07-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2021-01-01, endDate=2022-12-31, jobTitle=Junior Developer, companyName=Tech Company), EmployeeHistoryInsertDTO(startDate=2023-01-01, endDate=2024-06-30, jobTitle=Software Engineer, companyName=Innovative Solutions)])
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted new employee to entity: Employee(id=null, username=NewUser, password=null, name=New User, gender=2, phone=0987654321, jobTitle=2, departmentId=2, salary=7200.00, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/62b43e66-2565-403b-8649-ec3cb8821438.jpeg, entryDate=2024-07-01, createTime=null, updateTime=null)
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting new employee into the database started.
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted new employee into the database successfully. Employee ID: 54
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId started.
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId successfully. EmployeeHistoryList: [EmployeeHistory(id=null, startDate=2021-01-01, endDate=2022-12-31, jobTitle=Junior Developer, companyName=Tech Company, employeeId=54), EmployeeHistory(id=null, startDate=2023-01-01, endDate=2024-06-30, jobTitle=Software Engineer, companyName=Innovative Solutions, employeeId=54)]
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting employeeHistoryList into the database started.
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted employeeHistoryList into the database successfully. Size: 2
+2025-06-16 18:46:53 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee completed.
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee started. DTO: EmployeeInsertDTO(username=JohnDoe, name=John Doe, gender=2, phone=9876543210, jobTitle=2, departmentId=2, salary=7500, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg, entryDate=2024-07-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2019-05-01, endDate=2020-04-30, jobTitle=Junior Developer, companyName=Tech Solutions), EmployeeHistoryInsertDTO(startDate=2020-05-01, endDate=2023-06-30, jobTitle=Software Engineer, companyName=Innovatech)])
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting new employee started. DTO: EmployeeInsertDTO(username=JohnDoe, name=John Doe, gender=2, phone=9876543210, jobTitle=2, departmentId=2, salary=7500, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg, entryDate=2024-07-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2019-05-01, endDate=2020-04-30, jobTitle=Junior Developer, companyName=Tech Solutions), EmployeeHistoryInsertDTO(startDate=2020-05-01, endDate=2023-06-30, jobTitle=Software Engineer, companyName=Innovatech)])
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted new employee to entity: Employee(id=null, username=JohnDoe, password=null, name=John Doe, gender=2, phone=9876543210, jobTitle=2, departmentId=2, salary=7500, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg, entryDate=2024-07-01, createTime=null, updateTime=null)
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting new employee into the database started.
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted new employee into the database successfully. Employee ID: 55
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId started.
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId successfully. EmployeeHistoryList: [EmployeeHistory(id=null, startDate=2019-05-01, endDate=2020-04-30, jobTitle=Junior Developer, companyName=Tech Solutions, employeeId=55), EmployeeHistory(id=null, startDate=2020-05-01, endDate=2023-06-30, jobTitle=Software Engineer, companyName=Innovatech, employeeId=55)]
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting employeeHistoryList into the database started.
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted employeeHistoryList into the database successfully. Size: 2
+2025-06-16 18:48:20 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee completed.
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee started. DTO: EmployeeInsertDTO(username=Test111, name=Test Test222, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting new employee started. DTO: EmployeeInsertDTO(username=Test111, name=Test Test222, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg, entryDate=2024-06-01, employeeHistoryInsertDTOList=[EmployeeHistoryInsertDTO(startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba), EmployeeHistoryInsertDTO(startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance)])
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted new employee to entity: Employee(id=null, username=Test111, password=null, name=Test Test222, gender=1, phone=1234567890, jobTitle=1, departmentId=1, salary=6800, image=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg, entryDate=2024-06-01, createTime=null, updateTime=null)
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting new employee into the database started.
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted new employee into the database successfully. Employee ID: 56
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converting employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId started.
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Converted employeeHistoryInsertDTOList to EmployeeHistory, and set employeeId successfully. EmployeeHistoryList: [EmployeeHistory(id=null, startDate=2020-01-01, endDate=2021-12-31, jobTitle=Senior SDE, companyName=Alibaba, employeeId=56), EmployeeHistory(id=null, startDate=2022-01-01, endDate=2023-12-31, jobTitle=Full stack Developer, companyName=Byte Dance, employeeId=56)]
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserting employeeHistoryList into the database started.
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Inserted employeeHistoryList into the database successfully. Size: 2
+2025-06-16 18:49:56 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Inserting new employee completed.
+2025-06-16 18:54:00 [http-nio-8080-exec-3] INFO  org.apache.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/employees?ids=[53,54,55] ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:478)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-16 18:54:09 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.EmployeeController - Deleting employee started. IDs: [53, 54, 55]
+2025-06-16 18:54:09 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleting employee started. IDs: [53, 54, 55], Image URLs: [https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg, https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/62b43e66-2565-403b-8649-ec3cb8821438.jpeg, https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg]
+2025-06-16 18:54:09 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File name to delete: tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg
+2025-06-16 18:54:09 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 18:54:09 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@5c168a50
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File deleted successfully at path: tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleted OSS image file: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/14a60762-eccb-4e5b-93ac-12c726f60401.jpeg
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File name to delete: tlias/employee/image/2025/06/62b43e66-2565-403b-8649-ec3cb8821438.jpeg
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@a40664
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File deleted successfully at path: tlias/employee/image/2025/06/62b43e66-2565-403b-8649-ec3cb8821438.jpeg
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleted OSS image file: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/62b43e66-2565-403b-8649-ec3cb8821438.jpeg
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File name to delete: tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@3c18931f
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File deleted successfully at path: tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleted OSS image file: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/06/b330326c-3d72-40f4-94dc-66886155128c.jpeg
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleting employee information started. IDs: [53, 54, 55]
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleted employee information successfully. IDs: [53, 54, 55]
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleting employee history information started. IDs: [53, 54, 55]
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Deleted employee history information successfully. IDs: [53, 54, 55]
+2025-06-16 18:54:10 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.EmployeeController - Deleting employee completed.
+2025-06-16 19:12:09 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-16 19:12:11 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-16 19:12:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-16 19:12:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,0 +1,88 @@
+2025-06-15 13:57:41 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 55186 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-15 13:57:41 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-15 13:57:41 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-15 13:57:41 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-15 13:57:41 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-15 13:57:41 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-15 13:57:41 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-15 13:57:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 381 ms
+2025-06-15 13:57:41 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-15 13:57:42 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-15 13:57:42 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-15 13:57:42 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.909 seconds (process running for 1.163)
+2025-06-15 13:57:49 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-15 13:57:49 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-15 13:57:49 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-15 13:58:08 [http-nio-8080-exec-9] INFO  c.kezhang.tliasbackend.controller.UploadController - File original filename: avater.png, extension name: .png
+2025-06-15 13:58:08 [http-nio-8080-exec-9] INFO  c.kezhang.tliasbackend.controller.UploadController - File will be saved to: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/images208380e6-8619-47c7-bfb0-9c82dfab2367.png
+2025-06-15 13:58:08 [http-nio-8080-exec-9] INFO  c.kezhang.tliasbackend.controller.UploadController - Absolute path of upload directory: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee
+2025-06-15 13:58:08 [http-nio-8080-exec-9] INFO  c.kezhang.tliasbackend.controller.UploadController - File saved successfully: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/images208380e6-8619-47c7-bfb0-9c82dfab2367.png
+2025-06-15 14:00:12 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-15 14:00:14 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-15 14:00:16 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 55251 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-15 14:00:16 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-15 14:00:16 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-15 14:00:16 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-15 14:00:16 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-15 14:00:16 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-15 14:00:16 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-15 14:00:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 361 ms
+2025-06-15 14:00:16 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-15 14:00:17 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-15 14:00:17 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-15 14:00:17 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.867 seconds (process running for 1.071)
+2025-06-15 14:00:19 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-15 14:00:19 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-15 14:00:19 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-15 14:00:27 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.UploadController - File original filename: exploding-head.png, extension name: .png
+2025-06-15 14:00:27 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.UploadController - File will be saved to: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/images/b43d9692-ab63-4f97-b486-550b64e7f68e.png
+2025-06-15 14:00:27 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.UploadController - Absolute path of upload directory: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/images
+2025-06-15 14:00:27 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.UploadController - File saved successfully: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/images/b43d9692-ab63-4f97-b486-550b64e7f68e.png
+2025-06-15 14:00:27 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.UploadController - File URL to return: http://localhost:8080/employee/images/b43d9692-ab63-4f97-b486-550b64e7f68e.png
+2025-06-15 14:01:48 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-15 14:01:50 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-15 17:52:33 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 57592 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-15 17:52:33 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-15 17:52:33 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-15 17:52:33 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-15 17:52:33 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-15 17:52:33 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-15 17:52:33 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-15 17:52:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 376 ms
+2025-06-15 17:52:33 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-15 17:52:33 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-15 17:52:33 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-15 17:52:33 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.934 seconds (process running for 1.175)
+2025-06-15 17:52:42 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-15 17:52:42 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-15 17:52:42 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-15 17:53:07 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File original filename: 090304ED-6AA7-4F46-AA1F-3FCAF4CFC6CC_1_105_c.jpeg, extension name: .jpeg
+2025-06-15 17:53:07 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - File will be saved to: tlias/cb18a356-5082-47fd-8a10-922c7b262bee.jpeg
+2025-06-15 17:53:07 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - Initializing OSSClient with endpoint: oss-us-west-1.aliyuncs.com, region: us-west-1, bucketName: tlias-school-management-system
+2025-06-15 17:53:07 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient initialized successfully, ossClient: com.aliyun.oss.OSSClient@5933b5a1
+2025-06-15 17:53:08 [http-nio-8080-exec-7] INFO  com.kezhang.tliasbackend.utils.AliyunOssUtil - OSSClient has been shut down successfully.
+2025-06-15 17:53:08 [http-nio-8080-exec-7] INFO  c.kezhang.tliasbackend.controller.UploadController - Employee image uploaded successfully, URL: https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/cb18a356-5082-47fd-8a10-922c7b262bee.jpeg
+2025-06-15 17:54:21 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-15 17:54:23 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-15 18:13:54 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 57778 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-15 18:13:54 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-15 18:13:54 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-15 18:13:54 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-15 18:13:54 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-15 18:13:54 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-15 18:13:54 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-15 18:13:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 367 ms
+2025-06-15 18:13:55 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-15 18:13:55 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-15 18:13:55 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-15 18:13:55 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.877 seconds (process running for 1.114)
+2025-06-15 18:14:03 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-15 18:14:03 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-15 18:14:03 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-15 18:14:09 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File original filename: 9191BE6F-3459-4A74-8273-B01101E9BFF4_1_105_c.jpeg, extension name: .jpeg
+2025-06-15 18:14:09 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File will be saved to: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/97389bd9-73fe-47cd-9a0d-155105ef62ba.jpeg
+2025-06-15 18:14:09 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - Directory created: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image
+2025-06-15 18:14:09 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.LocalDriveUtil - File saved successfully: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/employee/image/97389bd9-73fe-47cd-9a0d-155105ef62ba.jpeg
+2025-06-15 18:14:09 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.UploadController - Image uploaded successfully, URL: http://localhost:8080/employee/image/97389bd9-73fe-47cd-9a0d-155105ef62ba.jpeg
+2025-06-15 18:14:35 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-15 18:14:37 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
