@@ -26,6 +26,7 @@ public class LocalDriveStorage {
 
     /*
     * 文件本地存储方法
+    * 调用者：并非由Controller调用，因为删除文件属于附属操作，直接由Service层的方法调用
     * 流程：
     * 1. 获取上传的文件的原始文件名和扩展名
     * 2. 生成一个新的文件名，使用UUID来避免文件名冲突
@@ -71,21 +72,27 @@ public class LocalDriveStorage {
     *  2. 删除文件需要的路径为真实的物理路径，所以需要删除http前缀，补充上uploadsPath物理路径前缀
     *  3. 删除文件
     * */
-    public void deleteFile(String fileUrl){
+    public void deleteFile(String fileUrl) {
         String uploadsPath = localDriveStorageProperties.getPath();
         String uploadsUrlPrefix = localDriveStorageProperties.getUrlPrefix();
-
-        // 1/2 获取要删除的文件路径:删除http前缀，补充上uploadsPath物理路径前缀
-        String filePath =  uploadsPath + fileUrl.substring(uploadsUrlPrefix.length());
-        // 3. 删除文件
+    
+        String filePath = uploadsPath + fileUrl.substring(uploadsUrlPrefix.length());
+        log.info("File to be deleted: {}", filePath);
+        
         File fileToDelete = new File(filePath);
         if (fileToDelete.exists()) {
+            // 添加权限检查，java可能没有权限删除本地文件，所以需要检查
+            if (!fileToDelete.canWrite()) {
+                log.error("No permission to delete file: {}", filePath);
+                throw new RuntimeException("No permission to delete file. Please check file permissions.");
+            }
+            
             boolean deleted = fileToDelete.delete();
             if (deleted) {
                 log.info("File deleted successfully: {}", filePath);
             } else {
                 log.error("Failed to delete file: {}", filePath);
-                throw new RuntimeException("Failed to delete file.");
+                throw new RuntimeException("Failed to delete file. Please check file permissions.");
             }
         } else {
             log.warn("File not found for deletion: {}", filePath);
