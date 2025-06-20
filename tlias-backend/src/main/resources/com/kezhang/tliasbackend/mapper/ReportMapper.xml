@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kezhang.tliasbackend.mapper.ReportMapper">
+    <!-- 查询部门的名称和对应的人数 -->
+    <select id="getDepartmentEmployeeCount" resultType="com.kezhang.tliasbackend.dto.DepartmentEmployeeCountDTO">
+        SELECT
+            d.name AS departmentName,
+            COUNT(e.id) AS employeeCount
+        FROM department d
+        LEFT JOIN employee e ON d.id = e.department_id
+        GROUP BY d.id;
+    </select>
+
+</mapper>

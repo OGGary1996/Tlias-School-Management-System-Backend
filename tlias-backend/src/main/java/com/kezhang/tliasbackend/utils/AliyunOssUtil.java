@@ -127,7 +127,8 @@ public class AliyunOssUtil {
             filePath = fileUrl.substring(fullEndpointPrefix.length());
             log.info("File name to delete: {}", filePath);
         }else {
-            log.error("File path does not start with the expected prefix: {}", fullEndpointPrefix);
+            log.info("File path does not start with the expected prefix: {}", fullEndpointPrefix);
+            return; // 如果文件路径不正确，可能是OSS中没有存储这个文件，直接返回，不用删除。
         }
         // 创建OSSClient实例
         OSS ossClient = getOSSClient();

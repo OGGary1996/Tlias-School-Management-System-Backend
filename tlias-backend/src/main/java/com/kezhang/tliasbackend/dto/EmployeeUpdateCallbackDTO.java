@@ -34,14 +34,14 @@ public class EmployeeUpdateCallbackDTO {
     @Schema(description = "Employee's phone number", example = "1234567890")
     private String phone; // 员工手机号
 
-    @Schema(description = "Employee's jot title", example = "2", allowableValues = "1, 2, 3 ...")
-    private Integer jobTitle;
+    @Schema(description = "Employee's jot title", example = "Professor")
+    private String jobTitle; // 来自position表的职位名称
+
+    @Schema(description = "Employee's department name", example = "Academic Affairs")
+    private String departmentName; // 来自department表的部门名称
 
     @Schema(description = "Employee's salary", example = "5000.00")
     private BigDecimal salary;
-
-    @Schema(description = "Employee's department name", example = "Academic Affairs")
-    private String departmentName;
 
     @Schema(description = "Employee's entry date", example = "2023-12-31")
     @DateTimeFormat(pattern = "yyyy-MM-dd") // 用于解析日期格式

@@ -21,6 +21,7 @@ public enum ErrorCodeEnum {
     NETWORK_ERROR(800, "Network Error, please check your network connection."),
     DEPARTMENT_NOT_FOUND(1001, "Department not found."),
     EMPLOYEE_NOT_FOUND(1002, "Employee not found."),
+    POSITION_NOT_FOUND(1003, "Position not found."),
 
     ;
 

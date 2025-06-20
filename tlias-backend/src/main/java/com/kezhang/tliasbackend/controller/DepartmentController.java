@@ -37,8 +37,8 @@ public class DepartmentController {
     @Operation(summary = "Delete a department", description = "Delete a department by its ID")
     public Result<?> deleteDepartment(@PathVariable Integer id){
         log.info("Deleting department with ID: {}", id);
-        int row = departmentService.deleteDepartmentById(id);
-        log.info("Deletion of department with ID: {} completed. Rows affected: {}", id, row);
+        departmentService.deleteDepartmentById(id);
+        log.info("Deletion of department with ID: {} completed.", id);
         return Result.success(null);
     }
 
@@ -46,8 +46,8 @@ public class DepartmentController {
     @Operation(summary = "Create a new department", description = "Insert a new department into the system")
     public Result<?> createDepartment(@RequestBody @Valid DepartmentInsertDTO departmentInsertDTO){
         log.info("Creating a new department with details: {}", departmentInsertDTO);
-        int row = departmentService.insertDepartment(departmentInsertDTO);
-        log.info("Creation of new department completed. Rows affected: {}", row);
+        departmentService.insertDepartment(departmentInsertDTO);
+        log.info("Creation of new department completed." );
         return Result.success(null);
     }
 
@@ -64,8 +64,8 @@ public class DepartmentController {
     @Operation(summary = "Update a department", description = "Update an existing department's details")
     public Result<?> updateDepartment(@RequestBody @Valid DepartmentUpdateDTO departmentUpdateDTO){
         log.info("Updating department with details: {}", departmentUpdateDTO);
-        int row = departmentService.updateDepartmentById(departmentUpdateDTO);
-        log.info("Update of department completed. Rows affected: {}", row);
+        departmentService.updateDepartmentById(departmentUpdateDTO);
+        log.info("Update of department completed.");
         return Result.success(null);
     }
 }

@@ -12,11 +12,12 @@
 <!--            e.gender,-->
 <!--            e.image,-->
 <!--            d.name AS departmentName,-->
-<!--            e.job_title,-->
+<!--            p.name AS jobTitle,-->
 <!--            e.entry_date,-->
 <!--            e.update_time-->
 <!--        FROM employee e-->
 <!--        LEFT JOIN department d ON e.department_id = d.id-->
+<!--        LEFT JOIN position p ON e.job_title = p.id-->
 <!--        LIMIT #{offset}, #{limit}-->
 <!--        ORDER BY e.update_time DESC;-->
 <!--    </select>-->
@@ -34,13 +35,15 @@
 <!--            e.gender,-->
 <!--            e.image,-->
 <!--            d.name AS departmentName,-->
+<!--            p.name AS jobTitle,-->
 <!--            e.job_title,-->
 <!--            e.entry_date,-->
 <!--            e.update_time-->
 <!--        FROM employee e-->
 <!--        LEFT JOIN department d ON e.department_id = d.id-->
+<!--        LEFT JOIN position p ON e.job_title = p.id-->
 <!--        ORDER BY e.update_time DESC-->
-<!--        &lt;!&ndash; 这里注意不能有 ；分号，因为PageHelper拦截SQL之后会自动续上limit语句，分号会打断&ndash;&gt;-->
+<!--&lt;!&ndash;        注意：这里注意不能有 ；分号，因为PageHelper拦截SQL之后会自动续上limit语句，分号会打断&ndash;&gt;&ndash;&gt;-->
 <!--    </select>-->
 
     <!-- 使用PageHelper 和条件查询-->
@@ -51,11 +54,12 @@
             e.gender,
             e.image,
             d.name AS departmentName,
-            e.job_title,
+            p.name AS jobTitle,
             e.entry_date,
             e.update_time
         FROM employee e
         LEFT JOIN department d ON e.department_id = d.id
+        LEFT JOIN position p ON e.job_title = p.id
         <where>
             <if test="name != null and name != ''">
                 AND e.name LIKE CONCAT('%', #{name}, '%')
@@ -102,9 +106,9 @@
         <result column="name" property="name"/>
         <result column="gender" property="gender"/>
         <result column="phone" property="phone"/>
-        <result column="job_title" property="jobTitle"/>
-        <result column="salary" property="salary"/>
+        <result column="jobTitle" property="jobTitle"/>
         <result column="departmentName" property="departmentName"/>
+        <result column="salary" property="salary"/>
         <result column="entry_date" property="entryDate"/>
         <result column="image" property="image"/>
         <!-- 嵌套集合 List<EmployeeHistoryUpdateCallbackDTO> 封装-->
@@ -122,9 +126,9 @@
             e.name,
             e.gender,
             e.phone,
-            e.job_title,
-            e.salary,
+            p.name AS jobTitle,
             d.name AS departmentName,
+            e.salary,
             e.entry_date,
             e.image,
             eh.start_date,
@@ -134,6 +138,7 @@
             eh.employee_id
         FROM employee e
         LEFT JOIN department d ON e.department_id = d.id
+        LEFT JOIN position p ON e.job_title = p.id
         LEFT JOIN employee_history eh ON e.id = eh.employee_id
         WHERE e.id = #{id}
     </select>
@@ -156,11 +161,11 @@
             <if test="jobTitle != null and jobTitle != ''">
                 job_title = #{jobTitle},
             </if>
-            <if test="salary != null">
-                salary = #{salary},
-            </if>
             <if test="departmentId != null">
                 department_id = #{departmentId},
+            </if>
+            <if test="salary != null">
+                salary = #{salary},
             </if>
             <if test="entryDate != null">
                 entry_date = #{entryDate},

@@ -2,8 +2,10 @@ package com.kezhang.tliasbackend.controller;
 
 import com.kezhang.tliasbackend.common.Result;
 import com.kezhang.tliasbackend.constant.ErrorCodeEnum;
+import com.kezhang.tliasbackend.exception.DepartmentNotFoundException;
 import com.kezhang.tliasbackend.exception.EmployeeNotFoundException;
 import com.kezhang.tliasbackend.exception.NetworkException;
+import com.kezhang.tliasbackend.exception.PositionNotFoundException;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -52,11 +54,29 @@ public class GlobalExceptionHandler {
     }
 
     /*
+    * Handles department not found exceptions
+    * */
+    @ExceptionHandler(DepartmentNotFoundException.class)
+    public Result<?> handleDepartmentNotFoundException(DepartmentNotFoundException e){
+        log.error("A department not found error occurred: {}", e.getMessage(), e);
+        return Result.error(e.getCode(), e.getMessage());
+    }
+
+    /*
     * Handles employee not found exceptions
     * */
     @ExceptionHandler(EmployeeNotFoundException.class)
     public Result<?> handleEmployeeNotFoundException(EmployeeNotFoundException e){
         log.error("An employee not found error occurred: {}", e.getMessage(), e);
+        return Result.error(e.getCode(), e.getMessage());
+    }
+
+    /*
+    * Handles position not found exceptions
+    * */
+    @ExceptionHandler(PositionNotFoundException.class)
+    public Result<?> handlePositionNotFoundException(PositionNotFoundException e){
+        log.error("A position not found error occurred: {}", e.getMessage(), e);
         return Result.error(e.getCode(), e.getMessage());
     }
 }

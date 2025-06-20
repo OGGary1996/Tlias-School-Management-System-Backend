@@ -27,7 +27,7 @@ public class EmployeeResponseDTO {
     @Schema(description = "Department of employee")
     private String departmentName;   // 来自 d.name AS departmentName（注意别名对应）
     @Schema(description = "Job title of employee", example = "Lecturer/Professor")
-    private Integer jobTitle;        // 来自 e.job_title
+    private String jobTitle;        // 来自 p.name AS jobTitle（注意别名对应）
     @Schema(description = "Entry Date of employee", example = " 2023-01-01")
     private LocalDate entryDate;     // 来自 e.entry_date
     @Schema(description = "Last update time of employee", example = " 2023-01-01T12:00:00")

@@ -12,6 +12,7 @@ import com.kezhang.tliasbackend.exception.EmployeeNotFoundException;
 import com.kezhang.tliasbackend.mapper.DepartmentMapper;
 import com.kezhang.tliasbackend.mapper.EmployeeHistoryMapper;
 import com.kezhang.tliasbackend.mapper.EmployeeMapper;
+import com.kezhang.tliasbackend.mapper.PositionMapper;
 import com.kezhang.tliasbackend.service.EmployeeService;
 import com.kezhang.tliasbackend.utils.AliyunOssUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -30,12 +31,14 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeHistoryMapper employeeHistoryMapper;
     private final AliyunOssUtil aliyunOssUtil;
     private final DepartmentMapper departmentMapper;
+    private final PositionMapper positionMapper;
     @Autowired
-    public EmployeeServiceImpl(EmployeeMapper employeeMapper, EmployeeHistoryMapper employeeHistoryMapper, AliyunOssUtil aliyunOssUtil, DepartmentMapper departmentMapper) {
+    public EmployeeServiceImpl(EmployeeMapper employeeMapper, EmployeeHistoryMapper employeeHistoryMapper, AliyunOssUtil aliyunOssUtil, DepartmentMapper departmentMapper, PositionMapper positionMapper) {
         this.employeeMapper = employeeMapper;
         this.employeeHistoryMapper = employeeHistoryMapper;
         this.aliyunOssUtil = aliyunOssUtil;
         this.departmentMapper = departmentMapper;
+        this.positionMapper = positionMapper;
     }
 
 
@@ -130,20 +133,30 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     /*
     * 流程：
-    * 1. 将 EmployeeInsertDTO 转换为 Employee 实体对象
-    * 2. 插入 Employee 实体对象到数据库
-    * 3. 通过mapper.xml定义的useGeneratedKeys属性，获取插入后的主键ID
+    * 1. 根据jobTitle 查询职位ID
+    * 2. 根据departmentName 查询部门ID
+    * 3. 将 EmployeeInsertDTO 转换为 Employee 实体对象，并设置 jobTitleId 和 departmentId
+    * 4. 通过mapper.xml定义的useGeneratedKeys属性，获取插入后的主键ID
     * *     注意：EmployeeInsertDTO 中有一个子 DTO 的 employeeHistoryInsertDTO，
-    * 4. 使用 EmployeeInsertDTO.getEmployeeHistoryInsertDTOList() 获取员工历史信息列表
-    * 5. 将 EmployeeHistoryInsertDTOList 中的每一个EmployeeHistoryInsertDTO 转换为 EmployeeHistory 实体对象，并设置 employeeId
-    * 6. 批量插入 EmployeeHistory 实体对象到数据库
+    * 5. 使用 EmployeeInsertDTO.getEmployeeHistoryInsertDTOList() 获取员工历史信息列表
+    * 6. 将 EmployeeHistoryInsertDTOList 中的每一个EmployeeHistoryInsertDTO 转换为 EmployeeHistory 实体对象，并设置 employeeId
+    * 7. 批量插入 EmployeeHistory 实体对象到数据库
     * */
     @Transactional // 如果有RuntimeException，则回滚事务,所有插入操作全部回滚
     @Override
     public void insertEmployee(EmployeeInsertDTO employeeInsertDTO) {
+        // 1. 根据departmentName，获取departmentId
+        Integer departmentId = departmentMapper.selectDepartmentIdByName(employeeInsertDTO.getDepartmentName());
+        // 2. 根据jobTitle，获取Id
+        Integer jobId = positionMapper.selectPositionIdByName(employeeInsertDTO.getJobTitle());
+        log.info("Inserting new employee started. Department ID: {}, Job ID: {}", departmentId, jobId);
+
+        // 3. 将 EmployeeInsertDTO 转换为 Employee 实体对象，并设置 jobTitleId 和 departmentId
         log.info("Converting new employee started. DTO: {}", employeeInsertDTO);
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeInsertDTO, employee);
+        employee.setDepartmentId(departmentId); // 设置部门ID
+        employee.setJobTitle(jobId); // 设置职位ID
         log.info("Converted new employee to entity: {}", employee);
 
         log.info("Inserting new employee into the database started.");
@@ -205,12 +218,13 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     /*
-    * 流程：
+    * 由于可能存在多个员工的过往经历，所以 EmployeeUpdateCallbackDTO 中的 employeeHistoryUpdateCallbackDTOList 是一个 List。
+    * 想要实现这个功能，有两种方式：
     * 方法1:
-    *  1. 操作两个Mapper，1: EmployeeMapper，2: EmployeeHistoryMapper
+    *  1. 操作多个Mapper，1: EmployeeMapper，2: EmployeeHistoryMapper
     *  2. EmployeeMapper 因为涉及到多表查询，Employee Entity无法覆盖，直接返回 EmployeeUpdateCallbackDTO
     *  3. EmployeeHistoryMapper返回 EmployeeHistory Entity实体列表，需要转换为 EmployeeHistoryUpdateCallbackDTO 列表
-    *  4. 最终将EmployeeHistoryUpdateCallbackDTO 添加进到 EmployeeUpdateCallbackDTO 中
+    *  4. 最终将手动将 EmployeeHistoryUpdateCallbackDTO 添加进到 EmployeeUpdateCallbackDTO 中
     * 方法2:
     *  1. 操作一个Mapper，也就是EmployeeMapper，在其中指定ResultMap 手动映射多表查询结果到 EmployeeUpdateCallbackDTO
     *  2. 其中涉及到DTO和子DTO，需要在ResultMap中手动映射多个结果字段到List<子DTO>中
@@ -234,9 +248,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     /*
     * 流程：
-    *  1. 首先调用DepartmentMapper中的查询方法，查询部门信息，获取部门ID
-    *  2. 跟别将EmployeeUpdateCallbackDTO 转换为 Employee 实体对象,EmployeeHistoryUpdateCallbackDTO集合 转换为 EmployeeHistory 实体对象集合
-    *  3. 将 departmentId 设置到 Employee 实体对象中
+    *  1. 首先调用PositionMapper中的查询方法，查询职位信息，获取职位ID
+    *  2. 首先调用DepartmentMapper中的查询方法，查询部门信息，获取部门ID
+    *  3. 跟别将EmployeeUpdateCallbackDTO 转换为 Employee 实体对象,EmployeeHistoryUpdateCallbackDTO集合 转换为 EmployeeHistory 实体对象集合
+    *  4. 将 1,2 步获得的职位id和部门id 设置到 Employee 实体对象中
     *  4. 调用EmployeeMapper的updateEmployee方法更新员工信息，
     *  5. 删除原有的员工历史信息,然后对新的数据进行判空，如果为空，则不执行后续的插入操作，如果不为空，则执行后续的插入操作
     *  5. 调用EmployeeHistoryMapper的updateEmployeeHistory方法插入员工历史信息
@@ -247,12 +262,15 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void updateEmployee(EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO) {
         log.info("Updating employee started. DTO: {}", employeeUpdateCallbackDTO);
 
+        // 1. 首先根据职位名称获取职位ID
+        Integer jobId = positionMapper.selectPositionIdByName(employeeUpdateCallbackDTO.getJobTitle());
         // 1. 根据departmentName，获取departmentId
         Integer departmentId = departmentMapper.selectDepartmentIdByName(employeeUpdateCallbackDTO.getDepartmentName());
 
         // 2. 将 EmployeeUpdateCallbackDTO 转换为 Employee 实体对象
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeUpdateCallbackDTO, employee);
+        employee.setJobTitle(jobId); // 设置职位ID
         employee.setDepartmentId(departmentId); // 设置部门ID
         log.info("Converted employeeUpdateCallbackDTO to Employee entity: {}", employee);
 

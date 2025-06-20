@@ -39,13 +39,13 @@ public class EmployeeInsertDTO {
     @NotBlank(message = "Phone number cannot be blank")
     private String phone; // 员工手机号
 
-    @Schema(description = "Employee's jot title", example = "2", allowableValues = "1, 2, 3 ...")
+    @Schema(description = "Employee's jot title", example = "Software Engineer")
     @NotNull(message = "Job title cannot be null")
-    private Integer jobTitle;
+    private String jobTitle; // 来自position表
 
-    @Schema(description = "Employee's department ID", example = "1")
+    @Schema(description = "Employee's department name", example = "Engineering")
     @NotNull(message = "Department ID cannot be null")
-    private Integer departmentId;
+    private String departmentName; // 来自department表
 
     @Schema(description = "Employee's salary", example = "5000.00")
     @NotNull(message = "Salary cannot be null")
