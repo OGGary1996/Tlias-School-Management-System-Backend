@@ -1,7 +1,6 @@
 package com.kezhang.tliasbackend.service.impl;
 
-import com.kezhang.tliasbackend.dto.DepartmentEmployeeCountDTO;
-import com.kezhang.tliasbackend.dto.DepartmentEmployeeCountResponseDTO;
+import com.kezhang.tliasbackend.dto.*;
 import com.kezhang.tliasbackend.mapper.ReportMapper;
 import com.kezhang.tliasbackend.service.ReportService;
 import lombok.extern.slf4j.Slf4j;
@@ -27,7 +26,6 @@ public class ReportServiceImpl implements ReportService {
     * 1. 首先获取到DepartmentEmployeeCountDTO列表
     * 2. 将查询结果转换为前端需要的DTO类型对象 DepartmentEmployeeCountResponseDTOs
     * */
-
     @Override
     public DepartmentEmployeeCountResponseDTO getDepartmentEmployeeCount() {
         // 1. 首先获取到DepartmentEmployeeCountDTO列表
@@ -47,5 +45,44 @@ public class ReportServiceImpl implements ReportService {
         log.info("Final DepartmentEmployeeCountResponseDTO: {}", departmentEmployeeCountResponseDTO);
 
         return departmentEmployeeCountResponseDTO;
+    }
+
+    /*
+    * 流程：
+    *  1. 首先获取到PositionEmployeeCountDTO组成的List
+    *  2. 将查询结果转换为前端需要的DTO类型对象 PositionEmployeeCountResponseDTOs
+    * */
+    @Override
+    public PositionEmployeeCountResponseDTO getPositionEmployeeCount() {
+        log.info("Fetching position employee count data.");
+        // 1. 首先获取到PositionEmployeeCountDTO组成的List
+        List<PositionEmployeeCountDTO> positionEmployeeCountList = reportMapper.getPositionEmployeeCount();
+        log.info("Fetched position employee count data: {}", positionEmployeeCountList);
+
+        // 2. 将查询结果转换为前端需要的DTO类型对象 PositionEmployeeCountResponseDTOs
+        log.info("Converting fetched data to PositionEmployeeCountDTO.");
+        List<String> positionNameList = positionEmployeeCountList.stream().map(item -> item.getPositionName()).toList();
+        log.info("Converted position names: {}", positionNameList);
+        List<Integer> employeeCountList = positionEmployeeCountList.stream().map(item -> item.getEmployeeCount()).toList();
+        log.info("Converted employee counts: {}", employeeCountList);
+        PositionEmployeeCountResponseDTO positionEmployeeCountResponseDTO = new PositionEmployeeCountResponseDTO();
+        positionEmployeeCountResponseDTO.setPositionNameList(positionNameList);
+        positionEmployeeCountResponseDTO.setEmployeeCountList(employeeCountList);
+        log.info("Final PositionEmployeeCountResponseDTO: {}", positionEmployeeCountResponseDTO);
+
+        return positionEmployeeCountResponseDTO;
+    }
+
+    /*
+    * 流程：
+    *  1. 获取到员工性别和个数组成的对象列表
+    *  2. 返回结果
+    * */
+    @Override
+    public List<EmployeeGenderDTO> getEmployeeGenderCount() {
+        log.info("Fetching DTO from ReportMapper");
+        List<EmployeeGenderDTO> employeeGenderCountList = reportMapper.getEmployeeGenderCount();
+        log.info("Fetched DTO List: {}", employeeGenderCountList);
+        return employeeGenderCountList;
     }
 }

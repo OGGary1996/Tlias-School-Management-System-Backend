@@ -14,4 +14,27 @@
         GROUP BY d.id;
     </select>
 
+    <!-- 查询各个职位名称和对应的人数 -->
+    <select id="getPositionEmployeeCount" resultType="com.kezhang.tliasbackend.dto.PositionEmployeeCountDTO">
+        SELECT
+            p.name AS positionName,
+            COUNT(e.id) AS employeeCount
+        FROM position p
+        LEFT JOIN employee e ON p.id = e.job_title
+        GROUP BY p.id;
+    </select>
+
+    <!-- 查询员工性别对应数量 -->
+    <select id="getEmployeeGenderCount" resultType="com.kezhang.tliasbackend.dto.EmployeeGenderDTO">
+        SELECT
+            CASE gender
+                WHEN '0' THEN 'Female'
+                WHEN '1' THEN 'Male'
+                ELSE 'Not Specified'
+            END AS name,
+            COUNT(id) AS value
+        FROM employee
+        GROUP BY gender;
+    </select>
+
 </mapper>
