@@ -6,6 +6,7 @@ import com.kezhang.tliasbackend.exception.DepartmentNotFoundException;
 import com.kezhang.tliasbackend.exception.EmployeeNotFoundException;
 import com.kezhang.tliasbackend.exception.NetworkException;
 import com.kezhang.tliasbackend.exception.PositionNotFoundException;
+import com.kezhang.tliasbackend.exception.SubjectNotFoundException;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -77,6 +78,15 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(PositionNotFoundException.class)
     public Result<?> handlePositionNotFoundException(PositionNotFoundException e){
         log.error("A position not found error occurred: {}", e.getMessage(), e);
+        return Result.error(e.getCode(), e.getMessage());
+    }
+
+    /*
+    * Handles subject not found exceptions
+    * */
+    @ExceptionHandler(SubjectNotFoundException.class)
+    public Result<?> handleSubjectNotFoundException(SubjectNotFoundException e){
+        log.error("A subject not found error occurred: {}", e.getMessage(), e);
         return Result.error(e.getCode(), e.getMessage());
     }
 }

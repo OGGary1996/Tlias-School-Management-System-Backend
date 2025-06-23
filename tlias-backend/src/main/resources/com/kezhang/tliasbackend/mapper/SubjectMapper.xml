@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kezhang.tliasbackend.mapper.SubjectMapper">
+    <select id="selectAllSubjects" resultType="com.kezhang.tliasbackend.entity.Subject">
+        SELECT
+            id,
+            name,
+            description,
+            create_time,
+            update_time
+        FROM subject
+        ORDER BY update_time DESC;
+    </select>
+
+    <delete id="deleteSubjectById" parameterType="Integer">
+        DELETE FROM subject
+        WHERE id = #{id};
+    </delete>
+
+    <insert id="insertSubject" parameterType="com.kezhang.tliasbackend.entity.Subject">
+        INSERT INTO subject (name, description)
+            VALUES (#{name}, #{description});
+    </insert>
+
+    <select id="selectSubjectById" parameterType="Integer" resultType="com.kezhang.tliasbackend.entity.Subject">
+        SELECT
+            id,
+            name,
+            description,
+            create_time,
+            update_time
+        FROM subject
+        WHERE id = #{id};
+    </select>
+
+    <update id="updateSubjectById" parameterType="com.kezhang.tliasbackend.entity.Subject">
+        UPDATE subject
+        SET name = #{name}, description = #{description}
+        WHERE id = #{id};
+    </update>
+
+    <!-- 根据name选择id，用于新增、修改员工信息时，根据前端传递的name获取到id，提供给service修改id-->
+    <select id="selectSubjectIdByName">
+        SELECT id FROM subject WHERE name = #{name};
+    </select>
+</mapper> 
