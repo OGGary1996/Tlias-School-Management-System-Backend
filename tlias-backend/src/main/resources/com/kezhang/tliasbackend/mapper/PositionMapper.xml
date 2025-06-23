@@ -41,9 +41,4 @@
         SET name = #{name}, description = #{description}
         WHERE id = #{id};
     </update>
-
-    <!-- 根据name选择id，用于新增、修改员工信息时，根据前端传递的name获取到id，提供给service修改id-->
-    <select id="selectPositionIdByName">
-        SELECT id FROM position WHERE name = #{name};
-    </select>
 </mapper>

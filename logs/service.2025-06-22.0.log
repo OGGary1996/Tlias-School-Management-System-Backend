@@ -1,0 +1,52 @@
+2025-06-22 15:18:12 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - getAllClazzesByCondition: ClazzQueryParam(name=, beginDate=null, endDate=null, page=2, pageSize=10)
+2025-06-22 15:18:12 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Found 10 classes for the given query parameters.
+2025-06-22 15:22:57 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - getAllClazzesByCondition: ClazzQueryParam(name=, beginDate=null, endDate=null, page=2, pageSize=10)
+2025-06-22 15:22:57 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Found 10 classes for the given query parameters.
+2025-06-22 15:35:28 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - getAllClazzesByCondition: ClazzQueryParam(name=, beginDate=null, endDate=null, page=2, pageSize=10)
+2025-06-22 15:37:32 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - getAllClazzesByCondition: ClazzQueryParam(name=, beginDate=null, endDate=null, page=2, pageSize=10)
+2025-06-22 15:37:32 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Found 10 classes for the given query parameters.
+2025-06-22 17:20:37 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - insertClazzInfo: ClazzInsertDTO(name=DevOps Engineering - Cohort 3, room=IT-403, beginDate=2025-10-05, endDate=2026-04-15, masterName=Gloria Bell, subjectName=DevOps Engineering)
+2025-06-22 17:20:37 [http-nio-8080-exec-1] ERROR c.k.tliasbackend.service.impl.ClazzServiceImpl - Master not fdoun for name: Gloria Bell
+2025-06-22 17:22:49 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - insertClazzInfo: ClazzInsertDTO(name=DevOps Engineering - Cohort 3, room=IT-403, beginDate=2025-10-05, endDate=2026-04-15, masterName=Gloria Bell, subjectName=DevOps Engineering)
+2025-06-22 17:22:49 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master ID: 44, Subject ID: 10
+2025-06-22 17:22:49 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Clazz Entity: Clazz(id=null, name=DevOps Engineering - Cohort 3, room=IT-403, beginDate=2025-10-05, endDate=2026-04-15, masterId=44, subjectId=10, createTime=null, updateTime=null)
+2025-06-22 17:22:49 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Inserted class information successfully: DevOps Engineering - Cohort 3
+2025-06-22 17:49:55 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - deleteClazzById: [22]
+2025-06-22 17:51:01 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - deleteClazzById: [22]
+2025-06-22 17:51:01 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Status list for classes with IDs [22]: [Ongoing]
+2025-06-22 17:51:01 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.service.impl.ClazzServiceImpl - Cannot delete class with ongoing status.
+2025-06-22 17:54:55 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - deleteClazzById: [22]
+2025-06-22 17:54:55 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Status list for classes with IDs [22]: [Ongoing]
+2025-06-22 17:54:55 [http-nio-8080-exec-3] ERROR c.k.tliasbackend.service.impl.ClazzServiceImpl - Cannot delete class with ongoing status.
+2025-06-22 17:56:25 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - deleteClazzById: [22]
+2025-06-22 17:56:25 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Status list for classes with IDs [22]: [Ongoing]
+2025-06-22 17:56:25 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.service.impl.ClazzServiceImpl - Cannot delete class with ongoing status.
+2025-06-22 17:56:38 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - deleteClazzById: [23]
+2025-06-22 17:56:38 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Status list for classes with IDs [23]: [Upcoming]
+2025-06-22 17:56:38 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Deleted classes with IDs: [23]
+2025-06-22 18:55:43 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Fetching all subjects from the database started.
+2025-06-22 18:55:43 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Fetching all subjects from the database completed. Total subjects size: 10
+2025-06-22 18:56:45 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Inserting subject with name: test
+2025-06-22 18:56:45 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Insertion completed. Rows affected: 1
+2025-06-22 18:57:12 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Deleting subject with ID: 11
+2025-06-22 18:57:12 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Deletion of subject with ID: 11 completed. Rows affected: 1
+2025-06-22 18:57:49 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Retrieved subject with ID: 10
+2025-06-22 18:57:49 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - getSubjectById completed. Subject details: Subject(id=10, name=DevOps Engineering, description=Course teaching continuous integration/deployment, infrastructure as code, automation, and DevOps culture., createTime=2025-06-22T13:44:17, updateTime=2025-06-22T13:44:17)
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - getClazzInfoById: 22
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Retrieved class information: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-02-01, endDate=2025-08-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=2025-06-22T13:43:34, updateTime=2025-06-22T13:43:34)
+2025-06-22 22:02:39 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=, room=, beginDate=2025-03-05, endDate=2025-09-15, masterName=, subjectName=, createTime=null, updateTime=null)
+2025-06-22 22:02:39 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master Name: , Subject Name: 
+2025-06-22 22:02:39 [http-nio-8080-exec-5] ERROR c.k.tliasbackend.service.impl.ClazzServiceImpl - Master not found for name: 
+2025-06-22 22:14:14 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=null, updateTime=null)
+2025-06-22 22:14:14 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master Name: Matthew Baker, Subject Name: DevOps Engineering
+2025-06-22 22:14:14 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master ID: 25, Subject ID: 10
+2025-06-22 22:14:14 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Clazz Entity for update: Clazz(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterId=25, subjectId=10, createTime=null, updateTime=null)
+2025-06-22 22:14:48 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=null, updateTime=null)
+2025-06-22 22:14:48 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master Name: Matthew Baker, Subject Name: DevOps Engineering
+2025-06-22 22:14:49 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master ID: 25, Subject ID: 10
+2025-06-22 22:14:49 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Clazz Entity for update: Clazz(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterId=25, subjectId=10, createTime=null, updateTime=null)
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=null, updateTime=null)
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master Name: Matthew Baker, Subject Name: DevOps Engineering
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master ID: 25, Subject ID: 10
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Clazz Entity for update: Clazz(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterId=25, subjectId=10, createTime=null, updateTime=null)
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Updated class information successfully: DevOps Engineering - Cohort 2

@@ -50,11 +50,4 @@ public interface PositionMapper {
     * @return the number of rows affected by the update
     * */
     Integer updatePositionById(Position position);
-
-    /*
-    * Select a position id by its name.
-    * @param positionName the name of the position to be selected
-    * @return the id of the position if found, otherwise null
-    * */
-    Integer selectPositionIdByName(String name);
 }

@@ -1,7 +1,6 @@
 package com.kezhang.tliasbackend.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,10 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Schema(description = "DTO for update&callback a exist employee")
-public class EmployeeUpdateCallbackDTO {
+@Schema(description = "DTO for displaying employee information (for frontend display)")
+public class EmployeeDisplayDTO {
     @Schema(description = "Employee's ID", example = "1")
-    @NotNull(message = "Employee ID cannot be null")
     private Integer id; // 员工ID
 
     @Schema(description = "Employee's username", example = "JohnDoe")
@@ -34,10 +32,10 @@ public class EmployeeUpdateCallbackDTO {
     @Schema(description = "Employee's phone number", example = "1234567890")
     private String phone; // 员工手机号
 
-    @Schema(description = "Employee's jot title", example = "Professor")
+    @Schema(description = "Employee's job title name", example = "Software Engineer")
     private String jobTitle; // 来自position表的职位名称
 
-    @Schema(description = "Employee's department name", example = "Academic Affairs")
+    @Schema(description = "Employee's department name", example = "Engineering")
     private String departmentName; // 来自department表的部门名称
 
     @Schema(description = "Employee's salary", example = "5000.00")
@@ -50,6 +48,6 @@ public class EmployeeUpdateCallbackDTO {
     @Schema(description = "Employee's profile image URL", example = "http://example.com/image.jpg")
     private String image; // 员工头像图片地址
 
-    @Schema(description = "Employee's history")
-    private List<EmployeeHistoryUpdateCallbackDTO> employeeHistoryUpdateCallbackDTOList; // 员工历史记录列表
-}
+    @Schema(description = "Employee's work history list")
+    private List<EmployeeHistoryUpdateDisplayDTO> employeeHistoryUpdateDisplayDTOList; // 员工历史信息列表
+} 

@@ -49,4 +49,4 @@ public interface PositionService {
     * @return the number of rows affected by the update
     * */
     void updatePositionById(PositionUpdateDTO positionUpdateDTO);
-} 
+}

@@ -42,8 +42,4 @@
         WHERE id = #{id};
     </update>
 
-    <!-- 根据name选择id，用于新增、修改员工信息时，根据前端传递的name获取到id，提供给service修改id-->
-    <select id="selectSubjectIdByName">
-        SELECT id FROM subject WHERE name = #{name};
-    </select>
 </mapper> 

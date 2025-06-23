@@ -3,14 +3,22 @@ package com.kezhang.tliasbackend.service;
 
 import com.aliyuncs.exceptions.ClientException;
 import com.kezhang.tliasbackend.common.PageResult;
+import com.kezhang.tliasbackend.dto.EmployeeDisplayDTO;
 import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
 import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
-import com.kezhang.tliasbackend.dto.EmployeeUpdateCallbackDTO;
+import com.kezhang.tliasbackend.dto.EmployeeUpdateDTO;
 
 import java.util.List;
 
 public interface EmployeeService {
+    /*
+    * Select all employees with their department names and job titles.
+    * This method retrieves a list of EmployeeResponseDTO objects,
+    * @return List of EmployeeResponseDTO containing employee details
+    * */
+    List<EmployeeResponseDTO> selectAllEmployees();
+
 //    /*
 //    * !!! 基于传统 SQL 的分页接口 !!!
 //    * Select all employees with their department names and job titles.
@@ -57,14 +65,14 @@ public interface EmployeeService {
     void deleteEmployee(List<Integer> ids) throws ClientException;
 
     /*
-    * Select an employee by their ID.
+    * Select an employee by their ID for display purposes.
     * @Param id The ID of the employee to be selected
+    * @return EmployeeDisplayDTO containing employee details with department and position names
     * */
-    EmployeeUpdateCallbackDTO selectEmployeeById(Integer id);
+    EmployeeDisplayDTO selectEmployeeById(Integer id);
 
     /*
     * Update an existing employee's information and history. (employee + employee_history)
     * */
-    void updateEmployee(EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO);
-
+    void updateEmployee(EmployeeUpdateDTO employeeUpdateDTO);
 }

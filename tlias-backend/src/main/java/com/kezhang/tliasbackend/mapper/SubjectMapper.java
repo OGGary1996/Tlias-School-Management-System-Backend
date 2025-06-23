@@ -51,10 +51,4 @@ public interface SubjectMapper {
     * */
     Integer updateSubjectById(Subject subject);
 
-    /*
-    * Select a subject id by its name.
-    * @param subjectName the name of the subject to be selected
-    * @return the id of the subject if found, otherwise null
-    * */
-    Integer selectSubjectIdByName(String name);
 } 

@@ -6,7 +6,8 @@ import com.kezhang.tliasbackend.common.Result;
 import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
 import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
-import com.kezhang.tliasbackend.dto.EmployeeUpdateCallbackDTO;
+import com.kezhang.tliasbackend.dto.EmployeeUpdateDTO;
+import com.kezhang.tliasbackend.dto.EmployeeDisplayDTO;
 import com.kezhang.tliasbackend.service.EmployeeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -26,6 +27,17 @@ public class EmployeeController {
     @Autowired
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
+    }
+
+    @Operation(summary = "List all employees", description = "Retrieve a list of all employees with their department names and job titles")
+    @GetMapping("/all")
+    public Result<?> listAllEmployees(){
+        log.info("Fetching all employees from the service started.");
+        List<EmployeeResponseDTO> employeeResponseDTOS = employeeService.selectAllEmployees();
+        log.info("Fetching all employees from the service completed,Total employees size: {}",employeeResponseDTOS.size());
+
+        log.info("Returning employee response DTOs.");
+        return Result.success(employeeResponseDTOS);
     }
 
 //    /**
@@ -118,20 +130,20 @@ public class EmployeeController {
     @GetMapping("/{id}")
     public Result<?> getEmployeeById(@PathVariable("id") Integer id){
         log.info("Fetching employee by ID: {}", id);
-        EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO = employeeService.selectEmployeeById(id);
-        log.info("Fetched employee by ID completed. Employee details: {}", employeeUpdateCallbackDTO);
-        return Result.success(employeeUpdateCallbackDTO);
+        EmployeeDisplayDTO employeeDisplayDTO = employeeService.selectEmployeeById(id);
+        log.info("Fetched employee by ID completed. Employee details: {}", employeeDisplayDTO);
+        return Result.success(employeeDisplayDTO);
     }
     /*
     * 修改员工时的修改接口（员工信息 + 员工过往经历修改）
-    * @param employeeUpdateCallbackDTO 员工信息 DTO，注意DTO中包含了员工历史信息的子 DTO
+    * @param employeeUpdateDTO 员工信息 DTO，注意DTO中包含了员工历史信息的子 DTO
     * @return 成功或失败的结果
     * */
     @Operation(summary = "Update employee", description = "Update an existing employee's details")
     @PutMapping
-    public Result<?> updateEmployee(@RequestBody EmployeeUpdateCallbackDTO employeeUpdateCallbackDTO){
-        log.info("Updating employee started. DTO: {}", employeeUpdateCallbackDTO);
-        employeeService.updateEmployee(employeeUpdateCallbackDTO);
+    public Result<?> updateEmployee(@RequestBody EmployeeUpdateDTO employeeUpdateDTO){
+        log.info("Updating employee started. DTO: {}", employeeUpdateDTO);
+        employeeService.updateEmployee(employeeUpdateDTO);
         log.info("Updating employee completed.");
         return Result.success(null);
     }

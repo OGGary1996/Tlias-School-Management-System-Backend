@@ -4,6 +4,28 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.kezhang.tliasbackend.mapper.ClazzMapper">
+    <!-- 查询所有的Ongoing & Upcoming状态的Clazz信息，提供给前端下拉菜单选项 -->
+    <select id="selectAllOngoingAndUpcomingClazzes" resultType="com.kezhang.tliasbackend.dto.ClazzResponseDTO">
+        SELECT
+            c.id,
+            c.name,
+            c.room,
+            c.master_id,
+            e.name AS masterName,
+            c.begin_date,
+            c.end_date,
+            c.create_time,
+            c.update_time,
+            CASE
+                WHEN NOW() &lt; c.begin_date THEN 'Upcoming'
+                WHEN NOW() &gt; c.end_date THEN 'Ended'
+                ELSE 'Ongoing'
+            END AS status
+        FROM clazz c
+        LEFT JOIN employee e ON c.master_id = e.id
+        WHERE NOW() &lt;= c.end_date
+    </select>
+
     <!-- 查询所有的Clazz信息，用于条件分页查询 -->
     <select id="selectAllClazzesByCondition" resultType="com.kezhang.tliasbackend.dto.ClazzResponseDTO" parameterType="com.kezhang.tliasbackend.dto.ClazzQueryParam">
         SELECT
@@ -35,7 +57,7 @@
     </select>
 
     <!-- 新增单个Clazz信息 -->
-    <insert id="insertClazz" parameterType="com.kezhang.tliasbackend.dto.ClazzInsertDTO">
+    <insert id="insertClazz" parameterType="com.kezhang.tliasbackend.entity.Clazz">
         INSERT INTO clazz (name,room,begin_date,end_date,master_id,subject_id)
         VALUES (#{name},#{room},#{beginDate},#{endDate},#{masterId},#{subjectId})
     </insert>
@@ -63,7 +85,7 @@
     </delete>
 
     <!-- 获取单个班级信息 -->
-    <select id="getClazzById" resultType="com.kezhang.tliasbackend.dto.ClazzCallbackUpdateDTO">
+    <select id="getClazzById" resultType="com.kezhang.tliasbackend.dto.ClazzDisplayDTO">
         SELECT
             c.id,
             c.name,

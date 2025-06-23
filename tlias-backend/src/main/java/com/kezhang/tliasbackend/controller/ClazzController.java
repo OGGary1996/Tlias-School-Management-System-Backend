@@ -2,10 +2,11 @@ package com.kezhang.tliasbackend.controller;
 
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.common.Result;
-import com.kezhang.tliasbackend.dto.ClazzCallbackUpdateDTO;
+import com.kezhang.tliasbackend.dto.ClazzDisplayDTO;
 import com.kezhang.tliasbackend.dto.ClazzInsertDTO;
 import com.kezhang.tliasbackend.dto.ClazzQueryParam;
 import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
+import com.kezhang.tliasbackend.dto.ClazzUpdateDTO;
 import com.kezhang.tliasbackend.service.ClazzService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -24,6 +25,18 @@ public class ClazzController {
     @Autowired
     public ClazzController(ClazzService clazzService) {
         this.clazzService = clazzService;
+    }
+    /*
+    * Select all classes that are ongoing or upcoming, used for dropdown display
+    * @return Result containing List of ClazzResponseDTO
+    * */
+    @Operation(summary = "Select all classes that are ongoing or upcoming", description = "Select all classes that are ongoing or upcoming, used for dropdown display")
+    @GetMapping("/ongoing-and-upcoming")
+    public Result<?> getAllOngoingAndUpcomingClazzes() {
+        log.info("getAllOngoingAndUpcomingClazzes called.");
+        List<ClazzResponseDTO> clazzResponseDTOS = clazzService.getAllOngoingAndUpcomingClazzes();
+        log.info("getAllOngoingAndUpcomingClazzes: {}", clazzResponseDTOS);
+        return Result.success(clazzResponseDTOS);
     }
 
     /*
@@ -73,18 +86,18 @@ public class ClazzController {
     @GetMapping("/{id}")
     public Result<?> getClazzInfoById(@PathVariable("id") Integer id){
         log.info("getClazzInfoById: {}", id);
-        ClazzCallbackUpdateDTO clazzCallbackUpdateDTO = clazzService.getClazzInfoById(id);
-        log.info("getClazzInfoById completed successfully: {}", clazzCallbackUpdateDTO);
-        return Result.success(clazzCallbackUpdateDTO);
+        ClazzDisplayDTO clazzDisplayDTO = clazzService.getClazzInfoById(id);
+        log.info("getClazzInfoById completed successfully: {}", clazzDisplayDTO);
+        return Result.success(clazzDisplayDTO);
     }
     /*
     * Update class information by condition
     * */
     @Operation(summary = "Update class information by condition", description = "Update class information by condition")
     @PutMapping
-    public Result<?> updateClazzByCondition(@RequestBody ClazzCallbackUpdateDTO clazzCallbackUpdateDTO) {
-        log.info("updateClazzByCondition: {}", clazzCallbackUpdateDTO);
-        clazzService.updateClazzByCondition(clazzCallbackUpdateDTO);
+    public Result<?> updateClazzByCondition(@RequestBody ClazzUpdateDTO clazzUpdateDTO) {
+        log.info("updateClazzByCondition: {}", clazzUpdateDTO);
+        clazzService.updateClazzByCondition(clazzUpdateDTO);
         log.info("updateClazzByCondition completed successfully.");
         return Result.success(null);
     }

@@ -31,11 +31,10 @@ public class ClazzInsertDTO {
     @NotNull(message = "Class end date cannot be null")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate; // Class end date
-    @Schema(description = "Employee's name", example = "John Smith")
-    private String masterName; // Master ID
-    @Schema(description = "Subject's name", example = "Java Development")
-    @NotBlank(message = "Subject name cannot be blank")
-    @NotNull(message = "Subject name cannot be null")
-    private String subjectName; // Subject ID
-
+    @Schema(description = "Employee's ID", example = "1")
+    @NotNull(message = "Master ID cannot be null")
+    private Integer masterId; // Master ID
+    @Schema(description = "Subject's ID", example = "1")
+    @NotNull(message = "Subject ID cannot be null")
+    private Integer subjectId; // Subject ID
 }

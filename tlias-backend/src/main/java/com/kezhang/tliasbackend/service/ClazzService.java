@@ -2,14 +2,20 @@ package com.kezhang.tliasbackend.service;
 
 
 import com.kezhang.tliasbackend.common.PageResult;
-import com.kezhang.tliasbackend.dto.ClazzCallbackUpdateDTO;
+import com.kezhang.tliasbackend.dto.ClazzDisplayDTO;
 import com.kezhang.tliasbackend.dto.ClazzInsertDTO;
 import com.kezhang.tliasbackend.dto.ClazzQueryParam;
 import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
+import com.kezhang.tliasbackend.dto.ClazzUpdateDTO;
 
 import java.util.List;
 
 public interface ClazzService {
+    /*
+    * 查询所有Ongoing & Upcoming状态的班级信息，用于前端下拉菜单展示
+    * */
+    List<ClazzResponseDTO> getAllOngoingAndUpcomingClazzes();
+
     /*
     * 查询所有的班级信息，用于分页查询展示
     * */
@@ -26,11 +32,12 @@ public interface ClazzService {
     void deleteClazzById(List<Integer> ids);
 
     /*
-    * 获取单个班级信息
+    * 获取单个班级信息（用于回显）
     * */
-    ClazzCallbackUpdateDTO getClazzInfoById(Integer id);
+    ClazzDisplayDTO getClazzInfoById(Integer id);
+    
     /*
     * 修改单个班级信息
     * */
-    void updateClazzByCondition(ClazzCallbackUpdateDTO clazzCallbackUpdateDTO);
+    void updateClazzByCondition(ClazzUpdateDTO clazzUpdateDTO);
 }

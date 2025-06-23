@@ -4,6 +4,22 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.kezhang.tliasbackend.mapper.EmployeeMapper">
+    <!-- 因为涉及到多表查询，所以将返回类型指定为DTO而不是entity，entity中的单表字段覆盖不了多表查询的结果-->
+    <select id="selectAllEmployees" resultType="com.kezhang.tliasbackend.dto.EmployeeResponseDTO">
+        SELECT
+            e.username,
+            e.gender,
+            e.image,
+            d.name AS departmentName,
+            p.name AS jobTitle,
+            e.entry_date,
+            e.update_time
+        FROM employee e
+        LEFT JOIN department d ON e.department_id = d.id
+        LEFT JOIN position p ON e.job_title = p.id
+        ORDER BY e.update_time DESC;
+    </select>
+
     <!-- 传统方式实现的分页查询 -->
     <!-- 因为涉及到多表查询，所以将返回类型指定为DTO而不是entity，entity中的单表字段覆盖不了多表查询的结果-->
 <!--    <select id="selectAllEmployees" resultType="com.kezhang.tliasbackend.dto.EmployeeResponseDTO">-->
@@ -100,7 +116,7 @@
 
     <!-- 员工信息回显-->
     <!-- 使用多表查询，并且手动指定ResultMap封装嵌套DTO（一条主表信息，多个员工经历信息组成的集合） -->
-    <resultMap id="EmployeeUpdateCallbackDTOMap" type="com.kezhang.tliasbackend.dto.EmployeeUpdateCallbackDTO">
+    <resultMap id="EmployeeDisplayDTOMap" type="com.kezhang.tliasbackend.dto.EmployeeDisplayDTO">
         <!--主表信息封装-->
         <result column="username" property="username"/>
         <result column="name" property="name"/>
@@ -111,8 +127,8 @@
         <result column="salary" property="salary"/>
         <result column="entry_date" property="entryDate"/>
         <result column="image" property="image"/>
-        <!-- 嵌套集合 List<EmployeeHistoryUpdateCallbackDTO> 封装-->
-        <collection property="employeeHistoryUpdateCallbackDTOList" ofType="com.kezhang.tliasbackend.dto.EmployeeHistoryUpdateCallbackDTO">
+        <!-- 嵌套集合 List<EmployeeHistoryUpdateDisplayDTO> 封装-->
+        <collection property="employeeHistoryUpdateDisplayDTOList" ofType="com.kezhang.tliasbackend.dto.EmployeeHistoryUpdateDisplayDTO">
             <result column="start_date" property="startDate" />
             <result column="end_date" property="endDate" />
             <result column="previousJobTitle" property="jobTitle"/>
@@ -120,7 +136,7 @@
             <result column="employee_id" property="employeeId"/>
         </collection>
     </resultMap>
-    <select id="selectEmployeeById" resultMap="EmployeeUpdateCallbackDTOMap">
+    <select id="selectEmployeeById" resultMap="EmployeeDisplayDTOMap">
         SELECT
             e.username,
             e.name,
@@ -177,7 +193,7 @@
         WHERE id = #{id};
     </update>
 
-    <!-- 根据employeeName 获取id-->
+    <!-- 根据employeeName 获取id，用于班级管理中的班主任关联 -->
     <select id="selectEmployeeIdByName">
         SELECT id FROM employee WHERE name = #{name};
     </select>
