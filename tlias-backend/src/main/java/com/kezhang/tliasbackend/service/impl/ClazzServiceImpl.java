@@ -4,11 +4,13 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.constant.ErrorCodeEnum;
+import com.kezhang.tliasbackend.dto.ClazzCallbackUpdateDTO;
 import com.kezhang.tliasbackend.dto.ClazzInsertDTO;
 import com.kezhang.tliasbackend.dto.ClazzQueryParam;
 import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
 import com.kezhang.tliasbackend.entity.Clazz;
 import com.kezhang.tliasbackend.exception.ClazzNotAllowToDeleteException;
+import com.kezhang.tliasbackend.exception.ClazzNotFoundException;
 import com.kezhang.tliasbackend.exception.EmployeeNotFoundException;
 import com.kezhang.tliasbackend.exception.SubjectNotFoundException;
 import com.kezhang.tliasbackend.mapper.ClazzMapper;
@@ -122,5 +124,62 @@ public class ClazzServiceImpl implements ClazzService {
         // 如果所有班级状态都允许删除，则调用Mapper中的deleteClazzById方法删除班级信息
         clazzMapper.deleteClazzById(ids);
         log.info("Deleted classes with IDs: {}", ids);
+    }
+
+    /*
+    * 流程：
+    *  1. 调用Mapper中的getClazzById方法获取单个班级信息
+    * */
+    @Override
+    public ClazzCallbackUpdateDTO getClazzInfoById(Integer id) {
+        log.info("getClazzInfoById: {}", id);
+        ClazzCallbackUpdateDTO clazzCallbackUpdateDTO = clazzMapper.getClazzById(id);
+        if (clazzCallbackUpdateDTO == null) {
+            log.error("Class with ID {} not found.", id);
+            throw new ClazzNotFoundException(ErrorCodeEnum.CLAZZ_NOT_FOUND.getCode(), ErrorCodeEnum.CLAZZ_NOT_FOUND.getMessage());
+        }
+        log.info("Retrieved class information: {}", clazzCallbackUpdateDTO);
+        return clazzCallbackUpdateDTO;
+    }
+
+    /*
+    * 流程：
+    *  1. 首先需要获取到ClazzCallbackUpdateDTO中的masterName和subjectName
+    *  2. 通过EmployeeMapper, SubjectMapper等获取到对应的masterId和subjectId
+    *  3. 将所有的信息封装到Clazz Entity中
+    *  4. 调用Mapper中的updateClazzByCondition方法更新班级信息
+    * */
+    @Override
+    public void updateClazzByCondition(ClazzCallbackUpdateDTO clazzCallbackUpdateDTO) {
+        log.info("updateClazzByCondition: {}", clazzCallbackUpdateDTO);
+
+        // 获取masterName和subjectName
+        String masterName = clazzCallbackUpdateDTO.getMasterName();
+        String subjectName = clazzCallbackUpdateDTO.getSubjectName();
+        log.info("Master Name: {}, Subject Name: {}", masterName, subjectName);
+
+        // 获取masterId和subjectId
+        Integer masterId = employeeMapper.selectEmployeeIdByName(masterName);
+        if (masterId == null) {
+            log.error("Master not found for name: {}", masterName);
+            throw new EmployeeNotFoundException(ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getCode(), ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getMessage());
+        }
+        Integer subjectId = subjectMapper.selectSubjectIdByName(subjectName);
+        if (subjectId == null) {
+            log.error("Subject not found for name: {}", subjectName);
+            throw new SubjectNotFoundException(ErrorCodeEnum.SUBJECT_NOT_FOUND.getCode(), ErrorCodeEnum.SUBJECT_NOT_FOUND.getMessage());
+        }
+        log.info("Master ID: {}, Subject ID: {}", masterId, subjectId);
+
+        // 封装Clazz Entity
+        Clazz clazz = new Clazz();
+        BeanUtils.copyProperties(clazzCallbackUpdateDTO, clazz);
+        clazz.setMasterId(masterId);
+        clazz.setSubjectId(subjectId);
+        log.info("Clazz Entity for update: {}", clazz);
+
+        // 调用Mapper中的updateClazzByCondition方法更新班级信息
+        clazzMapper.updateClazzByCondition(clazz);
+        log.info("Updated class information successfully: {}", clazzCallbackUpdateDTO.getName());
     }
 }

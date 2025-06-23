@@ -2,6 +2,7 @@ package com.kezhang.tliasbackend.controller;
 
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.common.Result;
+import com.kezhang.tliasbackend.dto.ClazzCallbackUpdateDTO;
 import com.kezhang.tliasbackend.dto.ClazzInsertDTO;
 import com.kezhang.tliasbackend.dto.ClazzQueryParam;
 import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
@@ -62,6 +63,29 @@ public class ClazzController {
         log.info("deleteClazzById: {}", ids);
         clazzService.deleteClazzById(ids);
         log.info("deleteClazzById completed successfully.");
+        return Result.success(null);
+    }
+
+    /*
+    * Retrieve class information by ID
+    * */
+    @Operation(summary = "Retrieve class information by ID", description = "Retrieve class information by ID")
+    @GetMapping("/{id}")
+    public Result<?> getClazzInfoById(@PathVariable("id") Integer id){
+        log.info("getClazzInfoById: {}", id);
+        ClazzCallbackUpdateDTO clazzCallbackUpdateDTO = clazzService.getClazzInfoById(id);
+        log.info("getClazzInfoById completed successfully: {}", clazzCallbackUpdateDTO);
+        return Result.success(clazzCallbackUpdateDTO);
+    }
+    /*
+    * Update class information by condition
+    * */
+    @Operation(summary = "Update class information by condition", description = "Update class information by condition")
+    @PutMapping
+    public Result<?> updateClazzByCondition(@RequestBody ClazzCallbackUpdateDTO clazzCallbackUpdateDTO) {
+        log.info("updateClazzByCondition: {}", clazzCallbackUpdateDTO);
+        clazzService.updateClazzByCondition(clazzCallbackUpdateDTO);
+        log.info("updateClazzByCondition completed successfully.");
         return Result.success(null);
     }
 }

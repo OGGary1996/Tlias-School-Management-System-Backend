@@ -1221,3 +1221,465 @@ com.kezhang.tliasbackend.exception.ClazzNotAllowToDeleteException: Class cannot 
 2025-06-22 18:32:58 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
 2025-06-22 18:32:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-06-22 18:32:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-22 18:50:22 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 6994 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-22 18:50:22 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-22 18:50:23 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-22 18:50:23 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-22 18:50:23 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-22 18:50:23 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-22 18:50:23 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-22 18:50:23 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 340 ms
+2025-06-22 18:50:23 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-22 18:50:23 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-22 18:50:23 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-22 18:50:23 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.848 seconds (process running for 1.079)
+2025-06-22 18:55:29 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-22 18:55:29 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-22 18:55:29 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-22 18:55:29 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: Request method 'DELETE' is not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:509)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-22 18:55:43 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.SubjectController - Fetching all subjects from the service started.
+2025-06-22 18:55:43 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Fetching all subjects from the database started.
+2025-06-22 18:55:43 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-22 18:55:43 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a6c0473
+2025-06-22 18:55:43 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-22 18:55:43 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Fetching all subjects from the database completed. Total subjects size: 10
+2025-06-22 18:55:43 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.SubjectController - Fetching all subjects from the service completed. Total subjects size: 10
+2025-06-22 18:56:45 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.SubjectController - Creating a new subject with details: SubjectInsertDTO(name=test, description=test)
+2025-06-22 18:56:45 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Inserting subject with name: test
+2025-06-22 18:56:45 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Insertion completed. Rows affected: 1
+2025-06-22 18:56:45 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.SubjectController - Creation of new subject completed.
+2025-06-22 18:57:12 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.controller.SubjectController - Deleting subject with ID: 11
+2025-06-22 18:57:12 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Deleting subject with ID: 11
+2025-06-22 18:57:12 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Deletion of subject with ID: 11 completed. Rows affected: 1
+2025-06-22 18:57:12 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.controller.SubjectController - Deletion of subject with ID: 11 completed.
+2025-06-22 18:57:49 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.controller.SubjectController - Fetching subject with ID: 10
+2025-06-22 18:57:49 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - Retrieved subject with ID: 10
+2025-06-22 18:57:49 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.SubjectServiceImpl - getSubjectById completed. Subject details: Subject(id=10, name=DevOps Engineering, description=Course teaching continuous integration/deployment, infrastructure as code, automation, and DevOps culture., createTime=2025-06-22T13:44:17, updateTime=2025-06-22T13:44:17)
+2025-06-22 18:57:49 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.controller.SubjectController - Fetching subject with ID: 10 completed. Subject details: SubjectResponseDTO(id=10, name=DevOps Engineering, description=Course teaching continuous integration/deployment, infrastructure as code, automation, and DevOps culture., createTime=2025-06-22T13:44:17, updateTime=2025-06-22T13:44:17)
+2025-06-22 18:59:33 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-22 18:59:35 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-22 18:59:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-22 18:59:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-22 21:59:14 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 8680 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-22 21:59:14 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-22 21:59:15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-22 21:59:15 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-22 21:59:15 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-22 21:59:15 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-22 21:59:15 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-22 21:59:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 385 ms
+2025-06-22 21:59:15 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-22 21:59:15 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-22 21:59:15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-22 21:59:15 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.916 seconds (process running for 1.151)
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ClazzController - getClazzInfoById: 22
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - getClazzInfoById: 22
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@717d4655
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Retrieved class information: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-02-01, endDate=2025-08-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=2025-06-22T13:43:34, updateTime=2025-06-22T13:43:34)
+2025-06-22 21:59:49 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ClazzController - getClazzInfoById completed successfully: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-02-01, endDate=2025-08-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=2025-06-22T13:43:34, updateTime=2025-06-22T13:43:34)
+2025-06-22 22:02:39 [http-nio-8080-exec-5] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=, room=, beginDate=2025-03-05, endDate=2025-09-15, masterName=, subjectName=, createTime=null, updateTime=null)
+2025-06-22 22:02:39 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=, room=, beginDate=2025-03-05, endDate=2025-09-15, masterName=, subjectName=, createTime=null, updateTime=null)
+2025-06-22 22:02:39 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master Name: , Subject Name: 
+2025-06-22 22:02:39 [http-nio-8080-exec-5] ERROR c.k.tliasbackend.service.impl.ClazzServiceImpl - Master not found for name: 
+2025-06-22 22:02:39 [http-nio-8080-exec-5] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An employee not found error occurred: Employee not found.
+com.kezhang.tliasbackend.exception.EmployeeNotFoundException: Employee not found.
+	at com.kezhang.tliasbackend.service.impl.ClazzServiceImpl.updateClazzByCondition(ClazzServiceImpl.java:165)
+	at com.kezhang.tliasbackend.controller.ClazzController.updateClazzByCondition(ClazzController.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-22 22:14:14 [http-nio-8080-exec-8] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=null, updateTime=null)
+2025-06-22 22:14:14 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=null, updateTime=null)
+2025-06-22 22:14:14 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master Name: Matthew Baker, Subject Name: DevOps Engineering
+2025-06-22 22:14:14 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master ID: 25, Subject ID: 10
+2025-06-22 22:14:14 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Clazz Entity for update: Clazz(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterId=25, subjectId=10, createTime=null, updateTime=null)
+2025-06-22 22:14:14 [http-nio-8080-exec-8] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+### The error may exist in com/kezhang/tliasbackend/mapper/ClazzMapper.xml
+### The error may involve com.kezhang.tliasbackend.mapper.ClazzMapper.updateClazzByCondition-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE clazz          SET AND name = ?,                                           AND room = ?,                                           AND begin_date = ?,                                           AND end_date = ?,                                           AND master_id = ?,                                           AND subject_id = ?          WHERE id = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+; bad SQL grammar []
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+### The error may exist in com/kezhang/tliasbackend/mapper/ClazzMapper.xml
+### The error may involve com.kezhang.tliasbackend.mapper.ClazzMapper.updateClazzByCondition-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE clazz          SET AND name = ?,                                           AND room = ?,                                           AND begin_date = ?,                                           AND end_date = ?,                                           AND master_id = ?,                                           AND subject_id = ?          WHERE id = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+; bad SQL grammar []
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:93)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy78.updateClazzByCondition(Unknown Source)
+	at com.kezhang.tliasbackend.service.impl.ClazzServiceImpl.updateClazzByCondition(ClazzServiceImpl.java:182)
+	at com.kezhang.tliasbackend.controller.ClazzController.updateClazzByCondition(ClazzController.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:382)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy104.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy102.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	... 56 common frames omitted
+2025-06-22 22:14:23 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-22 22:14:25 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-22 22:14:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-22 22:14:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-22 22:14:27 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 8720 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-22 22:14:27 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-22 22:14:27 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-22 22:14:27 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-22 22:14:27 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-22 22:14:27 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-22 22:14:27 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-22 22:14:27 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 374 ms
+2025-06-22 22:14:27 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-22 22:14:27 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-22 22:14:27 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-22 22:14:27 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 1.034 seconds (process running for 1.289)
+2025-06-22 22:14:48 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-22 22:14:48 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-22 22:14:48 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-22 22:14:48 [http-nio-8080-exec-1] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=null, updateTime=null)
+2025-06-22 22:14:48 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=null, updateTime=null)
+2025-06-22 22:14:48 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master Name: Matthew Baker, Subject Name: DevOps Engineering
+2025-06-22 22:14:48 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-22 22:14:49 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21d3cd67
+2025-06-22 22:14:49 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-22 22:14:49 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master ID: 25, Subject ID: 10
+2025-06-22 22:14:49 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Clazz Entity for update: Clazz(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterId=25, subjectId=10, createTime=null, updateTime=null)
+2025-06-22 22:14:49 [http-nio-8080-exec-1] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+### The error may exist in com/kezhang/tliasbackend/mapper/ClazzMapper.xml
+### The error may involve com.kezhang.tliasbackend.mapper.ClazzMapper.updateClazzByCondition-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE clazz          SET AND name = ?,                                           AND room = ?,                                           AND begin_date = ?,                                           AND end_date = ?,                                           AND master_id = ?,                                           AND subject_id = ?          WHERE id = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+; bad SQL grammar []
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+### The error may exist in com/kezhang/tliasbackend/mapper/ClazzMapper.xml
+### The error may involve com.kezhang.tliasbackend.mapper.ClazzMapper.updateClazzByCondition-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE clazz          SET AND name = ?,                                           AND room = ?,                                           AND begin_date = ?,                                           AND end_date = ?,                                           AND master_id = ?,                                           AND subject_id = ?          WHERE id = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+; bad SQL grammar []
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:93)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy78.updateClazzByCondition(Unknown Source)
+	at com.kezhang.tliasbackend.service.impl.ClazzServiceImpl.updateClazzByCondition(ClazzServiceImpl.java:182)
+	at com.kezhang.tliasbackend.controller.ClazzController.updateClazzByCondition(ClazzController.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND name = 'DevOps Engineering - Cohort 2',
+            
+            
+          ' at line 2
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:382)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy106.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy104.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	... 56 common frames omitted
+2025-06-22 22:16:13 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-22 22:16:15 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-22 22:16:15 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-22 22:16:15 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-22 22:16:16 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 8736 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-22 22:16:16 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-22 22:16:16 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-22 22:16:16 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-22 22:16:16 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-22 22:16:16 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-22 22:16:16 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-22 22:16:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 376 ms
+2025-06-22 22:16:16 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-22 22:16:17 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-22 22:16:17 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-22 22:16:17 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.915 seconds (process running for 1.152)
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=null, updateTime=null)
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzCallbackUpdateDTO(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterName=Matthew Baker, subjectName=DevOps Engineering, createTime=null, updateTime=null)
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master Name: Matthew Baker, Subject Name: DevOps Engineering
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@390b2f4b
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Master ID: 25, Subject ID: 10
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Clazz Entity for update: Clazz(id=22, name=DevOps Engineering - Cohort 2, room=IT-402, beginDate=2025-03-01, endDate=2025-09-15, masterId=25, subjectId=10, createTime=null, updateTime=null)
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Updated class information successfully: DevOps Engineering - Cohort 2
+2025-06-22 22:16:20 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition completed successfully.
+2025-06-22 22:16:31 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-22 22:16:33 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-22 22:16:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-22 22:16:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

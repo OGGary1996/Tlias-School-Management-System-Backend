@@ -61,4 +61,47 @@
             #{id}
         </foreach>
     </delete>
+
+    <!-- 获取单个班级信息 -->
+    <select id="getClazzById" resultType="com.kezhang.tliasbackend.dto.ClazzCallbackUpdateDTO">
+        SELECT
+            c.id,
+            c.name,
+            c.room,
+            c.begin_date,
+            c.end_date,
+            e.name AS masterName,
+            s.name AS subjectName,
+            c.create_time,
+            c.update_time
+        FROM clazz c
+        LEFT JOIN employee e ON c.master_id = e.id
+        LEFT JOIN subject s ON c.subject_id = s.id
+        WHERE c.id = #{id}
+    </select>
+    <!-- 更新单个Clazz信息 -->
+    <update id="updateClazzByCondition" parameterType="com.kezhang.tliasbackend.entity.Clazz">
+        UPDATE clazz
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="room != null and room != ''">
+                room = #{room},
+            </if>
+            <if test="beginDate != null">
+                begin_date = #{beginDate},
+            </if>
+            <if test="endDate != null">
+                end_date = #{endDate},
+            </if>
+            <if test="masterId != null">
+                master_id = #{masterId},
+            </if>
+            <if test="subjectId != null">
+                subject_id = #{subjectId},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
 </mapper>

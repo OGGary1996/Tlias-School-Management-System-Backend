@@ -1,5 +1,6 @@
 package com.kezhang.tliasbackend.mapper;
 
+import com.kezhang.tliasbackend.dto.ClazzCallbackUpdateDTO;
 import com.kezhang.tliasbackend.dto.ClazzQueryParam;
 import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
 import com.kezhang.tliasbackend.entity.Clazz;
@@ -25,4 +26,13 @@ public interface ClazzMapper {
     * 删除单个班级信息
     * */
     void deleteClazzById(List<Integer> ids);
+
+    /*
+    * 获取单个班级信息
+    * */
+    ClazzCallbackUpdateDTO getClazzById(Integer id);
+    /*
+    * 修改单个班级信息
+    * */
+    void updateClazzByCondition(Clazz clazz);
 }
