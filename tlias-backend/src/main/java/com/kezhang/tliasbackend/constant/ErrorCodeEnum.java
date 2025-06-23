@@ -22,6 +22,9 @@ public enum ErrorCodeEnum {
     DEPARTMENT_NOT_FOUND(1001, "Department not found."),
     EMPLOYEE_NOT_FOUND(1002, "Employee not found."),
     POSITION_NOT_FOUND(1003, "Position not found."),
+    SUBJECT_NOT_FOUND(1004, "Subject not found."),
+    CLAZZ_NOT_FOUND(1005, "Class not found."),
+    CLAZZ_NOT_ALLOWED_TO_DELETE(1006, "Class cannot be deleted, it's ongoing.")
 
     ;
 

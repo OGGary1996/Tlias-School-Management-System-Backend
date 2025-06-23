@@ -85,4 +85,9 @@ public interface EmployeeMapper {
     * @param employeeUpdateCallbackDTO The DTO containing the updated details of the employee
     * */
     Integer updateEmployeeById(Employee employee);
+
+    /*
+    * Select employee's Id by their name.
+    * */
+    Integer selectEmployeeIdByName(String employeeName);
 }

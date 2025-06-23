@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kezhang.tliasbackend.mapper.ClazzMapper">
+    <!-- 查询所有的Clazz信息，用于条件分页查询 -->
+    <select id="selectAllClazzesByCondition" resultType="com.kezhang.tliasbackend.dto.ClazzResponseDTO" parameterType="com.kezhang.tliasbackend.dto.ClazzQueryParam">
+        SELECT
+            c.id,
+            c.name,
+            c.room,
+            c.master_id,
+            e.name AS masterName,
+            c.begin_date,
+            c.end_date,
+            c.create_time,
+            c.update_time,
+            CASE
+                WHEN NOW() &lt; c.begin_date THEN 'Upcoming'
+                WHEN NOW() &gt; c.end_date THEN 'Ended'
+                ELSE 'Ongoing'
+            END AS status
+        FROM clazz c
+        LEFT JOIN employee e ON c.master_id = e.id
+        <where>
+            <if test="name != null and name != ''">
+                AND c.name LIKE CONCAT('%',#{name},'%')
+            </if>
+            <if test="beginDate != null and endDate != null">
+                AND c.begin_date BETWEEN #{beginDate} and #{endDate}
+            </if>
+        </where>
+        ORDER by update_time DESC
+    </select>
+
+    <!-- 新增单个Clazz信息 -->
+    <insert id="insertClazz" parameterType="com.kezhang.tliasbackend.dto.ClazzInsertDTO">
+        INSERT INTO clazz (name,room,begin_date,end_date,master_id,subject_id)
+        VALUES (#{name},#{room},#{beginDate},#{endDate},#{masterId},#{subjectId})
+    </insert>
+
+    <!-- 获取班级的status状态，用于删除前的判断 -->
+    <select id="getClazzStatusById">
+        SELECT
+            CASE
+                WHEN NOW() &lt; c.begin_date THEN 'Upcoming'
+                WHEN NOW() &gt; c.end_date THEN 'Ended'
+                ELSE 'Ongoing'
+            END AS status
+        FROM clazz c
+        WHERE c.id IN
+        <foreach item="id" collection="ids" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+    <!-- 删除Clazz -->
+    <delete id="deleteClazzById">
+        DELETE FROM clazz WHERE id IN
+        <foreach item="id" collection="ids" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

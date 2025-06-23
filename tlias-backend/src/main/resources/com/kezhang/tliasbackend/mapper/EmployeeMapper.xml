@@ -175,6 +175,11 @@
             </if>
         </set>
         WHERE id = #{id};
-</update>
+    </update>
+
+    <!-- 根据employeeName 获取id-->
+    <select id="selectEmployeeIdByName">
+        SELECT id FROM employee WHERE name = #{name};
+    </select>
 
 </mapper>
