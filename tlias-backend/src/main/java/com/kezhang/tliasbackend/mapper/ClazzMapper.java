@@ -1,6 +1,5 @@
 package com.kezhang.tliasbackend.mapper;
 
-import com.kezhang.tliasbackend.dto.ClazzDisplayDTO;
 import com.kezhang.tliasbackend.dto.ClazzQueryParam;
 import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
 import com.kezhang.tliasbackend.entity.Clazz;
@@ -35,7 +34,7 @@ public interface ClazzMapper {
     /*
     * 获取单个班级信息（用于回显）
     * */
-    ClazzDisplayDTO getClazzById(Integer id);
+    Clazz getClazzById(Integer id);
     /*
     * 修改单个班级信息
     * */

@@ -85,20 +85,18 @@
     </delete>
 
     <!-- 获取单个班级信息 -->
-    <select id="getClazzById" resultType="com.kezhang.tliasbackend.dto.ClazzDisplayDTO">
+    <select id="getClazzById" resultType="com.kezhang.tliasbackend.entity.Clazz">
         SELECT
             c.id,
             c.name,
             c.room,
             c.begin_date,
             c.end_date,
-            e.name AS masterName,
-            s.name AS subjectName,
+            c.master_id,
+            c.subject_id,
             c.create_time,
             c.update_time
         FROM clazz c
-        LEFT JOIN employee e ON c.master_id = e.id
-        LEFT JOIN subject s ON c.subject_id = s.id
         WHERE c.id = #{id}
     </select>
     <!-- 更新单个Clazz信息 -->

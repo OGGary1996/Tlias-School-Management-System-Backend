@@ -3,7 +3,6 @@ package com.kezhang.tliasbackend.service;
 
 import com.aliyuncs.exceptions.ClientException;
 import com.kezhang.tliasbackend.common.PageResult;
-import com.kezhang.tliasbackend.dto.EmployeeDisplayDTO;
 import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
 import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
@@ -69,7 +68,7 @@ public interface EmployeeService {
     * @Param id The ID of the employee to be selected
     * @return EmployeeDisplayDTO containing employee details with department and position names
     * */
-    EmployeeDisplayDTO selectEmployeeById(Integer id);
+    EmployeeUpdateDTO selectEmployeeById(Integer id);
 
     /*
     * Update an existing employee's information and history. (employee + employee_history)

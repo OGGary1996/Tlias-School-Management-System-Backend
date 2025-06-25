@@ -13,5 +13,5 @@ public class PositionEmployeeCountDTO {
     @Schema(description = "Position Name", example = "Software Engineer")
     private String positionName;
     @Schema(description = "Employee Count", example = "25")
-    private Integer employeeCount;
+    private Long employeeCount;
 }

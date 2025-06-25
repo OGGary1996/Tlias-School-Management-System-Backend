@@ -1,4 +1,4 @@
-package com.kezhang.tliasbackend.constant;
+package com.kezhang.tliasbackend.utils;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

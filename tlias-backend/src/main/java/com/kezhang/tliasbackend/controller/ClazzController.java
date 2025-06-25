@@ -2,7 +2,6 @@ package com.kezhang.tliasbackend.controller;
 
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.common.Result;
-import com.kezhang.tliasbackend.dto.ClazzDisplayDTO;
 import com.kezhang.tliasbackend.dto.ClazzInsertDTO;
 import com.kezhang.tliasbackend.dto.ClazzQueryParam;
 import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
@@ -86,9 +85,9 @@ public class ClazzController {
     @GetMapping("/{id}")
     public Result<?> getClazzInfoById(@PathVariable("id") Integer id){
         log.info("getClazzInfoById: {}", id);
-        ClazzDisplayDTO clazzDisplayDTO = clazzService.getClazzInfoById(id);
-        log.info("getClazzInfoById completed successfully: {}", clazzDisplayDTO);
-        return Result.success(clazzDisplayDTO);
+        ClazzUpdateDTO clazzUpdateDTO = clazzService.getClazzInfoById(id);
+        log.info("getClazzInfoById completed successfully: {}", clazzUpdateDTO);
+        return Result.success(clazzUpdateDTO);
     }
     /*
     * Update class information by condition

@@ -20,5 +20,5 @@ public class DepartmentEmployeeCountDTO {
     @Schema(description = "Department names")
     private String departmentName;
     @Schema(description = "Employee counts corresponding to each department")
-    private Integer employeeCount;
+    private Long employeeCount;
 }

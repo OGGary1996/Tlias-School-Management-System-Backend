@@ -4,39 +4,28 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.constant.ErrorCodeEnum;
-import com.kezhang.tliasbackend.dto.ClazzDisplayDTO;
 import com.kezhang.tliasbackend.dto.ClazzInsertDTO;
 import com.kezhang.tliasbackend.dto.ClazzQueryParam;
 import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
 import com.kezhang.tliasbackend.dto.ClazzUpdateDTO;
 import com.kezhang.tliasbackend.entity.Clazz;
 import com.kezhang.tliasbackend.exception.ClazzNotAllowToDeleteException;
-import com.kezhang.tliasbackend.exception.ClazzNotFoundException;
-import com.kezhang.tliasbackend.exception.EmployeeNotFoundException;
-import com.kezhang.tliasbackend.exception.SubjectNotFoundException;
 import com.kezhang.tliasbackend.mapper.ClazzMapper;
-import com.kezhang.tliasbackend.mapper.EmployeeMapper;
-import com.kezhang.tliasbackend.mapper.SubjectMapper;
 import com.kezhang.tliasbackend.service.ClazzService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service
 @Slf4j
 public class ClazzServiceImpl implements ClazzService {
     private final ClazzMapper clazzMapper; // Assuming ClazzMapper is injected here
-    private final SubjectMapper subjectMapper; // Assuming SubjectMapper is injected here
-    private final EmployeeMapper employeeMapper;
     @Autowired
-    public ClazzServiceImpl(ClazzMapper clazzMapper, SubjectMapper subjectMapper, EmployeeMapper employeeMapper) {
+    public ClazzServiceImpl(ClazzMapper clazzMapper) {
         this.clazzMapper = clazzMapper;
-        this.subjectMapper = subjectMapper;
-        this.employeeMapper = employeeMapper;
     }
 
 
@@ -129,17 +118,17 @@ public class ClazzServiceImpl implements ClazzService {
     /*
     * 流程：
     *  1. 调用Mapper中的getClazzById方法获取单个班级信息
+    *  2. 将获取到的班级信息封装为ClazzUpdateDTO对象
     * */
     @Override
-    public ClazzDisplayDTO getClazzInfoById(Integer id) {
+    public ClazzUpdateDTO getClazzInfoById(Integer id) {
         log.info("getClazzInfoById: {}", id);
-        ClazzDisplayDTO clazzDisplayDTO = clazzMapper.getClazzById(id);
-        if (clazzDisplayDTO == null) {
-            log.error("Class with ID {} not found.", id);
-            throw new ClazzNotFoundException(ErrorCodeEnum.CLAZZ_NOT_FOUND.getCode(), ErrorCodeEnum.CLAZZ_NOT_FOUND.getMessage());
-        }
-        log.info("Retrieved class information: {}", clazzDisplayDTO);
-        return clazzDisplayDTO;
+        Clazz clazz = clazzMapper.getClazzById(id);
+        log.info("Retrieved class entity: {}", clazz);
+        ClazzUpdateDTO clazzUpdateDTO = new ClazzUpdateDTO();
+        BeanUtils.copyProperties(clazz, clazzUpdateDTO);
+        log.info("Retrieved class information: {}", clazzUpdateDTO);
+        return clazzUpdateDTO;
     }
 
     /*

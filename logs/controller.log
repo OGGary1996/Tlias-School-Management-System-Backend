@@ -1,14 +1,17 @@
-2025-06-23 13:45:55 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.DepartmentController - Fetching all department names for dropdown menus started.
-2025-06-23 13:45:55 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.DepartmentController - Fetching all department names for dropdown menus completed. Total department names size: 10
-2025-06-23 13:46:05 [http-nio-8080-exec-3] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: No static resource position/names.
-org.springframework.web.servlet.resource.NoResourceFoundException: No static resource position/names.
-	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
-	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2025-06-24 10:31:15 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: Request method 'DELETE' is not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:509)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -44,15 +47,58 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-06-23 13:46:15 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.controller.PositionController - Fetching all position names from the service started.
-2025-06-23 13:46:15 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.controller.PositionController - Fetching all position names from the service completed. Total position names size: 10
-2025-06-23 14:27:17 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "names"
-org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "names"
-	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:301)
-	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:136)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+2025-06-24 10:31:48 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.StudentController - Received request to delete students with IDs: [146]
+2025-06-24 10:31:48 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.StudentController - Students deleted successfully with IDs: [146]
+2025-06-24 11:20:45 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
+2025-06-24 11:20:46 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
+            e.salary,
+            e.entry_date,
+            e.im' at line 7
+### The error may exist in com/kezhang/tliasbackend/mapper/EmployeeMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT             e.username,             e.name,             e.gender,             e.phone,             e.job_title             e.department_id,             e.salary,             e.entry_date,             e.image,             eh.start_date,             eh.end_date,             eh.job_title AS previousJobTitle,             eh.company_name AS previousCompanyName,             eh.employee_id         FROM employee e         LEFT JOIN employee_history eh ON e.id = eh.employee_id         WHERE e.id = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
+            e.salary,
+            e.entry_date,
+            e.im' at line 7
+; bad SQL grammar []
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
+            e.salary,
+            e.entry_date,
+            e.im' at line 7
+### The error may exist in com/kezhang/tliasbackend/mapper/EmployeeMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT             e.username,             e.name,             e.gender,             e.phone,             e.job_title             e.department_id,             e.salary,             e.entry_date,             e.image,             eh.start_date,             eh.end_date,             eh.job_title AS previousJobTitle,             eh.company_name AS previousCompanyName,             eh.employee_id         FROM employee e         LEFT JOIN employee_history eh ON e.id = eh.employee_id         WHERE e.id = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
+            e.salary,
+            e.entry_date,
+            e.im' at line 7
+; bad SQL grammar []
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:93)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:154)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectEmployeeById(Unknown Source)
+	at com.kezhang.tliasbackend.service.impl.EmployeeServiceImpl.selectEmployeeById(EmployeeServiceImpl.java:241)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:724)
+	at com.kezhang.tliasbackend.service.impl.EmployeeServiceImpl$$SpringCGLIB$$0.selectEmployeeById(<generated>)
+	at com.kezhang.tliasbackend.controller.EmployeeController.getEmployeeById(EmployeeController.java:133)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
@@ -97,31 +143,345 @@ org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: M
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.lang.NumberFormatException: For input string: "names"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
-	at java.base/java.lang.Integer.parseInt(Integer.java:662)
-	at java.base/java.lang.Integer.valueOf(Integer.java:989)
-	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:201)
-	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
-	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:439)
-	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:412)
-	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:161)
-	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:80)
-	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
-	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:867)
-	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:293)
-	... 48 common frames omitted
-2025-06-23 14:27:57 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching all employee names started.
-2025-06-23 14:27:57 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched all employee names completed. Total names: 50
-2025-06-23 15:42:57 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. DTO: EmployeeQueryParam(name=null, gender=null, startDate=null, endDate=null, page=1, pageSize=10)
-2025-06-23 15:42:57 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 50, Records size: 10
-2025-06-23 15:43:01 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.DepartmentController - Fetching all departments from the service started.
-2025-06-23 15:43:01 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.DepartmentController - Fetching all departments from the service completed. Total departments size: 10
-2025-06-23 15:43:06 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.controller.PositionController - Fetching all positions from the service started.
-2025-06-23 15:43:06 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.controller.PositionController - Fetching all positions from the service completed. Total positions size: 10
-2025-06-23 15:43:11 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 1
-2025-06-23 15:43:11 [http-nio-8080-exec-6] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeDisplayDTO(id=null, username=JohnSmith, name=John Smith, gender=1, phone=6173520981, jobTitle=Administrative Coordinator, departmentName=Admissions, salary=61906.65, entryDate=2020-06-15, image=https://i.pravatar.cc/250?u=JohnSmith, employeeHistoryUpdateDisplayDTOList=[EmployeeHistoryUpdateDisplayDTO(startDate=2015-03-10, endDate=2020-06-01, jobTitle=Administrative Assistant, companyName=Boston University, employeeId=1), EmployeeHistoryUpdateDisplayDTO(startDate=2012-07-15, endDate=2015-02-28, jobTitle=Office Clerk, companyName=Massachusetts General Hospital, employeeId=1)])
-2025-06-23 15:43:36 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.controller.EmployeeController - Updating employee started. DTO: EmployeeUpdateDTO(id=1, username=JohnSmith, name=John Smith Updated, gender=1, phone=6173520981, jobTitle=null, departmentId=1, salary=65000.00, entryDate=2020-06-15, image=https://i.pravatar.cc/250?u=JohnSmith, employeeHistoryUpdateDisplayDTOList=[EmployeeHistoryUpdateDisplayDTO(startDate=2015-03-10, endDate=2020-06-01, jobTitle=Administrative Assistant, companyName=Boston University, employeeId=1)])
-2025-06-23 15:43:36 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.controller.EmployeeController - Updating employee completed.
-2025-06-23 15:43:40 [http-nio-8080-exec-10] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 1
-2025-06-23 15:43:40 [http-nio-8080-exec-10] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeDisplayDTO(id=null, username=JohnSmith, name=John Smith Updated, gender=1, phone=6173520981, jobTitle=Administrative Coordinator, departmentName=Admissions, salary=65000.00, entryDate=2020-06-15, image=https://i.pravatar.cc/250?u=JohnSmith, employeeHistoryUpdateDisplayDTOList=[EmployeeHistoryUpdateDisplayDTO(startDate=2015-03-10, endDate=2020-06-01, jobTitle=Administrative Assistant, companyName=Boston University, employeeId=1)])
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
+            e.salary,
+            e.entry_date,
+            e.im' at line 7
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:382)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy105.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:151)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy103.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	... 61 common frames omitted
+2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
+2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=null, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDisplayDTOList=[])
+2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
+2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=null, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDisplayDTOList=[])
+2025-06-24 11:23:31 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
+2025-06-24 11:23:32 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=48, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDisplayDTOList=[])
+2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
+2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=48, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDTOList=[])
+2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ClazzController - getClazzInfoById: 4
+2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ClazzController - getClazzInfoById completed successfully: ClazzUpdateDTO(id=4, name=Web Development - Cohort 20, room=CS-201, beginDate=2024-10-01, endDate=2025-04-15, masterId=8, subjectId=2, createTime=2025-06-22T13:43:34, updateTime=2025-06-22T13:43:34)
+2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to get student by ID: 4
+2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Returning student details: StudentUpdateDTO(id=4, name=Olivia Martinez, accountNumber=S11001, gender=0, phone=6175550201, idCard=330101200002104567, address=234 Beacon Street, Boston, MA 02116, clazzId=2, isCollege=1, degree=1, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
+2025-06-24 12:18:02 [http-nio-8080-exec-5] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition: ClazzUpdateDTO(id=145, name=Ke Zhang, room=null, beginDate=null, endDate=null, masterId=null, subjectId=null, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
+2025-06-24 12:18:02 [http-nio-8080-exec-5] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition completed successfully.
+2025-06-24 12:20:08 [http-nio-8080-exec-8] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition: ClazzUpdateDTO(id=144, name=Ke Zhang, room=null, beginDate=null, endDate=null, masterId=null, subjectId=null, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
+2025-06-24 12:20:08 [http-nio-8080-exec-8] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition completed successfully.
+2025-06-24 12:22:25 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.StudentController - Received request to update student: StudentUpdateDTO(id=145, name=Ke Zhang, accountNumber=, gender=0, phone=, idCard=, address=, clazzId=15, isCollege=1, degree=4, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
+2025-06-24 12:22:25 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.StudentController - Student updated successfully: StudentUpdateDTO(id=145, name=Ke Zhang, accountNumber=, gender=0, phone=, idCard=, address=, clazzId=15, isCollege=1, degree=4, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
+2025-06-24 12:52:58 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to update violation score for student ID: 145, score: 10
+2025-06-24 12:52:58 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: 
+### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+### The error may exist in com/kezhang/tliasbackend/mapper/StudentMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: UPDATE student         SET violation_score = violation_score + ?,             violation_count = violation_count + 1         WHERE id = ?
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+org.mybatis.spring.MyBatisSystemException: 
+### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+### The error may exist in com/kezhang/tliasbackend/mapper/StudentMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: UPDATE student         SET violation_score = violation_score + ?,             violation_count = violation_count + 1         WHERE id = ?
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy86.updateViolationScoreById(Unknown Source)
+	at com.kezhang.tliasbackend.service.impl.StudentServiceImpl.updateViolationScoreById(StudentServiceImpl.java:137)
+	at com.kezhang.tliasbackend.controller.StudentController.updateViolationScoreById(StudentController.java:106)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:210)
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:46)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy103.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	... 56 common frames omitted
+2025-06-24 12:54:10 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to update violation score for student ID: 145, score: 10
+2025-06-24 12:54:10 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: 
+### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+### The error may exist in com/kezhang/tliasbackend/mapper/StudentMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: UPDATE student         SET violation_score = violation_score + ?,             violation_count = violation_count + 1         WHERE id = ?
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+org.mybatis.spring.MyBatisSystemException: 
+### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+### The error may exist in com/kezhang/tliasbackend/mapper/StudentMapper.xml
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: UPDATE student         SET violation_score = violation_score + ?,             violation_count = violation_count + 1         WHERE id = ?
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy86.updateViolationScoreById(Unknown Source)
+	at com.kezhang.tliasbackend.service.impl.StudentServiceImpl.updateViolationScoreById(StudentServiceImpl.java:137)
+	at com.kezhang.tliasbackend.controller.StudentController.updateViolationScoreById(StudentController.java:106)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:210)
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:46)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy103.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	... 56 common frames omitted
+2025-06-24 12:54:44 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to update violation score for student ID: 145, score: 10
+2025-06-24 12:54:45 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Violation score updated successfully for student ID: 145
+2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to update violation score for student ID: 145, score: 5
+2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Violation score updated successfully for student ID: 145
+2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  c.kezhang.tliasbackend.controller.ReportController - Received request for student degree report.
+2025-06-24 13:53:20 [http-nio-8080-exec-1] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: class java.lang.Long cannot be cast to class java.lang.Integer (java.lang.Long and java.lang.Integer are in module java.base of loader 'bootstrap')
+java.lang.ClassCastException: class java.lang.Long cannot be cast to class java.lang.Integer (java.lang.Long and java.lang.Integer are in module java.base of loader 'bootstrap')
+	at com.kezhang.tliasbackend.service.impl.ReportServiceImpl.lambda$getStudentDegreeCount$4(ReportServiceImpl.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.kezhang.tliasbackend.service.impl.ReportServiceImpl.getStudentDegreeCount(ReportServiceImpl.java:107)
+	at com.kezhang.tliasbackend.controller.ReportController.studentDegreeReport(ReportController.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ReportController - Received request for student degree report.
+2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ReportController - Returning student degree report data: [StudentDegreeReportDTO(name=Bachelor's Degree, value=53), StudentDegreeReportDTO(name=Master's Degree, value=45), StudentDegreeReportDTO(name=Undergraduate, value=28), StudentDegreeReportDTO(name=Doctorate Degree, value=18), StudentDegreeReportDTO(name=Unknown Degree, value=1)]
+2025-06-24 22:13:31 [http-nio-8080-exec-1] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: No static resource reports/student-calzz-count.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource reports/student-calzz-count.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.ReportController - Received request for student class report.
+2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.ReportController - Returning student class report data: StudentClazzCountDTO(clazzNameList=[Java Development - Cohort 10, Java Development - Cohort 11, Java Development - Cohort 12, Web Development - Cohort 20, Web Development - Cohort 21, Web Development - Cohort 22, Database Administration - Cohort 5, Database Administration - Cohort 6, Mobile App Development - Cohort 8, Mobile App Development - Cohort 9, Network Security - Cohort 7, Network Security - Cohort 8, Data Science - Cohort 4, Data Science - Cohort 5, Cloud Computing - Cohort 3, Cloud Computing - Cohort 4, Software Engineering - Cohort 6, Software Engineering - Cohort 7, AI and Machine Learning - Cohort 2, AI and Machine Learning - Cohort 3, DevOps Engineering - Cohort 1, DevOps Engineering - Cohort 2], countList=[7, 7, 7, 9, 8, 8, 9, 9, 7, 8, 8, 8, 7, 5, 5, 5, 4, 4, 5, 5, 5, 5])

@@ -1,8 +1,6 @@
 package com.kezhang.tliasbackend.service;
 
-import com.kezhang.tliasbackend.dto.DepartmentEmployeeCountResponseDTO;
-import com.kezhang.tliasbackend.dto.EmployeeGenderDTO;
-import com.kezhang.tliasbackend.dto.PositionEmployeeCountResponseDTO;
+import com.kezhang.tliasbackend.dto.*;
 
 import java.util.List;
 
@@ -24,4 +22,16 @@ public interface ReportService {
     * 报表需要的数据为员工性别和个数组成的对象列表
     * */
     List<EmployeeGenderDTO> getEmployeeGenderCount();
+
+    /*
+    * 用于查询student表中degree字段和人数
+    * 报表需要的数据为List<StudentDegreeReportDTO>
+    * */
+    List<StudentDegreeReportDTO> getStudentDegreeCount();
+
+    /*
+    * 用于查询学生班级名称和对应的学生数量
+    * 报表需要的数据为List<StudentClazzCountDTO>
+    * */
+    StudentClazzCountDTO getStudentClazzCount();
 }

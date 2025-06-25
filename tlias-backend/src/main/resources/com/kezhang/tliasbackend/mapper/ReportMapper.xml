@@ -37,4 +37,23 @@
         GROUP BY gender;
     </select>
 
+    <!-- 查询student表中degree的种类和对应人数 -->
+    <select id="getStudentDegreeCount" resultType="map">
+        SELECT
+            degree,
+            COUNT(*) AS count
+        FROM student
+        GROUP BY degree;
+    </select>
+
+    <!-- 查询student表中各个clazz的学生人数 -->
+    <select id="getStudentClazzCount" resultType="map">
+        SELECT
+            c.name AS clazzName,
+            COUNT(*) AS count
+        FROM student s
+        LEFT JOIN clazz c ON s.clazz_id = c.id
+        GROUP BY c.name;
+    </select>
+
 </mapper>

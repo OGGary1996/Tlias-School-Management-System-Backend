@@ -51,5 +51,5 @@ public class EmployeeUpdateDTO {
     private String image; // 员工头像图片地址
 
     @Schema(description = "Employee's work history list")
-    private List<EmployeeHistoryUpdateDisplayDTO> employeeHistoryUpdateDisplayDTOList; // 员工历史信息列表
+    private List<EmployeeHistoryUpdateDTO> employeeHistoryUpdateDTOList; // 员工历史信息列表
 }

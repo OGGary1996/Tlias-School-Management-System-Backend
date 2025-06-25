@@ -6,6 +6,7 @@ import com.kezhang.tliasbackend.dto.PositionEmployeeCountDTO;
 import com.kezhang.tliasbackend.dto.PositionEmployeeCountResponseDTO;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ReportMapper {
     /*
@@ -22,4 +23,14 @@ public interface ReportMapper {
     * 查询员工性别和对应的数量
     * */
     List<EmployeeGenderDTO> getEmployeeGenderCount();
+
+    /*
+    * 查询student表中degree字段和人数
+    * */
+    List<Map<String,Object>> getStudentDegreeCount();
+
+    /*
+    * 查询学生班级名称和对应的学生数量
+    * */
+    List<Map<String,Object>> getStudentClazzCount();
 }

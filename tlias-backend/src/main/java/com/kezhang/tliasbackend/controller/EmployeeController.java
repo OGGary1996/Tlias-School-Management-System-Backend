@@ -7,7 +7,6 @@ import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
 import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
 import com.kezhang.tliasbackend.dto.EmployeeUpdateDTO;
-import com.kezhang.tliasbackend.dto.EmployeeDisplayDTO;
 import com.kezhang.tliasbackend.service.EmployeeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -130,9 +129,9 @@ public class EmployeeController {
     @GetMapping("/{id}")
     public Result<?> getEmployeeById(@PathVariable("id") Integer id){
         log.info("Fetching employee by ID: {}", id);
-        EmployeeDisplayDTO employeeDisplayDTO = employeeService.selectEmployeeById(id);
-        log.info("Fetched employee by ID completed. Employee details: {}", employeeDisplayDTO);
-        return Result.success(employeeDisplayDTO);
+        EmployeeUpdateDTO employeeUpdateDTO = employeeService.selectEmployeeById(id);
+        log.info("Fetched employee by ID completed. Employee details: {}", employeeUpdateDTO);
+        return Result.success(employeeUpdateDTO);
     }
     /*
     * 修改员工时的修改接口（员工信息 + 员工过往经历修改）

@@ -13,5 +13,5 @@ public class EmployeeGenderDTO {
     @Schema(description= "Employee gender", example="0,1")
     private String name; // Employee's gender
     @Schema(description = "Count of employees with that gender", example = "100")
-    private Integer value; // Count of employees with that
+    private Long value; // Count of employees with that
 }

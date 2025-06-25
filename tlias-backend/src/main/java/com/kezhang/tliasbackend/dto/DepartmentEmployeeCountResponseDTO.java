@@ -15,5 +15,5 @@ public class DepartmentEmployeeCountResponseDTO {
     @Schema(description = "List of department name")
     private List<String> departmentNameList;
     @Schema(description = "List of employee count corresponding to each department")
-    private List<Integer> employeeCountList;
+    private List<Long> employeeCountList;
 }

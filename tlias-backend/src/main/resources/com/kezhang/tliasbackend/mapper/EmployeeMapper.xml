@@ -116,19 +116,20 @@
 
     <!-- 员工信息回显-->
     <!-- 使用多表查询，并且手动指定ResultMap封装嵌套DTO（一条主表信息，多个员工经历信息组成的集合） -->
-    <resultMap id="EmployeeDisplayDTOMap" type="com.kezhang.tliasbackend.dto.EmployeeDisplayDTO">
+    <resultMap id="EmployeeDisplayDTOMap" type="com.kezhang.tliasbackend.dto.EmployeeUpdateDTO">
         <!--主表信息封装-->
+        <id column="id" property="id"/>
         <result column="username" property="username"/>
         <result column="name" property="name"/>
         <result column="gender" property="gender"/>
         <result column="phone" property="phone"/>
-        <result column="jobTitle" property="jobTitle"/>
-        <result column="departmentName" property="departmentName"/>
+        <result column="job_title" property="jobTitle"/>
+        <result column="department_id" property="departmentId"/>
         <result column="salary" property="salary"/>
         <result column="entry_date" property="entryDate"/>
         <result column="image" property="image"/>
-        <!-- 嵌套集合 List<EmployeeHistoryUpdateDisplayDTO> 封装-->
-        <collection property="employeeHistoryUpdateDisplayDTOList" ofType="com.kezhang.tliasbackend.dto.EmployeeHistoryUpdateDisplayDTO">
+        <!-- 嵌套集合 List<EmployeeHistoryUpdateDTO> 封装-->
+        <collection property="employeeHistoryUpdateDTOList" ofType="com.kezhang.tliasbackend.dto.EmployeeHistoryUpdateDTO">
             <result column="start_date" property="startDate" />
             <result column="end_date" property="endDate" />
             <result column="previousJobTitle" property="jobTitle"/>
@@ -138,12 +139,13 @@
     </resultMap>
     <select id="selectEmployeeById" resultMap="EmployeeDisplayDTOMap">
         SELECT
+            e.id,
             e.username,
             e.name,
             e.gender,
             e.phone,
-            p.name AS jobTitle,
-            d.name AS departmentName,
+            e.job_title,
+            e.department_id,
             e.salary,
             e.entry_date,
             e.image,
@@ -153,8 +155,6 @@
             eh.company_name AS previousCompanyName,
             eh.employee_id
         FROM employee e
-        LEFT JOIN department d ON e.department_id = d.id
-        LEFT JOIN position p ON e.job_title = p.id
         LEFT JOIN employee_history eh ON e.id = eh.employee_id
         WHERE e.id = #{id}
     </select>

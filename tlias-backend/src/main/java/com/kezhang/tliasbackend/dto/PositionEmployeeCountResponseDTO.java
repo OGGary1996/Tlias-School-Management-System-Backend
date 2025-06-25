@@ -14,5 +14,5 @@ public class PositionEmployeeCountResponseDTO {
     @Schema(description = "List of PositionEmployeeCountDTO", example = "[{\"positionName\": \"Software Engineer\", \"employeeCount\": 25}]")
     private List<String> positionNameList;
     @Schema(description = "List of Employee Counts", example = "[25, 30, 15]")
-    private List<Integer> employeeCountList;
+    private List<Long> employeeCountList;
 }

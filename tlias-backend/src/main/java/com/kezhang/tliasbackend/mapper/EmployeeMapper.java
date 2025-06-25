@@ -1,8 +1,8 @@
 package com.kezhang.tliasbackend.mapper;
 
-import com.kezhang.tliasbackend.dto.EmployeeDisplayDTO;
 import com.kezhang.tliasbackend.dto.EmployeeQueryParam;
 import com.kezhang.tliasbackend.dto.EmployeeResponseDTO;
+import com.kezhang.tliasbackend.dto.EmployeeUpdateDTO;
 import com.kezhang.tliasbackend.entity.Employee;
 
 import java.util.List;
@@ -83,9 +83,9 @@ public interface EmployeeMapper {
     /*
     * Select an employee by their ID for display purposes.
     * @param id The ID of the employee to be selected
-    * @return EmployeeDisplayDTO containing employee details with department and position names
+    * @return EmployeeUpdateDTO containing employee details with department and position names
     * */
-    EmployeeDisplayDTO selectEmployeeById(Integer id);
+    EmployeeUpdateDTO selectEmployeeById(Integer id);
 
     // 更新员工信息的操作，隶属于修改操作的一部分,另一部分在 EmployeeHistoryMapper 中实现
     /*
@@ -94,11 +94,4 @@ public interface EmployeeMapper {
     * */
     Integer updateEmployeeById(Employee employee);
 
-    /*
-    * Select employee's Id by their name.
-    * This method is used by ClazzService to get employee ID by name for class management.
-    * @param employeeName the name of the employee to be selected
-    * @return the id of the employee if found, otherwise null
-    * */
-    Integer selectEmployeeIdByName(String employeeName);
 }

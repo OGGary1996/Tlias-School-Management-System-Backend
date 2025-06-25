@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kezhang.tliasbackend.mapper.StudentMapper">
+    <!-- 获取学生信息，条件分页查询 -->
+    <select id="getStudentByCondition" resultType="com.kezhang.tliasbackend.dto.StudentResponseDTO"
+        parameterType="com.kezhang.tliasbackend.entity.Student">
+        SELECT
+            s.id,
+            s.name,
+            s.account_number,
+            s.gender,
+            s.phone,
+            s.id_card,
+            s.address,
+            s.clazz_id,
+            c.name AS clazz_name,
+            s.is_college,
+            s.degree,
+            s.graduation_date,
+            s.violation_count,
+            s.violation_score,
+            s.create_time,
+            s.update_time
+        FROM student s
+        LEFT JOIN clazz c ON s.clazz_id = c.id
+        <where>
+            <if test="name != null and name != ''">
+                s.name LIKE CONCAT('%',#{name},'%')
+            </if>
+            <if test="degree != null and degree != ''">
+                e.degree = #{degree}
+            </if>
+            <if test="clazzId != null and clazzId != ''">
+                s.clazz_id = #{clazzId}
+            </if>
+        </where>
+        ORDER BY s.update_time DESC
+    </select>
+
+    <!-- 插入学生信息 -->
+    <insert id="insertStudent" parameterType="com.kezhang.tliasbackend.entity.Student">
+        INSERT INTO student (
+            name,
+            account_number,
+            gender,
+            phone,
+            id_card,
+            address,
+            clazz_id,
+            is_college,
+            degree,
+            graduation_date
+        )
+        VALUES (#{name},#{accountNumber},#{gender},#{phone},#{idCard},#{address},#{clazzId},#{isCollege},#{degree},#{graduationDate} )
+    </insert>
+
+    <!-- 删除学生信息 -->
+    <delete id="deleteStudentById">
+        DELETE FROM student
+        WHERE id IN
+        <foreach item="id" collection="ids" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!-- 回显单个学生信息 -->
+    <select id="getStudentById" resultType="com.kezhang.tliasbackend.entity.Student">
+        SELECT
+            s.id,
+            s.name,
+            s.account_number,
+            s.gender,
+            s.phone,
+            s.id_card,
+            s.address,
+            s.clazz_id,
+            s.is_college,
+            s.degree,
+            s.graduation_date,
+            s.violation_count,
+            s.violation_score,
+            s.create_time,
+            s.update_time
+        FROM student s
+        WHERE s.id = #{id}
+    </select>
+
+    <!-- 修改学生信息 -->
+    <update id="updateStudentById" parameterType="com.kezhang.tliasbackend.entity.Student">
+        UPDATE student
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="accountNumber != null and accountNumber != ''">
+                account_number = #{accountNumber},
+            </if>
+            <if test="phone != null and phone != ''">
+                phone = #{phone},
+            </if>
+            <if test="idCard != null and idCard != ''">
+                id_card = #{idCard},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address},
+            </if>
+            <if test="clazzId != null and clazzId != ''">
+                clazz_id = #{clazzId},
+            </if>
+            <if test="isCollege != null">
+                is_college = #{isCollege},
+            </if>
+            <if test="degree != null and degree != ''">
+                degree = #{degree},
+            </if>
+            <if test="graduationDate != null">
+                graduation_date = #{graduationDate},
+            </if>
+            <if test="violationCount != null">
+                violation_count = #{violationCount},
+            </if>
+            <if test="violationScore != null">
+                violation_score = #{violationScore},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <!-- 更新违纪分数 -->
+    <update id="updateViolationScoreById">
+        UPDATE student
+        SET violation_score = violation_score + #{score},
+            violation_count = violation_count + 1
+        WHERE id = #{id}
+    </update>
+</mapper> 

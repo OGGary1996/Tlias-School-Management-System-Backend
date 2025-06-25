@@ -1,9 +1,7 @@
 package com.kezhang.tliasbackend.controller;
 
 import com.kezhang.tliasbackend.common.Result;
-import com.kezhang.tliasbackend.dto.DepartmentEmployeeCountResponseDTO;
-import com.kezhang.tliasbackend.dto.EmployeeGenderDTO;
-import com.kezhang.tliasbackend.dto.PositionEmployeeCountResponseDTO;
+import com.kezhang.tliasbackend.dto.*;
 import com.kezhang.tliasbackend.service.ReportService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -64,4 +62,31 @@ public class ReportController {
         log.info("Returning employee gender report data: {}", employeeGenderCountList);
         return Result.success(employeeGenderCountList);
     }
+
+    /*
+    * 用于处理前端的学生学位报表请求
+    * @return Result<?>
+    * */
+    @Operation(summary = "Get data for student degree report", description = "Retrieve data for student degree report")
+    @GetMapping("/student-degree-count")
+    public Result<?> studentDegreeReport() {
+        log.info("Received request for student degree report.");
+        List<StudentDegreeReportDTO> studentDegreeCountList = reportService.getStudentDegreeCount();
+        log.info("Returning student degree report data: {}", studentDegreeCountList);
+        return Result.success(studentDegreeCountList);
+    }
+
+    /*
+    * 处理前端的学生班级报表请求
+    * @return Result<?>
+    * */
+    @Operation(summary = "Get data for student class report", description = "Retrieve data for student class report")
+    @GetMapping("/student-clazz-count")
+    public Result<?> studentClazzReport(){
+        log.info("Received request for student class report.");
+        StudentClazzCountDTO studentClazzCount = reportService.getStudentClazzCount();
+        log.info("Returning student class report data: {}", studentClazzCount);
+        return Result.success(studentClazzCount);
+    }
+
 }

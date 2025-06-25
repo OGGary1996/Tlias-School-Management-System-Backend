@@ -2,7 +2,6 @@ package com.kezhang.tliasbackend.service;
 
 
 import com.kezhang.tliasbackend.common.PageResult;
-import com.kezhang.tliasbackend.dto.ClazzDisplayDTO;
 import com.kezhang.tliasbackend.dto.ClazzInsertDTO;
 import com.kezhang.tliasbackend.dto.ClazzQueryParam;
 import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
@@ -34,7 +33,7 @@ public interface ClazzService {
     /*
     * 获取单个班级信息（用于回显）
     * */
-    ClazzDisplayDTO getClazzInfoById(Integer id);
+    ClazzUpdateDTO getClazzInfoById(Integer id);
     
     /*
     * 修改单个班级信息

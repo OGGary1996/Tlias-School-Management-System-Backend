@@ -1,6 +1,5 @@
 package com.kezhang.tliasbackend.utils;
 
-import com.kezhang.tliasbackend.constant.LocalDriveUtilProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

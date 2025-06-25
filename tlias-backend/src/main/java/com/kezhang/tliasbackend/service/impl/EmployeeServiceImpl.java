@@ -222,32 +222,32 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     /*
-    * 由于可能存在多个员工的过往经历，所以 EmployeeDisplayDTO 中的 employeeHistoryUpdateDisplayDTOList 是一个 List。
+    * 由于可能存在多个员工的过往经历，所以 EmployeeUpdateDTO 中的 employeeHistoryUpdateDisplayDTOList 是一个 List。
     * 想要实现这个功能，有两种方式：
     * 方法1:
     *  1. 操作多个Mapper，1: EmployeeMapper，2: EmployeeHistoryMapper
     *  2. EmployeeMapper 因为涉及到多表查询，Employee Entity无法覆盖，直接返回 EmployeeDisplayDTO
-    *  3. EmployeeHistoryMapper返回 EmployeeHistory Entity实体列表，需要转换为 EmployeeHistoryUpdateDisplayDTO 列表
-    *  4. 最终将手动将 EmployeeHistoryUpdateDisplayDTO 添加进到 EmployeeDisplayDTO 中
+    *  3. EmployeeHistoryMapper返回 EmployeeHistory Entity实体列表，需要转换为 EmployeeHistoryUpdateDTO 列表
+    *  4. 最终将手动将 EmployeeHistoryUpdateDTO 添加进到 EmployeeUpdateDTO 中
     * 方法2:
-    *  1. 操作一个Mapper，也就是EmployeeMapper，在其中指定ResultMap 手动映射多表查询结果到 EmployeeDisplayDTO
+    *  1. 操作一个Mapper，也就是EmployeeMapper，在其中指定ResultMap 手动映射多表查询结果到 EmployeeUpdateDTO
     *  2. 其中涉及到DTO和子DTO，需要在ResultMap中手动映射多个结果字段到List<子DTO>中
     *  2. 注意：ResultMap这种方式基本上只用于查询操作，不能用于插入、更新、删除等操作，其他的操作还是需要操作两个Mapper
     * */
     @Override
-    public EmployeeDisplayDTO selectEmployeeById(Integer id) {
+    public EmployeeUpdateDTO selectEmployeeById(Integer id) {
         log.info("Fetching employee by ID: {}", id);
         // 1. 操作 EmployeeMapper 并手动映射结果
-        EmployeeDisplayDTO employeeDisplayDTO = employeeMapper.selectEmployeeById(id);
-        if (employeeDisplayDTO == null) {
+        EmployeeUpdateDTO employeeUpdateDTO = employeeMapper.selectEmployeeById(id);
+        if (employeeUpdateDTO == null) {
             log.error("Employee not found with ID: {}", id);
             throw new EmployeeNotFoundException(
                     ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getCode(),
                     ErrorCodeEnum.EMPLOYEE_NOT_FOUND.getMessage());
         }
-        log.info("Fetched employee by ID: {}, EmployeeDisplayDTO: {}", id, employeeDisplayDTO);
+        log.info("Fetched employee by ID: {}, EmployeeDisplayDTO: {}", id, employeeUpdateDTO);
         // 2. 返回结果
-        return employeeDisplayDTO;
+        return employeeUpdateDTO;
     }
 
     /*
@@ -285,7 +285,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeHistoryMapper.deleteEmployeeHistoryByEmployeeIds(ids);
         log.info("Deleted old employee history information successfully. Employee ID: {}", employee.getId());
 
-        if (employeeUpdateDTO.getEmployeeHistoryUpdateDisplayDTOList() == null || employeeUpdateDTO.getEmployeeHistoryUpdateDisplayDTOList().isEmpty()) {
+        if (employeeUpdateDTO.getEmployeeHistoryUpdateDTOList() == null || employeeUpdateDTO.getEmployeeHistoryUpdateDTOList().isEmpty()) {
             log.info("No employee history records to update for employee ID: {}", employee.getId());
             // 如果员工没有历史记录，转换过程中的 stream 会抛出 NullPointerException，所以：
             // 如果为空，不需要执行后续的插入的操作,只需要执行了之前的删除操作即可
@@ -293,7 +293,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
 
         // 4. 判空结束，开始插入操作，将 EmployeeHistoryUpdateDisplayDTO 集合转换为 EmployeeHistory 实体对象集合
-        List<EmployeeHistory> employeeHistoryList = employeeUpdateDTO.getEmployeeHistoryUpdateDisplayDTOList().stream().map(employeeHistoryUpdateCallbackDTO -> {
+        List<EmployeeHistory> employeeHistoryList = employeeUpdateDTO.getEmployeeHistoryUpdateDTOList().stream().map(employeeHistoryUpdateCallbackDTO -> {
             EmployeeHistory employeeHistory = new EmployeeHistory();
             BeanUtils.copyProperties(employeeHistoryUpdateCallbackDTO, employeeHistory);
             return employeeHistory;
