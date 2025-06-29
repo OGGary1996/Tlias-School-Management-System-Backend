@@ -1,7 +1,8 @@
-2025-06-28 13:15:34 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
-2025-06-28 13:15:41 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
-2025-06-28 13:15:41 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login successful for employee: KeZhang
-2025-06-28 13:15:41 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Returning login response for employee: KeZhang
-2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
-2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login successful for employee: KeZhang
-2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Returning login response for employee: KeZhang
+2025-06-29 13:00:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
+2025-06-29 13:00:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login successful for employee: KeZhang
+2025-06-29 13:00:53 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Returning login response for employee: KeZhang
+2025-06-29 16:39:19 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
+2025-06-29 16:39:19 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login successful for employee: KeZhang
+2025-06-29 16:39:19 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Returning login response for employee: KeZhang
+2025-06-29 16:41:02 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employee by ID: 20
+2025-06-29 16:41:02 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched employee by ID: 20, EmployeeDisplayDTO: EmployeeUpdateDTO(id=20, username=KarenAllen, name=Karen Allen, gender=0, phone=9783524985, jobTitle=4, departmentId=4, salary=54113.27, entryDate=2017-09-20, image=https://i.pravatar.cc/250?u=KarenAllen, employeeHistoryUpdateDTOList=[])
