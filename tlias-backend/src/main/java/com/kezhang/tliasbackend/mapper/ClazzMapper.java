@@ -38,5 +38,5 @@ public interface ClazzMapper {
     /*
     * 修改单个班级信息
     * */
-    void updateClazzByCondition(Clazz clazz);
+    Integer updateClazzByCondition(Clazz clazz);
 }

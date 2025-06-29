@@ -50,6 +50,12 @@ aliyun:
     region: us-west-1
     dir: tlias/  # 文件存储目录
 
+# 定义JWT相关配置
+jwt:
+  secret-code: YWVmaHdlaFBPSUhIRkFXR3dlaGZvd2lAKiZeKl4qJSomVCo
+  algorithm: HS256  # JWT加密算法
+  expiration: 604800000 # JWT过期时间，单位为毫秒（这里设置为7天）
+
 # MyBatis configuration
 mybatis:
     mapper-locations: classpath:mapper/*.xml

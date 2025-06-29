@@ -1,143 +1,27 @@
-2025-06-24 10:30:55 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 28254 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 10:30:55 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 10:30:56 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 10:30:56 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 10:30:56 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 10:30:56 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 10:30:56 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 10:30:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 386 ms
-2025-06-24 10:30:56 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 10:30:56 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 10:30:56 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 10:30:56 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.925 seconds (process running for 1.141)
-2025-06-24 10:31:15 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 10:31:15 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 10:31:15 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2025-06-24 10:31:15 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: Request method 'DELETE' is not supported
-org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:509)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-06-24 10:31:48 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.StudentController - Received request to delete students with IDs: [146]
-2025-06-24 10:31:48 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Received request to delete students with IDs: [146]
-2025-06-24 10:31:48 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 10:31:48 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d52dea8
-2025-06-24 10:31:48 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 10:31:48 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Students with IDs [146] deleted successfully
-2025-06-24 10:31:48 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.StudentController - Students deleted successfully with IDs: [146]
-2025-06-24 10:32:52 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 10:32:54 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 10:32:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 10:32:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 11:20:25 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 29577 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 11:20:25 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 11:20:26 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 11:20:26 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:20:26 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 11:20:26 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 11:20:26 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 11:20:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 426 ms
-2025-06-24 11:20:26 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 11:20:26 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:20:26 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 11:20:26 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 1.017 seconds (process running for 1.287)
-2025-06-24 11:20:45 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 11:20:45 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 11:20:45 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 11:20:45 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
-2025-06-24 11:20:45 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employee by ID: 48
-2025-06-24 11:20:45 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 11:20:45 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7606aec6
-2025-06-24 11:20:45 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 11:20:46 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
-            e.salary,
-            e.entry_date,
-            e.im' at line 7
-### The error may exist in com/kezhang/tliasbackend/mapper/EmployeeMapper.xml
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: SELECT             e.username,             e.name,             e.gender,             e.phone,             e.job_title             e.department_id,             e.salary,             e.entry_date,             e.image,             eh.start_date,             eh.end_date,             eh.job_title AS previousJobTitle,             eh.company_name AS previousCompanyName,             eh.employee_id         FROM employee e         LEFT JOIN employee_history eh ON e.id = eh.employee_id         WHERE e.id = ?
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
-            e.salary,
-            e.entry_date,
-            e.im' at line 7
-; bad SQL grammar []
-org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
-            e.salary,
-            e.entry_date,
-            e.im' at line 7
-### The error may exist in com/kezhang/tliasbackend/mapper/EmployeeMapper.xml
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: SELECT             e.username,             e.name,             e.gender,             e.phone,             e.job_title             e.department_id,             e.salary,             e.entry_date,             e.image,             eh.start_date,             eh.end_date,             eh.job_title AS previousJobTitle,             eh.company_name AS previousCompanyName,             eh.employee_id         FROM employee e         LEFT JOIN employee_history eh ON e.id = eh.employee_id         WHERE e.id = ?
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
-            e.salary,
-            e.entry_date,
-            e.im' at line 7
-; bad SQL grammar []
-	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:93)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
-	at jdk.proxy2/jdk.proxy2.$Proxy77.selectOne(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:154)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at jdk.proxy2/jdk.proxy2.$Proxy80.selectEmployeeById(Unknown Source)
-	at com.kezhang.tliasbackend.service.impl.EmployeeServiceImpl.selectEmployeeById(EmployeeServiceImpl.java:241)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:724)
-	at com.kezhang.tliasbackend.service.impl.EmployeeServiceImpl$$SpringCGLIB$$0.selectEmployeeById(<generated>)
-	at com.kezhang.tliasbackend.controller.EmployeeController.getEmployeeById(EmployeeController.java:133)
+2025-06-28 13:15:15 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 42996 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-28 13:15:15 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 13:15:15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-28 13:15:15 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-28 13:15:15 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 13:15:15 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-28 13:15:15 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 13:15:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 404 ms
+2025-06-28 13:15:16 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-28 13:15:16 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-28 13:15:16 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-28 13:15:16 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.964 seconds (process running for 1.204)
+2025-06-28 13:15:34 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-28 13:15:34 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-28 13:15:34 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-28 13:15:34 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.LoginController - Login request received for user: KeZhang
+2025-06-28 13:15:34 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
+2025-06-28 13:15:34 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-28 13:15:34 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78ce03cb
+2025-06-28 13:15:34 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-28 13:15:34 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - A username or password error occurred: Username or password is incorrect.
+com.kezhang.tliasbackend.exception.UsernameOrPasswordErrorException: Username or password is incorrect.
+	at com.kezhang.tliasbackend.service.impl.LoginServiceImpl.login(LoginServiceImpl.java:39)
+	at com.kezhang.tliasbackend.controller.LoginController.login(LoginController.java:102)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -149,8 +33,8 @@ org.springframework.jdbc.BadSqlGrammarException:
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -186,419 +70,17 @@ org.springframework.jdbc.BadSqlGrammarException:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.department_id,
-            e.salary,
-            e.entry_date,
-            e.im' at line 7
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:382)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
-	at jdk.proxy3/jdk.proxy3.$Proxy105.execute(Unknown Source)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:151)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
-	at jdk.proxy2/jdk.proxy2.$Proxy103.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
-	... 61 common frames omitted
-2025-06-24 11:22:23 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 11:22:25 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 11:22:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 11:22:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 11:22:26 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 29587 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 11:22:26 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 11:22:26 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 11:22:26 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:22:26 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 11:22:26 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 11:22:26 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 11:22:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 378 ms
-2025-06-24 11:22:26 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 11:22:26 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:22:26 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 11:22:26 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.911 seconds (process running for 1.142)
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employee by ID: 48
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e093c5a
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched employee by ID: 48, EmployeeDisplayDTO: EmployeeUpdateDTO(id=null, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDisplayDTOList=[])
-2025-06-24 11:22:29 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=null, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDisplayDTOList=[])
-2025-06-24 11:22:53 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 11:22:55 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 11:22:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 11:22:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 11:22:56 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 29601 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 11:22:56 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 11:22:57 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 11:22:57 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:22:57 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 11:22:57 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 11:22:57 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 11:22:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 370 ms
-2025-06-24 11:22:57 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 11:22:57 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:22:57 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 11:22:57 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.915 seconds (process running for 1.164)
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employee by ID: 48
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39f1cb7c
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched employee by ID: 48, EmployeeDisplayDTO: EmployeeUpdateDTO(id=null, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDisplayDTOList=[])
-2025-06-24 11:22:59 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=null, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDisplayDTOList=[])
-2025-06-24 11:23:26 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 11:23:28 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 11:23:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 11:23:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 11:23:29 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 29611 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 11:23:29 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 11:23:29 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 11:23:29 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:23:29 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 11:23:29 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 11:23:29 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 11:23:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 379 ms
-2025-06-24 11:23:30 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 11:23:30 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:23:30 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 11:23:30 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.919 seconds (process running for 1.139)
-2025-06-24 11:23:31 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 11:23:31 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 11:23:31 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 11:23:31 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
-2025-06-24 11:23:31 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employee by ID: 48
-2025-06-24 11:23:31 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 11:23:32 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@679653e0
-2025-06-24 11:23:32 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 11:23:32 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched employee by ID: 48, EmployeeDisplayDTO: EmployeeUpdateDTO(id=48, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDisplayDTOList=[])
-2025-06-24 11:23:32 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=48, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDisplayDTOList=[])
-2025-06-24 11:27:23 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 11:27:25 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 11:27:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 11:27:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 11:31:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 29713 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 11:31:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 11:31:09 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 11:31:09 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:31:09 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 11:31:09 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 11:31:09 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 11:31:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 385 ms
-2025-06-24 11:31:09 [main] ERROR org.mybatis.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface com.kezhang.tliasbackend.mapper.EmployeeMapper' to configuration.
-org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/kezhang/tliasbackend/mapper/EmployeeMapper.xml'. Cause: org.apache.ibatis.builder.BuilderException: Ambiguous collection type for property 'employeeHistoryUpdateDisplayDTOList'. You must specify 'javaType' or 'resultMap'.
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:98)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:164)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:117)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:943)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1682)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
-	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:12)
-Caused by: org.apache.ibatis.builder.BuilderException: Ambiguous collection type for property 'employeeHistoryUpdateDisplayDTOList'. You must specify 'javaType' or 'resultMap'.
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.validateCollection(XMLMapperBuilder.java:377)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.processNestedResultMappings(XMLMapperBuilder.java:364)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.lambda$buildResultMappingFromContext$0(XMLMapperBuilder.java:345)
-	at org.apache.ibatis.parsing.XNode.getStringAttribute(XNode.java:198)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildResultMappingFromContext(XMLMapperBuilder.java:344)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:239)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:214)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:206)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
-	... 54 common frames omitted
-2025-06-24 11:31:09 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clazzController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/ClazzController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'clazzServiceImpl' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/service/impl/ClazzServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'employeeMapper' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/mapper/EmployeeMapper.class]: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/kezhang/tliasbackend/mapper/EmployeeMapper.xml'. Cause: org.apache.ibatis.builder.BuilderException: Ambiguous collection type for property 'employeeHistoryUpdateDisplayDTOList'. You must specify 'javaType' or 'resultMap'.
-2025-06-24 11:31:09 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
-2025-06-24 11:31:09 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-06-24 11:31:09 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clazzController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/ClazzController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'clazzServiceImpl' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/service/impl/ClazzServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'employeeMapper' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/mapper/EmployeeMapper.class]: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/kezhang/tliasbackend/mapper/EmployeeMapper.xml'. Cause: org.apache.ibatis.builder.BuilderException: Ambiguous collection type for property 'employeeHistoryUpdateDisplayDTOList'. You must specify 'javaType' or 'resultMap'.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
-	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:12)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clazzServiceImpl' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/service/impl/ClazzServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'employeeMapper' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/mapper/EmployeeMapper.class]: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/kezhang/tliasbackend/mapper/EmployeeMapper.xml'. Cause: org.apache.ibatis.builder.BuilderException: Ambiguous collection type for property 'employeeHistoryUpdateDisplayDTOList'. You must specify 'javaType' or 'resultMap'.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 21 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeMapper' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/mapper/EmployeeMapper.class]: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/kezhang/tliasbackend/mapper/EmployeeMapper.xml'. Cause: org.apache.ibatis.builder.BuilderException: Ambiguous collection type for property 'employeeHistoryUpdateDisplayDTOList'. You must specify 'javaType' or 'resultMap'.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1682)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 35 common frames omitted
-Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/kezhang/tliasbackend/mapper/EmployeeMapper.xml'. Cause: org.apache.ibatis.builder.BuilderException: Ambiguous collection type for property 'employeeHistoryUpdateDisplayDTOList'. You must specify 'javaType' or 'resultMap'.
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:79)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	... 45 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/kezhang/tliasbackend/mapper/EmployeeMapper.xml'. Cause: org.apache.ibatis.builder.BuilderException: Ambiguous collection type for property 'employeeHistoryUpdateDisplayDTOList'. You must specify 'javaType' or 'resultMap'.
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:98)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:164)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:117)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:943)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:76)
-	... 48 common frames omitted
-Caused by: org.apache.ibatis.builder.BuilderException: Ambiguous collection type for property 'employeeHistoryUpdateDisplayDTOList'. You must specify 'javaType' or 'resultMap'.
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.validateCollection(XMLMapperBuilder.java:377)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.processNestedResultMappings(XMLMapperBuilder.java:364)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.lambda$buildResultMappingFromContext$0(XMLMapperBuilder.java:345)
-	at org.apache.ibatis.parsing.XNode.getStringAttribute(XNode.java:198)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildResultMappingFromContext(XMLMapperBuilder.java:344)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:239)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:214)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:206)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
-	... 54 common frames omitted
-2025-06-24 11:32:51 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 29733 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 11:32:51 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 11:32:52 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 11:32:52 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:32:52 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 11:32:52 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 11:32:52 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 11:32:52 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 360 ms
-2025-06-24 11:32:52 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 11:32:52 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:32:52 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 11:32:52 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.878 seconds (process running for 1.084)
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 48
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employee by ID: 48
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@546a62d8
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched employee by ID: 48, EmployeeDisplayDTO: EmployeeUpdateDTO(id=48, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDTOList=[])
-2025-06-24 11:32:57 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=48, username=JoyceCooper, name=Joyce Cooper, gender=0, phone=3393722983, jobTitle=3, departmentId=10, salary=61273.28, entryDate=2019-01-28, image=https://i.pravatar.cc/250?u=JoyceCooper, employeeHistoryUpdateDTOList=[])
-2025-06-24 11:33:06 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 11:33:08 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 11:33:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 11:33:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 11:46:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 29935 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 11:46:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 11:46:09 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 11:46:09 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:46:09 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 11:46:09 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 11:46:09 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 11:46:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 393 ms
-2025-06-24 11:46:09 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 11:46:10 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 11:46:10 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 11:46:10 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.928 seconds (process running for 1.138)
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ClazzController - getClazzInfoById: 4
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - getClazzInfoById: 4
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@389e097c
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Retrieved class entity: Clazz(id=4, name=Web Development - Cohort 20, room=CS-201, beginDate=2024-10-01, endDate=2025-04-15, masterId=8, subjectId=2, createTime=2025-06-22T13:43:34, updateTime=2025-06-22T13:43:34)
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Retrieved class information: ClazzUpdateDTO(id=4, name=Web Development - Cohort 20, room=CS-201, beginDate=2024-10-01, endDate=2025-04-15, masterId=8, subjectId=2, createTime=2025-06-22T13:43:34, updateTime=2025-06-22T13:43:34)
-2025-06-24 11:46:23 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ClazzController - getClazzInfoById completed successfully: ClazzUpdateDTO(id=4, name=Web Development - Cohort 20, room=CS-201, beginDate=2024-10-01, endDate=2025-04-15, masterId=8, subjectId=2, createTime=2025-06-22T13:43:34, updateTime=2025-06-22T13:43:34)
-2025-06-24 11:46:27 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 11:46:29 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 11:46:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 11:46:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 12:16:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 30269 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 12:16:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 12:16:10 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 12:16:10 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:16:10 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 12:16:10 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 12:16:10 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 12:16:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 409 ms
-2025-06-24 12:16:10 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 12:16:10 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:16:10 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 12:16:10 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.948 seconds (process running for 1.18)
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to get student by ID: 4
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Received request to get student by ID: 4
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22eb6ac2
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Retrieved student entity: Student(id=4, name=Olivia Martinez, accountNumber=S11001, gender=0, phone=6175550201, idCard=330101200002104567, address=234 Beacon Street, Boston, MA 02116, clazzId=2, isCollege=1, degree=1, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Converted StudentUpdateDTO: StudentUpdateDTO(id=4, name=Olivia Martinez, accountNumber=S11001, gender=0, phone=6175550201, idCard=330101200002104567, address=234 Beacon Street, Boston, MA 02116, clazzId=2, isCollege=1, degree=1, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:16:12 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Returning student details: StudentUpdateDTO(id=4, name=Olivia Martinez, accountNumber=S11001, gender=0, phone=6175550201, idCard=330101200002104567, address=234 Beacon Street, Boston, MA 02116, clazzId=2, isCollege=1, degree=1, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:18:02 [http-nio-8080-exec-5] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition: ClazzUpdateDTO(id=145, name=Ke Zhang, room=null, beginDate=null, endDate=null, masterId=null, subjectId=null, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:18:02 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzUpdateDTO(id=145, name=Ke Zhang, room=null, beginDate=null, endDate=null, masterId=null, subjectId=null, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:18:02 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Clazz Entity for update: Clazz(id=145, name=Ke Zhang, room=null, beginDate=null, endDate=null, masterId=null, subjectId=null, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:18:02 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Updated class information successfully: Ke Zhang
-2025-06-24 12:18:02 [http-nio-8080-exec-5] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition completed successfully.
-2025-06-24 12:20:08 [http-nio-8080-exec-8] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition: ClazzUpdateDTO(id=144, name=Ke Zhang, room=null, beginDate=null, endDate=null, masterId=null, subjectId=null, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:20:08 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - updateClazzByCondition: ClazzUpdateDTO(id=144, name=Ke Zhang, room=null, beginDate=null, endDate=null, masterId=null, subjectId=null, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:20:08 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Clazz Entity for update: Clazz(id=144, name=Ke Zhang, room=null, beginDate=null, endDate=null, masterId=null, subjectId=null, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:20:08 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.ClazzServiceImpl - Updated class information successfully: Ke Zhang
-2025-06-24 12:20:08 [http-nio-8080-exec-8] INFO  c.kezhang.tliasbackend.controller.ClazzController - updateClazzByCondition completed successfully.
-2025-06-24 12:22:25 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.StudentController - Received request to update student: StudentUpdateDTO(id=145, name=Ke Zhang, accountNumber=, gender=0, phone=, idCard=, address=, clazzId=15, isCollege=1, degree=4, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:22:25 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Received request to update student: StudentUpdateDTO(id=145, name=Ke Zhang, accountNumber=, gender=0, phone=, idCard=, address=, clazzId=15, isCollege=1, degree=4, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:22:25 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Converted Student entity for update: Student(id=145, name=Ke Zhang, accountNumber=, gender=0, phone=, idCard=, address=, clazzId=15, isCollege=1, degree=4, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:22:25 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Student with ID 145 updated successfully
-2025-06-24 12:22:25 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.StudentController - Student updated successfully: StudentUpdateDTO(id=145, name=Ke Zhang, accountNumber=, gender=0, phone=, idCard=, address=, clazzId=15, isCollege=1, degree=4, graduationDate=2022-12-18, violationCount=0, violationScore=0, createTime=2025-06-23T21:20:47, updateTime=2025-06-23T21:20:47)
-2025-06-24 12:22:32 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 12:22:34 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 12:22:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 12:22:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 12:52:16 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 30460 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 12:52:16 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 12:52:17 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 12:52:17 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:52:17 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 12:52:17 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 12:52:17 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 12:52:17 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 395 ms
-2025-06-24 12:52:17 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 12:52:17 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:52:17 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 12:52:17 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.934 seconds (process running for 1.15)
-2025-06-24 12:52:58 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 12:52:58 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 12:52:58 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 12:52:58 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to update violation score for student ID: 145, score: 10
-2025-06-24 12:52:58 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Received request to update violation score for student ID: 145, score: 10
-2025-06-24 12:52:58 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 12:52:58 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@495cd28f
-2025-06-24 12:52:58 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 12:52:58 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: 
-### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-### The error may exist in com/kezhang/tliasbackend/mapper/StudentMapper.xml
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: UPDATE student         SET violation_score = violation_score + ?,             violation_count = violation_count + 1         WHERE id = ?
-### Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-org.mybatis.spring.MyBatisSystemException: 
-### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-### The error may exist in com/kezhang/tliasbackend/mapper/StudentMapper.xml
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: UPDATE student         SET violation_score = violation_score + ?,             violation_count = violation_count + 1         WHERE id = ?
-### Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
-	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at jdk.proxy2/jdk.proxy2.$Proxy86.updateViolationScoreById(Unknown Source)
-	at com.kezhang.tliasbackend.service.impl.StudentServiceImpl.updateViolationScoreById(StudentServiceImpl.java:137)
-	at com.kezhang.tliasbackend.controller.StudentController.updateViolationScoreById(StudentController.java:106)
+2025-06-28 13:15:41 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.LoginController - Login request received for user: KeZhang
+2025-06-28 13:15:41 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
+2025-06-28 13:15:41 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login successful for employee: KeZhang
+2025-06-28 13:15:41 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Returning login response for employee: KeZhang
+2025-06-28 13:15:41 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.LoginController - Login successful for user: KeZhang
+2025-06-28 13:15:41 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Generating JWT token for employee: ID=58, Username=KeZhang, Name=Ke Zhang
+2025-06-28 13:15:41 [http-nio-8080-exec-3] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: The specified key byte array is 232 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 232 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys#secretKeyFor(SignatureAlgorithm) method to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at io.jsonwebtoken.security.Keys.hmacShaKeyFor(Keys.java:96)
+	at com.kezhang.tliasbackend.utils.JWTUtil.generateToken(JWTUtil.java:51)
+	at com.kezhang.tliasbackend.controller.LoginController.login(LoginController.java:106)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -610,8 +92,8 @@ org.mybatis.spring.MyBatisSystemException:
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -647,92 +129,59 @@ org.mybatis.spring.MyBatisSystemException:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:210)
-	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:46)
-	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)
-	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
-	at jdk.proxy2/jdk.proxy2.$Proxy103.update(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
-	... 56 common frames omitted
-2025-06-24 12:54:03 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 12:54:05 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 12:54:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 12:54:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 12:54:07 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 30484 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 12:54:07 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 12:54:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 12:54:07 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:54:07 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 12:54:07 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 12:54:07 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 12:54:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 378 ms
-2025-06-24 12:54:07 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 12:54:07 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:54:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 12:54:07 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.923 seconds (process running for 1.131)
-2025-06-24 12:54:10 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 12:54:10 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 12:54:10 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 12:54:10 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to update violation score for student ID: 145, score: 10
-2025-06-24 12:54:10 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Received request to update violation score for student ID: 145, score: 10
-2025-06-24 12:54:10 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 12:54:10 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3398391a
-2025-06-24 12:54:10 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 12:54:10 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: 
-### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-### The error may exist in com/kezhang/tliasbackend/mapper/StudentMapper.xml
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: UPDATE student         SET violation_score = violation_score + ?,             violation_count = violation_count + 1         WHERE id = ?
-### Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-org.mybatis.spring.MyBatisSystemException: 
-### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-### The error may exist in com/kezhang/tliasbackend/mapper/StudentMapper.xml
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: UPDATE student         SET violation_score = violation_score + ?,             violation_count = violation_count + 1         WHERE id = ?
-### Cause: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)
-	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at jdk.proxy2/jdk.proxy2.$Proxy86.updateViolationScoreById(Unknown Source)
-	at com.kezhang.tliasbackend.service.impl.StudentServiceImpl.updateViolationScoreById(StudentServiceImpl.java:137)
-	at com.kezhang.tliasbackend.controller.StudentController.updateViolationScoreById(StudentController.java:106)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+2025-06-28 13:16:50 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 13:16:52 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-28 13:16:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-28 13:16:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-28 13:16:53 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 43058 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-28 13:16:53 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 13:16:53 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-28 13:16:53 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-28 13:16:53 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 13:16:53 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-28 13:16:53 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 13:16:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 381 ms
+2025-06-28 13:16:54 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-28 13:16:54 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-28 13:16:54 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-28 13:16:54 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.942 seconds (process running for 1.158)
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.kezhang.tliasbackend.controller.LoginController - Login request received for user: KeZhang
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@527ad7e0
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login successful for employee: KeZhang
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Returning login response for employee: KeZhang
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.kezhang.tliasbackend.controller.LoginController - Login successful for user: KeZhang
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Generating JWT token for employee: ID=58, Username=KeZhang, Name=Ke Zhang
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Generated JWT token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTExMzgyMTYsImV4cCI6MTc1MTc0MzAxNn0.YT_P48PCU5jxdaOzScME8ffRMWaAI-mv2-20syxkoGI
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.kezhang.tliasbackend.controller.LoginController - Generated JWT token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTExMzgyMTYsImV4cCI6MTc1MTc0MzAxNn0.YT_P48PCU5jxdaOzScME8ffRMWaAI-mv2-20syxkoGI
+2025-06-28 13:16:56 [http-nio-8080-exec-1] INFO  c.kezhang.tliasbackend.controller.LoginController - Token set in login response for user: EmployeeLoginResponseDTO(id=58, name=Ke Zhang, username=KeZhang, token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTExMzgyMTYsImV4cCI6MTc1MTc0MzAxNn0.YT_P48PCU5jxdaOzScME8ffRMWaAI-mv2-20syxkoGI)
+2025-06-28 13:17:15 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 13:17:17 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-28 13:17:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-28 13:17:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-28 19:29:14 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 45155 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-28 19:29:14 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 19:29:15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-28 19:29:15 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-28 19:29:15 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 19:29:15 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-28 19:29:15 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 19:29:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 405 ms
+2025-06-28 19:29:15 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-28 19:29:15 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-28 19:29:15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-28 19:29:15 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.952 seconds (process running for 1.176)
+2025-06-28 19:29:17 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-28 19:29:17 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-28 19:29:17 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-28 19:29:17 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.ClassCastException: class org.apache.catalina.connector.ResponseFacade cannot be cast to class jakarta.servlet.http.HttpServletRequest (org.apache.catalina.connector.ResponseFacade and jakarta.servlet.http.HttpServletRequest are in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.filter.LoginFilter.doFilter(LoginFilter.java:42)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
@@ -763,127 +212,26 @@ org.mybatis.spring.MyBatisSystemException:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.apache.ibatis.binding.BindingException: Parameter 'violationScore' not found. Available parameters are [score, id, param1, param2]
-	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:210)
-	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:46)
-	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)
-	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
-	at jdk.proxy2/jdk.proxy2.$Proxy103.update(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
-	... 56 common frames omitted
-2025-06-24 12:54:38 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 12:54:40 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 12:54:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 12:54:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 12:54:41 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 30497 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 12:54:41 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 12:54:41 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 12:54:41 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:54:41 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 12:54:41 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 12:54:41 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 12:54:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 386 ms
-2025-06-24 12:54:42 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 12:54:42 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:54:42 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 12:54:42 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.929 seconds (process running for 1.158)
-2025-06-24 12:54:44 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 12:54:44 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 12:54:44 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 12:54:44 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to update violation score for student ID: 145, score: 10
-2025-06-24 12:54:44 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Received request to update violation score for student ID: 145, score: 10
-2025-06-24 12:54:44 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 12:54:45 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@765517a6
-2025-06-24 12:54:45 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 12:54:45 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Violation score for student ID 145 updated successfully with score: 10
-2025-06-24 12:54:45 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Violation score updated successfully for student ID: 145
-2025-06-24 12:56:02 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 12:56:05 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 12:56:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 12:56:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 12:56:06 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 30528 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 12:56:06 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 12:56:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 12:56:07 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:56:07 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 12:56:07 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 12:56:07 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 12:56:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 378 ms
-2025-06-24 12:56:07 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 12:56:07 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 12:56:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 12:56:07 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.907 seconds (process running for 1.108)
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Received request to update violation score for student ID: 145, score: 5
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Received request to update violation score for student ID: 145, score: 5
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@457462bf
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Violation score for student ID 145 updated successfully with score: 5
-2025-06-24 12:56:13 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.StudentController - Violation score updated successfully for student ID: 145
-2025-06-24 12:58:01 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 12:58:03 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 12:58:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 12:58:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 13:52:55 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 31047 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 13:52:55 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 13:52:56 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 13:52:56 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 13:52:56 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 13:52:56 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 13:52:56 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 13:52:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 396 ms
-2025-06-24 13:52:56 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 13:52:56 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 13:52:56 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 13:52:56 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.94 seconds (process running for 1.177)
-2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  c.kezhang.tliasbackend.controller.ReportController - Received request for student degree report.
-2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Fetching student degree count data from ReportMapper.
-2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39b5bc01
-2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 13:53:20 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Fetched student degree count data: [{degree=1, count=53}, {degree=2, count=45}, {degree=0, count=28}, {degree=3, count=18}, {degree=4, count=1}]
-2025-06-24 13:53:20 [http-nio-8080-exec-1] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: class java.lang.Long cannot be cast to class java.lang.Integer (java.lang.Long and java.lang.Integer are in module java.base of loader 'bootstrap')
-java.lang.ClassCastException: class java.lang.Long cannot be cast to class java.lang.Integer (java.lang.Long and java.lang.Integer are in module java.base of loader 'bootstrap')
-	at com.kezhang.tliasbackend.service.impl.ReportServiceImpl.lambda$getStudentDegreeCount$4(ReportServiceImpl.java:110)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at com.kezhang.tliasbackend.service.impl.ReportServiceImpl.getStudentDegreeCount(ReportServiceImpl.java:107)
-	at com.kezhang.tliasbackend.controller.ReportController.studentDegreeReport(ReportController.java:77)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+2025-06-28 19:29:30 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 19:29:32 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-28 19:29:33 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 45162 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-28 19:29:33 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 19:29:33 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-28 19:29:33 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-28 19:29:33 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 19:29:33 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-28 19:29:33 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 19:29:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 366 ms
+2025-06-28 19:29:33 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-28 19:29:33 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-28 19:29:33 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-28 19:29:33 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.909 seconds (process running for 1.163)
+2025-06-28 19:29:56 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-28 19:29:56 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-28 19:29:56 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-28 19:29:56 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.ClassCastException: class org.apache.catalina.connector.ResponseFacade cannot be cast to class jakarta.servlet.http.HttpServletRequest (org.apache.catalina.connector.ResponseFacade and jakarta.servlet.http.HttpServletRequest are in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.filter.LoginFilter.doFilter(LoginFilter.java:42)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
@@ -914,110 +262,41 @@ java.lang.ClassCastException: class java.lang.Long cannot be cast to class java.
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-06-24 14:17:37 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 14:17:39 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 14:17:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 14:17:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 14:17:41 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 31266 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 14:17:41 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 14:17:42 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 14:17:42 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 14:17:42 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 14:17:42 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 14:17:42 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 14:17:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 386 ms
-2025-06-24 14:17:42 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 14:17:42 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 14:17:42 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 14:17:42 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.93 seconds (process running for 1.163)
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ReportController - Received request for student degree report.
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Fetching student degree count data from ReportMapper.
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21ce4ff2
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Fetched student degree count data: [{degree=1, count=53}, {degree=2, count=45}, {degree=0, count=28}, {degree=3, count=18}, {degree=4, count=1}]
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Converted to StudentDegreeReportDTO: StudentDegreeReportDTO(name=Bachelor's Degree, value=53)
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Converted to StudentDegreeReportDTO: StudentDegreeReportDTO(name=Master's Degree, value=45)
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Converted to StudentDegreeReportDTO: StudentDegreeReportDTO(name=Undergraduate, value=28)
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Converted to StudentDegreeReportDTO: StudentDegreeReportDTO(name=Doctorate Degree, value=18)
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Converted to StudentDegreeReportDTO: StudentDegreeReportDTO(name=Unknown Degree, value=1)
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Final StudentDegreeReportDTO List: [StudentDegreeReportDTO(name=Bachelor's Degree, value=53), StudentDegreeReportDTO(name=Master's Degree, value=45), StudentDegreeReportDTO(name=Undergraduate, value=28), StudentDegreeReportDTO(name=Doctorate Degree, value=18), StudentDegreeReportDTO(name=Unknown Degree, value=1)]
-2025-06-24 14:17:46 [http-nio-8080-exec-2] INFO  c.kezhang.tliasbackend.controller.ReportController - Returning student degree report data: [StudentDegreeReportDTO(name=Bachelor's Degree, value=53), StudentDegreeReportDTO(name=Master's Degree, value=45), StudentDegreeReportDTO(name=Undergraduate, value=28), StudentDegreeReportDTO(name=Doctorate Degree, value=18), StudentDegreeReportDTO(name=Unknown Degree, value=1)]
-2025-06-24 14:17:58 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 14:18:00 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 14:18:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 14:18:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-06-24 22:13:14 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 32757 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
-2025-06-24 22:13:14 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-24 22:13:14 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-06-24 22:13:14 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-06-24 22:13:14 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-24 22:13:14 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-24 22:13:14 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-24 22:13:14 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 398 ms
-2025-06-24 22:13:14 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-06-24 22:13:14 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-06-24 22:13:14 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-06-24 22:13:14 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.954 seconds (process running for 1.196)
-2025-06-24 22:13:31 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-24 22:13:31 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-24 22:13:31 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-24 22:13:31 [http-nio-8080-exec-1] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: No static resource reports/student-calzz-count.
-org.springframework.web.servlet.resource.NoResourceFoundException: No static resource reports/student-calzz-count.
-	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
-	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.ReportController - Received request for student class report.
-2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Fetching student class count data from ReportMapper.
-2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a9befa1
-2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Fetched student class count data: [{count=7, clazzName=Java Development - Cohort 10}, {count=7, clazzName=Java Development - Cohort 11}, {count=7, clazzName=Java Development - Cohort 12}, {count=9, clazzName=Web Development - Cohort 20}, {count=8, clazzName=Web Development - Cohort 21}, {count=8, clazzName=Web Development - Cohort 22}, {count=9, clazzName=Database Administration - Cohort 5}, {count=9, clazzName=Database Administration - Cohort 6}, {count=7, clazzName=Mobile App Development - Cohort 8}, {count=8, clazzName=Mobile App Development - Cohort 9}, {count=8, clazzName=Network Security - Cohort 7}, {count=8, clazzName=Network Security - Cohort 8}, {count=7, clazzName=Data Science - Cohort 4}, {count=5, clazzName=Data Science - Cohort 5}, {count=5, clazzName=Cloud Computing - Cohort 3}, {count=5, clazzName=Cloud Computing - Cohort 4}, {count=4, clazzName=Software Engineering - Cohort 6}, {count=4, clazzName=Software Engineering - Cohort 7}, {count=5, clazzName=AI and Machine Learning - Cohort 2}, {count=5, clazzName=AI and Machine Learning - Cohort 3}, {count=5, clazzName=DevOps Engineering - Cohort 1}, {count=5, clazzName=DevOps Engineering - Cohort 2}]
-2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.service.impl.ReportServiceImpl - Final StudentClazzCountDTO: StudentClazzCountDTO(clazzNameList=[Java Development - Cohort 10, Java Development - Cohort 11, Java Development - Cohort 12, Web Development - Cohort 20, Web Development - Cohort 21, Web Development - Cohort 22, Database Administration - Cohort 5, Database Administration - Cohort 6, Mobile App Development - Cohort 8, Mobile App Development - Cohort 9, Network Security - Cohort 7, Network Security - Cohort 8, Data Science - Cohort 4, Data Science - Cohort 5, Cloud Computing - Cohort 3, Cloud Computing - Cohort 4, Software Engineering - Cohort 6, Software Engineering - Cohort 7, AI and Machine Learning - Cohort 2, AI and Machine Learning - Cohort 3, DevOps Engineering - Cohort 1, DevOps Engineering - Cohort 2], countList=[7, 7, 7, 9, 8, 8, 9, 9, 7, 8, 8, 8, 7, 5, 5, 5, 4, 4, 5, 5, 5, 5])
-2025-06-24 22:14:03 [http-nio-8080-exec-3] INFO  c.kezhang.tliasbackend.controller.ReportController - Returning student class report data: StudentClazzCountDTO(clazzNameList=[Java Development - Cohort 10, Java Development - Cohort 11, Java Development - Cohort 12, Web Development - Cohort 20, Web Development - Cohort 21, Web Development - Cohort 22, Database Administration - Cohort 5, Database Administration - Cohort 6, Mobile App Development - Cohort 8, Mobile App Development - Cohort 9, Network Security - Cohort 7, Network Security - Cohort 8, Data Science - Cohort 4, Data Science - Cohort 5, Cloud Computing - Cohort 3, Cloud Computing - Cohort 4, Software Engineering - Cohort 6, Software Engineering - Cohort 7, AI and Machine Learning - Cohort 2, AI and Machine Learning - Cohort 3, DevOps Engineering - Cohort 1, DevOps Engineering - Cohort 2], countList=[7, 7, 7, 9, 8, 8, 9, 9, 7, 8, 8, 8, 7, 5, 5, 5, 4, 4, 5, 5, 5, 5])
-2025-06-24 22:17:24 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-24 22:17:26 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-24 22:17:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-06-24 22:17:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-28 19:30:58 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 19:31:00 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-28 19:31:05 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 45193 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-28 19:31:05 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 19:31:06 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-28 19:31:06 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-28 19:31:06 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 19:31:06 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-28 19:31:06 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 19:31:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 451 ms
+2025-06-28 19:31:06 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-28 19:31:06 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-28 19:31:06 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-28 19:31:06 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 1.091 seconds (process running for 1.696)
+2025-06-28 19:31:14 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-28 19:31:14 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-28 19:31:14 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-28 19:31:38 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.filter.LoginFilter - Request URI /login is in whitelist, allowing access.
+2025-06-28 19:33:24 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 19:33:26 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-28 19:33:37 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 45203 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-28 19:33:37 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 19:33:37 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-28 19:33:37 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-28 19:33:37 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 19:33:37 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-28 19:33:37 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 19:33:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 383 ms
+2025-06-28 19:33:38 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-28 19:33:38 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-28 19:33:38 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-28 19:33:38 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.913 seconds (process running for 1.13)
+2025-06-28 19:33:40 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-28 19:33:40 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-28 19:33:40 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-28 19:33:40 [http-nio-8080-exec-1] INFO  com.kezhang.tliasbackend.filter.LoginFilter - Request URI /login is in whitelist, allowing access.
+2025-06-28 19:34:56 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 19:34:58 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete

@@ -198,4 +198,15 @@
         SELECT id FROM employee WHERE name = #{name};
     </select>
 
+    <!-- 根据username和password 查询对应的员工 -->
+    <select id="selectEmployeeByUsernameAndPassword" resultType="com.kezhang.tliasbackend.entity.Employee">
+        SELECT
+            id,
+            name,
+            username
+        FROM employee
+        WHERE username = #{username} AND password = #{password};
+    </select>
+
+
 </mapper>

@@ -21,7 +21,7 @@ public interface StudentMapper {
     /*
     * 删除学生信息
     * */
-    void deleteStudentById(List<Integer> ids);
+    Integer deleteStudentById(List<Integer> ids);
 
     /*
     * 回显单个学生信息
@@ -30,10 +30,10 @@ public interface StudentMapper {
     /*
     * 修改单个学生信息
     * */
-    void updateStudentById(Student student);
+    Integer updateStudentById(Student student);
 
     /*
     * 更新违纪分数
     * */
-    void updateViolationScoreById(Integer id, Integer score);
+    Integer updateViolationScoreById(Integer id, Integer score);
 }

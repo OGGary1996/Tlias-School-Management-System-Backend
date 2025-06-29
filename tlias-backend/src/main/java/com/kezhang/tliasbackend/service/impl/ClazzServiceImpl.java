@@ -10,6 +10,7 @@ import com.kezhang.tliasbackend.dto.ClazzResponseDTO;
 import com.kezhang.tliasbackend.dto.ClazzUpdateDTO;
 import com.kezhang.tliasbackend.entity.Clazz;
 import com.kezhang.tliasbackend.exception.ClazzNotAllowToDeleteException;
+import com.kezhang.tliasbackend.exception.ClazzNotFoundException;
 import com.kezhang.tliasbackend.mapper.ClazzMapper;
 import com.kezhang.tliasbackend.service.ClazzService;
 import lombok.extern.slf4j.Slf4j;
@@ -124,6 +125,12 @@ public class ClazzServiceImpl implements ClazzService {
     public ClazzUpdateDTO getClazzInfoById(Integer id) {
         log.info("getClazzInfoById: {}", id);
         Clazz clazz = clazzMapper.getClazzById(id);
+        if (clazz == null){
+            log.error("Class with ID {} not found.", id);
+            throw new ClazzNotFoundException(
+                    ErrorCodeEnum.CLAZZ_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.CLAZZ_NOT_FOUND.getMessage());
+        }
         log.info("Retrieved class entity: {}", clazz);
         ClazzUpdateDTO clazzUpdateDTO = new ClazzUpdateDTO();
         BeanUtils.copyProperties(clazz, clazzUpdateDTO);
@@ -146,7 +153,13 @@ public class ClazzServiceImpl implements ClazzService {
         log.info("Clazz Entity for update: {}", clazz);
 
         // 调用Mapper中的updateClazzByCondition方法更新班级信息
-        clazzMapper.updateClazzByCondition(clazz);
+        Integer i = clazzMapper.updateClazzByCondition(clazz);
+        if (i == 0) {
+            log.error("Failed to update class information for ID: {}", clazzUpdateDTO.getId());
+            throw new ClazzNotFoundException(
+                    ErrorCodeEnum.CLAZZ_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.CLAZZ_NOT_FOUND.getMessage());
+        }
         log.info("Updated class information successfully: {}", clazzUpdateDTO.getName());
     }
 }

@@ -94,4 +94,13 @@ public interface EmployeeMapper {
     * */
     Integer updateEmployeeById(Employee employee);
 
+    /*
+    * Select an employee by their username and password.
+    * @Param Employee Entity containing the employee's username and password
+    * @return Employee Entity containing employee details and token
+    * */
+    Employee selectEmployeeByUsernameAndPassword(Employee employee);
+
+
+
 }

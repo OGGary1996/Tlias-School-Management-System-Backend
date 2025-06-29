@@ -3,11 +3,13 @@ package com.kezhang.tliasbackend.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.kezhang.tliasbackend.common.PageResult;
+import com.kezhang.tliasbackend.constant.ErrorCodeEnum;
 import com.kezhang.tliasbackend.dto.StudentInsertDTO;
 import com.kezhang.tliasbackend.dto.StudentQueryParam;
 import com.kezhang.tliasbackend.dto.StudentResponseDTO;
 import com.kezhang.tliasbackend.dto.StudentUpdateDTO;
 import com.kezhang.tliasbackend.entity.Student;
+import com.kezhang.tliasbackend.exception.StudentNotFoundException;
 import com.kezhang.tliasbackend.mapper.StudentMapper;
 import com.kezhang.tliasbackend.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
@@ -88,7 +90,13 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void deleteStudentById(List<Integer> ids) {
         log.info("Received request to delete students with IDs: {}", ids);
-        studentMapper.deleteStudentById(ids);
+        Integer i = studentMapper.deleteStudentById(ids);
+        if (i == 0) {
+            log.warn("No students found with the provided IDs: {}", ids);
+            throw new StudentNotFoundException(
+                    ErrorCodeEnum.STUDENT_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.STUDENT_NOT_FOUND.getMessage());
+        }
         log.info("Students with IDs {} deleted successfully", ids);
     }
 
@@ -102,6 +110,12 @@ public class StudentServiceImpl implements StudentService {
     public StudentUpdateDTO getStudentById(Integer id) {
         log.info("Received request to get student by ID: {}", id);
         Student student = studentMapper.getStudentById(id);
+        if (student == null) {
+            log.warn("No student found with ID: {}", id);
+            throw new StudentNotFoundException(
+                    ErrorCodeEnum.STUDENT_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.STUDENT_NOT_FOUND.getMessage());
+        }
         log.info("Retrieved student entity: {}", student);
         StudentUpdateDTO studentUpdateDTO = new StudentUpdateDTO();
         BeanUtils.copyProperties(student, studentUpdateDTO);
@@ -121,7 +135,13 @@ public class StudentServiceImpl implements StudentService {
         Student student = new Student();
         BeanUtils.copyProperties(studentUpdateDTO, student);
         log.info("Converted Student entity for update: {}", student);
-        studentMapper.updateStudentById(student);
+        Integer i = studentMapper.updateStudentById(student);
+        if (i == 0) {
+            log.warn("No student found with ID: {}", student.getId());
+            throw new StudentNotFoundException(
+                    ErrorCodeEnum.STUDENT_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.STUDENT_NOT_FOUND.getMessage());
+        }
         log.info("Student with ID {} updated successfully", student.getId());
     }
 
@@ -134,7 +154,13 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void updateViolationScoreById(Integer id, Integer score) {
         log.info("Received request to update violation score for student ID: {}, score: {}", id, score);
-        studentMapper.updateViolationScoreById(id, score);
+        Integer i = studentMapper.updateViolationScoreById(id, score);
+        if (i == 0) {
+            log.warn("No student found with ID: {}", id);
+            throw new StudentNotFoundException(
+                    ErrorCodeEnum.STUDENT_NOT_FOUND.getCode(),
+                    ErrorCodeEnum.STUDENT_NOT_FOUND.getMessage());
+        }
         log.info("Violation score for student ID {} updated successfully with score: {}", id, score);
     }
 }

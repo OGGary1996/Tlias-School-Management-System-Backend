@@ -20,7 +20,7 @@ public class Result<T> {
 
     public static <T> Result<T> success(T data){
         return Result.<T>builder()
-                .code(200)
+                .code(1)
                 .message("Success")
                 .data(data)
                 .build();
