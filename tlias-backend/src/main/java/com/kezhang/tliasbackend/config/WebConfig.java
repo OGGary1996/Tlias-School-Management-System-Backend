@@ -1,7 +1,7 @@
 package com.kezhang.tliasbackend.config;
 
 import com.kezhang.tliasbackend.constant.FilterWhitelistEnum;
-import com.kezhang.tliasbackend.interceptor.LoginInterceptor;
+import com.kezhang.tliasbackend.proxy.interceptor.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

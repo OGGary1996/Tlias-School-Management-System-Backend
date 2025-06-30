@@ -1,4 +1,4 @@
-package com.kezhang.tliasbackend.interceptor;
+package com.kezhang.tliasbackend.proxy.interceptor;
 
 import com.kezhang.tliasbackend.constant.ErrorCodeEnum;
 import com.kezhang.tliasbackend.exception.UnauthorizedUserException;

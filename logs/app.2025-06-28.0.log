@@ -181,7 +181,7 @@ io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 232 b
 2025-06-28 19:29:17 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 2025-06-28 19:29:17 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.lang.ClassCastException: class org.apache.catalina.connector.ResponseFacade cannot be cast to class jakarta.servlet.http.HttpServletRequest (org.apache.catalina.connector.ResponseFacade and jakarta.servlet.http.HttpServletRequest are in unnamed module of loader 'app')
-	at com.kezhang.tliasbackend.filter.LoginFilter.doFilter(LoginFilter.java:42)
+	at com.kezhang.tliasbackend.proxy.filter.LoginFilter.doFilter(LoginFilter.java:42)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
@@ -231,7 +231,7 @@ java.lang.ClassCastException: class org.apache.catalina.connector.ResponseFacade
 2025-06-28 19:29:56 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 2025-06-28 19:29:56 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 java.lang.ClassCastException: class org.apache.catalina.connector.ResponseFacade cannot be cast to class jakarta.servlet.http.HttpServletRequest (org.apache.catalina.connector.ResponseFacade and jakarta.servlet.http.HttpServletRequest are in unnamed module of loader 'app')
-	at com.kezhang.tliasbackend.filter.LoginFilter.doFilter(LoginFilter.java:42)
+	at com.kezhang.tliasbackend.proxy.filter.LoginFilter.doFilter(LoginFilter.java:42)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
@@ -279,7 +279,7 @@ java.lang.ClassCastException: class org.apache.catalina.connector.ResponseFacade
 2025-06-28 19:31:14 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-06-28 19:31:14 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2025-06-28 19:31:14 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2025-06-28 19:31:38 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.filter.LoginFilter - Request URI /login is in whitelist, allowing access.
+2025-06-28 19:31:38 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.proxy.filter.LoginFilter - Request URI /login is in whitelist, allowing access.
 2025-06-28 19:33:24 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2025-06-28 19:33:26 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
 2025-06-28 19:33:37 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 45203 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
@@ -297,6 +297,6 @@ java.lang.ClassCastException: class org.apache.catalina.connector.ResponseFacade
 2025-06-28 19:33:40 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-06-28 19:33:40 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2025-06-28 19:33:40 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-06-28 19:33:40 [http-nio-8080-exec-1] INFO  com.kezhang.tliasbackend.filter.LoginFilter - Request URI /login is in whitelist, allowing access.
+2025-06-28 19:33:40 [http-nio-8080-exec-1] INFO  com.kezhang.tliasbackend.proxy.filter.LoginFilter - Request URI /login is in whitelist, allowing access.
 2025-06-28 19:34:56 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2025-06-28 19:34:58 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
