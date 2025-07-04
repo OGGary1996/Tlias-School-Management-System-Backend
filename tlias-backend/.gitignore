@@ -3,6 +3,10 @@ target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+# Ignore logs directory
+/logs/
+# OR to be more specific and ignore only files inside logs folder but keep the folder
+/logs/*
 
 ### STS ###
 .apt_generated

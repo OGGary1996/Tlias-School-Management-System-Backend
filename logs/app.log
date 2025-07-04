@@ -178,3 +178,7 @@ com.kezhang.tliasbackend.exception.StudentNotFoundException: Student not found.
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 2025-07-03 22:27:57 [http-nio-8080-exec-5] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-03 22:28:24 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-03 22:28:26 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-03 22:28:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-03 22:28:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
