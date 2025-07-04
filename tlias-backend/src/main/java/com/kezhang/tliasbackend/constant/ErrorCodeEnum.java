@@ -13,6 +13,7 @@ public enum ErrorCodeEnum {
     UNKNOWN_ERROR(600, "Unknown Error, please try again later."),
     DATABASE_ERROR(601, "Database Error, please try again later."),
     IO_ERROR(602, "IO Error, please check your input."),
+    ILLEGAL_ARGUMENT(603, "Illegal Argument, please check your input."),
 
     /*
     * Below are the error codes for user-related operations.

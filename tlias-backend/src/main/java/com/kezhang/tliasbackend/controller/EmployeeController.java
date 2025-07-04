@@ -1,6 +1,7 @@
 package com.kezhang.tliasbackend.controller;
 
 import com.aliyuncs.exceptions.ClientException;
+import com.kezhang.tliasbackend.annotation.OperationLog;
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.common.Result;
 import com.kezhang.tliasbackend.dto.EmployeeInsertDTO;
@@ -97,6 +98,7 @@ public class EmployeeController {
      */
     @Operation(summary = "Insert employee", description = "Insert a new employee into the database")
     @PostMapping
+    @OperationLog
     public Result<?> createEmployee(@RequestBody EmployeeInsertDTO employeeInsertDTO){
        log.info("Inserting new employee started. DTO: {}", employeeInsertDTO);
        employeeService.insertEmployee(employeeInsertDTO);
@@ -112,6 +114,7 @@ public class EmployeeController {
     * */
     @Operation(summary = "Delete employee", description = "Delete an employee by their ID")
     @DeleteMapping
+    @OperationLog
     public Result<?> deleteEmployee(@RequestParam("ids") List<Integer> ids) throws ClientException {
         log.info("Deleting employee started. IDs: {}", ids);
         employeeService.deleteEmployee(ids);
@@ -140,6 +143,7 @@ public class EmployeeController {
     * */
     @Operation(summary = "Update employee", description = "Update an existing employee's details")
     @PutMapping
+    @OperationLog
     public Result<?> updateEmployee(@RequestBody EmployeeUpdateDTO employeeUpdateDTO){
         log.info("Updating employee started. DTO: {}", employeeUpdateDTO);
         employeeService.updateEmployee(employeeUpdateDTO);

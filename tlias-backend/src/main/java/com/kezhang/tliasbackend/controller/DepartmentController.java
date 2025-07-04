@@ -1,5 +1,6 @@
 package com.kezhang.tliasbackend.controller;
 
+import com.kezhang.tliasbackend.annotation.OperationLog;
 import com.kezhang.tliasbackend.dto.DepartmentInsertDTO;
 import com.kezhang.tliasbackend.dto.DepartmentResponseDTO;
 import com.kezhang.tliasbackend.common.Result;
@@ -35,6 +36,7 @@ public class DepartmentController {
 
     @DeleteMapping("/{id}")
     @Operation(summary = "Delete a department", description = "Delete a department by its ID")
+    @OperationLog
     public Result<?> deleteDepartment(@PathVariable Integer id){
         log.info("Deleting department with ID: {}", id);
         departmentService.deleteDepartmentById(id);
@@ -44,6 +46,7 @@ public class DepartmentController {
 
     @PostMapping
     @Operation(summary = "Create a new department", description = "Insert a new department into the system")
+    @OperationLog
     public Result<?> createDepartment(@RequestBody @Valid DepartmentInsertDTO departmentInsertDTO){
         log.info("Creating a new department with details: {}", departmentInsertDTO);
         departmentService.insertDepartment(departmentInsertDTO);
@@ -61,6 +64,7 @@ public class DepartmentController {
     }
 
     @PutMapping
+    @OperationLog
     @Operation(summary = "Update a department", description = "Update an existing department's details")
     public Result<?> updateDepartment(@RequestBody @Valid DepartmentUpdateDTO departmentUpdateDTO){
         log.info("Updating department with details: {}", departmentUpdateDTO);

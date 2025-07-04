@@ -1,9 +1,11 @@
 package com.kezhang.tliasbackend.controller;
 
 import com.aliyuncs.exceptions.ClientException;
+import com.kezhang.tliasbackend.annotation.OperationLog;
 import com.kezhang.tliasbackend.common.Result;
 import com.kezhang.tliasbackend.utils.AliyunOssUtil;
 import com.kezhang.tliasbackend.utils.LocalDriveUtil;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +34,8 @@ public class FileManageController {
     * @return 返回上传成功后的文件访问路径
     * */
     @PostMapping("/upload/employee/image/local")
+    @Operation(description = "Upload employee image to local storage")
+    @OperationLog
     public Result<?> employeeImageLocalUpload(@RequestParam("file") MultipartFile file) throws IOException {
         // 获取当前日期并格式化为 "yyyy/MM" 形式,并且加上业务逻辑特定的路径前缀
         String servicePath = "employee/image/" +
@@ -48,6 +52,8 @@ public class FileManageController {
     * @return Result containing the URL of the uploaded image.
     * */
     @PostMapping("/upload/employee/image/oss")
+    @Operation(description = "Upload employee image to Aliyun OSS")
+    @OperationLog
     public Result<?> employeeImageUpload(@RequestParam("file") MultipartFile file) throws IOException, ClientException {
         // 获取当前日期并格式化为 "yyyy/MM" 形式,并且加上业务逻辑特定的路径前缀
         String servicePath = "employee/image/" +

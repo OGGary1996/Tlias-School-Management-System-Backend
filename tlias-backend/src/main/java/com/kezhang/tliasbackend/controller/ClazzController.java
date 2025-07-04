@@ -1,5 +1,6 @@
 package com.kezhang.tliasbackend.controller;
 
+import com.kezhang.tliasbackend.annotation.OperationLog;
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.common.Result;
 import com.kezhang.tliasbackend.dto.ClazzInsertDTO;
@@ -58,6 +59,7 @@ public class ClazzController {
     * */
     @Operation(summary = "Insert a new class information", description = "Insert a new class information")
     @PostMapping
+    @OperationLog
     public Result<?> insertClazzInfo(@RequestBody ClazzInsertDTO clazzInsertDTO) {
         log.info("insertClazzInfo: {}", clazzInsertDTO);
         clazzService.insertClazzInfo(clazzInsertDTO);
@@ -71,6 +73,7 @@ public class ClazzController {
     * */
     @Operation(summary = "Delete class information by ID", description = "Delete class information by ID")
     @DeleteMapping
+    @OperationLog
     public Result<?> deleteClazzById(@RequestParam("ids") List<Integer> ids){
         log.info("deleteClazzById: {}", ids);
         clazzService.deleteClazzById(ids);
@@ -94,6 +97,7 @@ public class ClazzController {
     * */
     @Operation(summary = "Update class information by condition", description = "Update class information by condition")
     @PutMapping
+    @OperationLog
     public Result<?> updateClazzByCondition(@RequestBody ClazzUpdateDTO clazzUpdateDTO) {
         log.info("updateClazzByCondition: {}", clazzUpdateDTO);
         clazzService.updateClazzByCondition(clazzUpdateDTO);

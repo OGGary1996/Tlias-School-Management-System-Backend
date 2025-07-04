@@ -1,5 +1,6 @@
 package com.kezhang.tliasbackend.controller;
 
+import com.kezhang.tliasbackend.annotation.OperationLog;
 import com.kezhang.tliasbackend.dto.SubjectInsertDTO;
 import com.kezhang.tliasbackend.dto.SubjectResponseDTO;
 import com.kezhang.tliasbackend.common.Result;
@@ -35,6 +36,7 @@ public class SubjectController {
 
     @DeleteMapping("/{id}")
     @Operation(summary = "Delete a subject", description = "Delete a subject by its ID")
+    @OperationLog
     public Result<?> deleteSubject(@PathVariable Integer id){
         log.info("Deleting subject with ID: {}", id);
         subjectService.deleteSubjectById(id);
@@ -44,6 +46,7 @@ public class SubjectController {
 
     @PostMapping
     @Operation(summary = "Create a new subject", description = "Insert a new subject into the system")
+    @OperationLog
     public Result<?> createSubject(@RequestBody @Valid SubjectInsertDTO subjectInsertDTO){
         log.info("Creating a new subject with details: {}", subjectInsertDTO);
         subjectService.insertSubject(subjectInsertDTO);
@@ -62,6 +65,7 @@ public class SubjectController {
 
     @PutMapping
     @Operation(summary = "Update a subject", description = "Update an existing subject's details")
+    @OperationLog
     public Result<?> updateSubject(@RequestBody @Valid SubjectUpdateDTO subjectUpdateDTO){
         log.info("Updating subject with details: {}", subjectUpdateDTO);
         subjectService.updateSubjectById(subjectUpdateDTO);

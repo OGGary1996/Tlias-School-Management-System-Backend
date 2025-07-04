@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <!-- 定义变量 -->
+    <!-- 定义变量：日志文件输出路径变量、日记级别变量 等等-->
     <property name="LOG_PATH" value="logs"/>
         <!-- 这个变量为Controller目录下所有Controller的日志 -->
     <property name="LOG_FILE_CONTROLLER" value="${LOG_PATH}/controller.log"/>
@@ -8,12 +8,14 @@
     <property name="LOG_FILE_SERVICE" value="${LOG_PATH}/service.log"/>
         <!-- 这个变量为Mapper目录下所有Mapper的日志 -->
     <property name="LOG_FILE_MAPPER" value="${LOG_PATH}/mapper.log"/>
+        <!-- 这个变量为proxy目录下的所有的proxy的日志 -->
+    <property name="LOG_FILE_PROXY" value="${LOG_PATH}/proxy.log"/>
         <!-- 这个变量为所有日志的总日志 -->
     <property name="LOG_FILE" value="${LOG_PATH}/app.log"/>
         <!-- 定义日志级别，在开发环境把所有日志的级别定为INFO级别 -->
     <property name="LOG_LEVEL" value="INFO"/>
 
-    <!-- 定义输出位置-->
+    <!-- 定义输出位置和输出的设置-->
     <!-- 1. 输出到控制台 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -74,8 +76,21 @@
         </encoder>
     </appender>
 
-    <!-- 配置各项日志的引用 -->
-    <!-- Controller、Service、Mapper的日志分别输出到不同的文件 -->
+    <!-- 2.4 输出到 LOG_FILE_PROXY -->
+    <appender name="FILE_PROXY" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE_PROXY}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/proxy.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 配置各项日志的引用，这个操作使得以上的日志配置最终生效 -->
+    <!-- 将需要记录日志的包和以上的各个日志位置的配置关联起来 -->
     <logger name="com.kezhang.tliasbackend.controller" level="${LOG_LEVEL}" additivity="false">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE_CONTROLLER"/>
@@ -91,6 +106,12 @@
     <logger name="com.kezhang.tliasbackend.mapper" level="${LOG_LEVEL}" additivity="false">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE_MAPPER"/>
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <logger name="com.kezhang.tliasbackend.proxy" level="${LOG_LEVEL}" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE_PROXY"/>
         <appender-ref ref="FILE" />
     </logger>
 

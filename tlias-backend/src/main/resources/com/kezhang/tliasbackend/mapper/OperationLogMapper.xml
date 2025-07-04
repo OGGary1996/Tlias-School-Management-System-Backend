@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kezhang.tliasbackend.mapper.OperationLogMapper">
+    <!-- 插入日志的操作 -->
+    <insert id="insertLog" parameterType="com.kezhang.tliasbackend.entity.OperationLog">
+        INSERT INTO operation_log
+            (operate_emp_id,
+             operate_emp_name,
+             operate_time,
+             java_class_name,
+             java_method_name,
+             java_method_params,
+             java_method_return,
+             cost_time,
+             is_success)
+        VALUES
+            (#{operateEmpId},
+             #{operateEmpName},
+             #{operateTime},
+             #{javaClassName},
+             #{javaMethodName},
+             #{javaMethodParams},
+             #{javaMethodReturn},
+             #{costTime},
+             #{isSuccess})
+    </insert>
+
+</mapper> 

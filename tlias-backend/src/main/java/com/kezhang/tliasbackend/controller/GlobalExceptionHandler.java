@@ -1,5 +1,6 @@
 package com.kezhang.tliasbackend.controller;
 
+import com.kezhang.tliasbackend.annotation.OperationLog;
 import com.kezhang.tliasbackend.common.Result;
 import com.kezhang.tliasbackend.constant.ErrorCodeEnum;
 import com.kezhang.tliasbackend.exception.*;
@@ -45,6 +46,15 @@ public class GlobalExceptionHandler {
         return Result.error(ErrorCodeEnum.IO_ERROR.getCode(), ErrorCodeEnum.IO_ERROR.getMessage());
     }
 
+    /*
+    * Handles IllegalArgumentException exceptions
+    * */
+    @ExceptionHandler(IllegalArgumentException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST) // 设置响应状态码为400，表示请求错误
+    public Result<?> handleIllegalArgumentException(IllegalArgumentException e){
+        log.error("An illegal argument error occurred: {}", e.getMessage(), e);
+        return Result.error(ErrorCodeEnum.ILLEGAL_ARGUMENT.getCode(), ErrorCodeEnum.ILLEGAL_ARGUMENT.getMessage());
+    }
 
 
     /*
@@ -54,9 +64,6 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.NOT_FOUND) // 设置响应状态码为404，表示资源未找到
     public Result<?> handleDepartmentNotFoundException(DepartmentNotFoundException e){
         log.error("A department not found error occurred: {}", e.getMessage(), e);
-        // 设置响应码
-
-
         return Result.error(e.getCode(), e.getMessage());
     }
 

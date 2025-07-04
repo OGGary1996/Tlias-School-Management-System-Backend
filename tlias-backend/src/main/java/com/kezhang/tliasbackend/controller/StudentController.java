@@ -1,5 +1,6 @@
 package com.kezhang.tliasbackend.controller;
 
+import com.kezhang.tliasbackend.annotation.OperationLog;
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.common.Result;
 import com.kezhang.tliasbackend.dto.StudentInsertDTO;
@@ -47,6 +48,7 @@ public class StudentController {
     * */
     @Operation(summary = "Insert a new student", description = "Add a new student to the system")
     @PostMapping
+    @OperationLog
     public Result<?> createStudent(@RequestBody StudentInsertDTO studentInsertDTO){
         log.info("Received request to create student: {}", studentInsertDTO);
         studentService.insertStudent(studentInsertDTO);
@@ -60,6 +62,7 @@ public class StudentController {
     * */
     @Operation(summary = "Delete a student by ID", description = "Remove a student from the system using their ID")
     @DeleteMapping("/{ids}")
+    @OperationLog
     public Result<?> deleteStudentById(@PathVariable("ids") List<Integer> ids){
         log.info("Received request to delete students with IDs: {}", ids);
         studentService.deleteStudentById(ids);
@@ -87,6 +90,7 @@ public class StudentController {
     * */
     @Operation(summary = "Update student details", description = "Modify the details of an existing student")
     @PutMapping
+    @OperationLog
     public Result<?> updateStudentById(@RequestBody StudentUpdateDTO studentUpdateDTO){
         log.info("Received request to update student: {}", studentUpdateDTO);
         studentService.updateStudentById(studentUpdateDTO);
@@ -101,6 +105,7 @@ public class StudentController {
     * */
     @Operation(summary = "Update student violation count and score", description = "Modify the violation count and score of a student using their ID")
     @PutMapping("/violation/{id}/{score}")
+    @OperationLog
     public Result<?> updateViolationScoreById(@PathVariable("id") Integer id, @PathVariable("score") Integer score){
         log.info("Received request to update violation score for student ID: {}, score: {}", id, score);
         studentService.updateViolationScoreById(id, score);

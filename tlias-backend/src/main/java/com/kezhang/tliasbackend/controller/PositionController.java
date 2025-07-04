@@ -1,5 +1,6 @@
 package com.kezhang.tliasbackend.controller;
 
+import com.kezhang.tliasbackend.annotation.OperationLog;
 import com.kezhang.tliasbackend.dto.PositionInsertDTO;
 import com.kezhang.tliasbackend.dto.PositionResponseDTO;
 import com.kezhang.tliasbackend.common.Result;
@@ -35,6 +36,7 @@ public class PositionController {
 
     @DeleteMapping("/{id}")
     @Operation(summary = "Delete a position", description = "Delete a position by its ID")
+    @OperationLog
     public Result<?> deletePosition(@PathVariable Integer id){
         log.info("Deleting position with ID: {}", id);
         positionService.deletePositionById(id);
@@ -44,6 +46,7 @@ public class PositionController {
 
     @PostMapping
     @Operation(summary = "Create a new position", description = "Insert a new position into the system")
+    @OperationLog
     public Result<?> createPosition(@RequestBody @Valid PositionInsertDTO positionInsertDTO){
         log.info("Creating a new position with details: {}", positionInsertDTO);
         positionService.insertPosition(positionInsertDTO);
@@ -62,6 +65,7 @@ public class PositionController {
 
     @PutMapping
     @Operation(summary = "Update a position", description = "Update an existing position's details")
+    @OperationLog
     public Result<?> updatePosition(@RequestBody @Valid PositionUpdateDTO positionUpdateDTO){
         log.info("Updating position with details: {}", positionUpdateDTO);
         positionService.updatePositionById(positionUpdateDTO);

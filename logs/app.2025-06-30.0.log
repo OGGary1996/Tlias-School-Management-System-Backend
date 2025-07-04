@@ -1,0 +1,1135 @@
+2025-06-30 13:51:50 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.joran.action.LoggerAction - Missing attribute [name]. See element [logger] near line 112
+ERROR in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Could not find an AppenderAttachable at the top of execution stack. Near <appender-ref> at line 113
+ERROR in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Could not find an AppenderAttachable at the top of execution stack. Near <appender-ref> at line 114
+ERROR in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Could not find an AppenderAttachable at the top of execution stack. Near <appender-ref> at line 115
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.joran.action.LoggerAction - Missing attribute [name]. See element [logger] near line 112
+ERROR in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Could not find an AppenderAttachable at the top of execution stack. Near <appender-ref> at line 113
+ERROR in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Could not find an AppenderAttachable at the top of execution stack. Near <appender-ref> at line 114
+ERROR in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Could not find an AppenderAttachable at the top of execution stack. Near <appender-ref> at line 115
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:291)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:269)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:81)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:61)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:197)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 19 common frames omitted
+2025-06-30 13:54:22 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 51784 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 13:54:22 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 13:54:23 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 13:54:23 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 13:54:23 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 13:54:23 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 13:54:23 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 13:54:23 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 412 ms
+2025-06-30 13:54:23 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 13:54:23 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 13:54:23 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 13:54:23 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 14:07:17 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 51877 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:07:17 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:07:17 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:07:17 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:07:17 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:07:17 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:07:17 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:07:17 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 400 ms
+2025-06-30 14:07:17 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 14:07:17 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 14:07:17 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 14:07:17 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 14:11:28 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 51907 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:11:28 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:11:28 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:11:28 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:11:28 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:11:28 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:11:28 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:11:28 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 397 ms
+2025-06-30 14:11:28 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 14:11:28 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 14:11:28 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 14:11:28 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 14:11:34 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 51916 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:11:34 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:11:34 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:11:34 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:11:34 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:11:34 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:11:34 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:11:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 381 ms
+2025-06-30 14:11:35 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 14:11:35 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 14:11:35 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 14:11:35 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 14:20:45 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 53169 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:20:45 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:20:46 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:20:46 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:20:46 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:20:46 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:20:46 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:20:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 364 ms
+2025-06-30 14:20:46 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 14:20:46 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 14:20:46 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 14:20:46 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 14:23:43 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 53270 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:23:43 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:23:44 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:23:44 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:23:44 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:23:44 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:23:44 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:23:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 355 ms
+2025-06-30 14:23:44 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-30 14:23:44 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:23:44 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-30 14:23:44 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.867 seconds (process running for 1.072)
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTEyMzY3NTksImV4cCI6MTc1MTg0MTU1OX0.heXqCxmrGyWGb65MooRIX3s22heq7uZ14bOWlJIFNpQ
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Parsed JWT token claims: {sub=KeZhang, id=58, name=Ke Zhang, iat=1751236759, exp=1751841559}
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 20
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetching employee by ID: 20
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18a4c8ce
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.EmployeeServiceImpl - Fetched employee by ID: 20, EmployeeDisplayDTO: EmployeeUpdateDTO(id=20, username=KarenAllen, name=Karen Allen, gender=0, phone=9783524985, jobTitle=4, departmentId=4, salary=54113.27, entryDate=2017-09-20, image=https://i.pravatar.cc/250?u=KarenAllen, employeeHistoryUpdateDTOList=[])
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.t.p.invocationHandler.TimeInvocationHandler - Method selectEmployeeById executed in 96 ms
+2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=20, username=KarenAllen, name=Karen Allen, gender=0, phone=9783524985, jobTitle=4, departmentId=4, salary=54113.27, entryDate=2017-09-20, image=https://i.pravatar.cc/250?u=KarenAllen, employeeHistoryUpdateDTOList=[])
+2025-06-30 14:24:28 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-30 14:24:30 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-30 14:24:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-30 14:24:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-30 14:38:43 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 53677 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:38:43 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:38:43 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:38:43 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:38:43 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:38:43 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:38:43 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:38:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 399 ms
+2025-06-30 14:38:44 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 14:38:44 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 14:38:44 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 14:38:44 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 14:40:08 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 53736 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:40:08 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:40:08 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:40:08 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:40:08 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:40:08 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:40:08 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:40:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 357 ms
+2025-06-30 14:40:08 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 14:40:08 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 14:40:08 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 14:40:08 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 14:45:29 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 53888 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:45:29 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:45:30 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:45:30 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:45:30 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:45:30 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:45:30 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:45:30 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 372 ms
+2025-06-30 14:45:30 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+2025-06-30 14:45:30 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 14:45:30 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 14:45:30 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at java.base/java.lang.Class.cast(Class.java:4067)
+	at com.kezhang.tliasbackend.proxy.factory.ProxyFactory.createTimeProxy(ProxyFactory.java:33)
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 14:48:36 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 53965 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:48:36 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:48:36 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:48:36 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:48:36 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:48:36 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:48:36 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:48:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 355 ms
+2025-06-30 14:48:36 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 14:48:36 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 14:48:36 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 14:48:36 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 14:48:59 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 53982 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:48:59 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:48:59 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:48:59 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:48:59 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:48:59 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:48:59 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:48:59 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 350 ms
+2025-06-30 14:48:59 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-30 14:48:59 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:48:59 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-30 14:48:59 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.886 seconds (process running for 1.124)
+2025-06-30 14:54:12 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-30 14:54:14 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-30 14:59:38 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 54260 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 14:59:38 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 14:59:39 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 14:59:39 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 14:59:39 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 14:59:39 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 14:59:39 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 14:59:39 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 364 ms
+2025-06-30 14:59:39 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 14:59:39 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 14:59:39 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 14:59:39 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 15:31:07 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 54820 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 15:31:07 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 15:31:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 15:31:07 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:31:07 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 15:31:07 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 15:31:07 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 15:31:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 366 ms
+2025-06-30 15:31:07 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 15:31:07 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 15:31:07 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 15:31:07 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 15:34:44 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 54920 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 15:34:44 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 15:34:44 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 15:34:44 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:34:44 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 15:34:44 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 15:34:44 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 15:34:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 359 ms
+2025-06-30 15:34:44 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+2025-06-30 15:34:44 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 15:34:44 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 15:34:44 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at java.base/java.lang.Class.cast(Class.java:4067)
+	at com.kezhang.tliasbackend.proxy.factory.ProxyFactory.createTimeProxy(ProxyFactory.java:35)
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 15:35:10 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 54934 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 15:35:10 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 15:35:10 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 15:35:10 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:35:10 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 15:35:10 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 15:35:10 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 15:35:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 355 ms
+2025-06-30 15:35:10 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+2025-06-30 15:35:10 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 15:35:10 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 15:35:10 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: Cannot cast jdk.proxy2.$Proxy85 to com.kezhang.tliasbackend.service.EmployeeService
+	at java.base/java.lang.Class.cast(Class.java:4067)
+	at com.kezhang.tliasbackend.proxy.factory.ProxyFactory.createTimeProxy(ProxyFactory.java:35)
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 15:36:24 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 54972 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 15:36:24 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 15:36:24 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 15:36:24 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:36:24 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 15:36:24 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 15:36:24 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 15:36:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 415 ms
+2025-06-30 15:36:24 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-30 15:36:24 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:36:24 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-30 15:36:24 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.936 seconds (process running for 1.138)
+2025-06-30 15:36:28 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-30 15:36:30 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-30 15:40:33 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 55100 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 15:40:33 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 15:40:33 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 15:40:33 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:40:33 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 15:40:33 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 15:40:33 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 15:40:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 357 ms
+2025-06-30 15:40:34 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 15:40:34 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 15:40:34 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 15:40:34 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 15:49:08 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 55298 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 15:49:08 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 15:49:09 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 15:49:09 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:49:09 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 15:49:09 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 15:49:09 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 15:49:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 352 ms
+2025-06-30 15:49:09 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-30 15:49:09 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:49:09 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-30 15:49:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.863 seconds (process running for 1.072)
+2025-06-30 15:51:03 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-30 15:51:05 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-30 15:51:07 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 55351 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 15:51:07 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 15:51:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 15:51:07 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:51:07 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 15:51:07 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 15:51:07 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 15:51:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 359 ms
+2025-06-30 15:51:07 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+2025-06-30 15:51:07 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-06-30 15:51:07 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-30 15:51:07 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController' defined in file [/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes/com/kezhang/tliasbackend/controller/EmployeeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.kezhang.tliasbackend.TliasBackendApplication.main(TliasBackendApplication.java:14)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'createEmployeeServiceTimeProxy' defined in class path resource [com/kezhang/tliasbackend/config/ProxyConfig.class]: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.kezhang.tliasbackend.service.EmployeeService]: Factory method 'createEmployeeServiceTimeProxy' threw exception with message: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 35 common frames omitted
+Caused by: java.lang.ClassCastException: class jdk.proxy2.$Proxy85 cannot be cast to class com.kezhang.tliasbackend.service.EmployeeService (jdk.proxy2.$Proxy85 is in module jdk.proxy2 of loader 'app'; com.kezhang.tliasbackend.service.EmployeeService is in unnamed module of loader 'app')
+	at com.kezhang.tliasbackend.config.ProxyConfig.createEmployeeServiceTimeProxy(ProxyConfig.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 38 common frames omitted
+2025-06-30 15:59:22 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 55581 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 15:59:22 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 15:59:22 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 15:59:22 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:59:22 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 15:59:22 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 15:59:22 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 15:59:22 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 349 ms
+2025-06-30 15:59:22 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-30 15:59:22 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-30 15:59:22 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-30 15:59:22 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.87 seconds (process running for 1.078)
+2025-06-30 15:59:25 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-30 15:59:27 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-30 16:15:06 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 55950 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-06-30 16:15:06 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-30 16:15:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-30 16:15:07 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-30 16:15:07 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-30 16:15:07 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-30 16:15:07 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-30 16:15:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 356 ms
+2025-06-30 16:15:07 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-30 16:15:07 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-30 16:15:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-30 16:15:07 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 0.859 seconds (process running for 1.068)
+2025-06-30 16:15:15 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-30 16:15:17 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
