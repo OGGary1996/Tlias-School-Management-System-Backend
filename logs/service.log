@@ -1,4 +1,6 @@
-2025-07-03 22:26:54 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Received request to delete students with IDs: [200]
-2025-07-03 22:26:54 [http-nio-8080-exec-1] WARN  c.k.tliasbackend.service.impl.StudentServiceImpl - No students found with the provided IDs: [200]
-2025-07-03 22:27:57 [http-nio-8080-exec-5] INFO  c.k.tliasbackend.service.impl.StudentServiceImpl - Received request to delete students with IDs: [200]
-2025-07-03 22:27:57 [http-nio-8080-exec-5] WARN  c.k.tliasbackend.service.impl.StudentServiceImpl - No students found with the provided IDs: [200]
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=null)
+2025-07-06 16:19:45 [http-nio-8080-exec-1] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 3 operation logs
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=0)
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 3 operation logs
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=1)
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 0 operation logs

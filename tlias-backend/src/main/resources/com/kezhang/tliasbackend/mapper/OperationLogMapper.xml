@@ -28,4 +28,31 @@
              #{isSuccess})
     </insert>
 
+    <!-- 条件分页查询所有的日志 -->
+    <select id="getAllOperationLogsByCondition" resultType="com.kezhang.tliasbackend.entity.OperationLog">
+        SELECT *
+        FROM operation_log
+        <where>
+            <if test="operateEmpId != null">
+                AND operate_emp_id = #{operateEmpId}
+            </if>
+            <if test="operateEmpName != null and operateEmpName != ''">
+                AND operate_emp_name LIKE CONCAT('%', #{operateEmpName}, '%')
+            </if>
+            <if test="operateTime != null">
+                AND operate_time &gt;= #{operateTime}
+            </if>
+            <if test="javaClassName != null and javaClassName != ''">
+                AND java_class_name LIKE CONCAT('%', #{javaClassName}, '%')
+            </if>
+            <if test="javaMethodName != null and javaMethodName != ''">
+                AND java_method_name LIKE CONCAT('%', #{javaMethodName}, '%')
+            </if>
+            <if test = "isSuccess != null">
+                AND is_success = #{isSuccess}
+            </if>
+        </where>
+        ORDER BY operate_time DESC
+    </select>
+
 </mapper> 
