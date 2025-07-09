@@ -1,0 +1,6 @@
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=null)
+2025-07-06 16:19:45 [http-nio-8080-exec-1] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 3 operation logs
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=0)
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 3 operation logs
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=1)
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 0 operation logs

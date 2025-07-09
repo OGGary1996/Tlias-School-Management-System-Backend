@@ -1,9 +1,9 @@
 package com.kezhang.tliasbackend.controller;
 
 import com.aliyuncs.exceptions.ClientException;
+import com.kezhang.aliyunossoperator.AliyunOssUtil;
 import com.kezhang.tliasbackend.annotation.OperationLog;
 import com.kezhang.tliasbackend.common.Result;
-import com.kezhang.tliasbackend.utils.AliyunOssUtil;
 import com.kezhang.tliasbackend.utils.LocalDriveUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;

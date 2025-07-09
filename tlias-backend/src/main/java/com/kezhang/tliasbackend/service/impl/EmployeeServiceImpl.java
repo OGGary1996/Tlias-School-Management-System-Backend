@@ -3,18 +3,16 @@ package com.kezhang.tliasbackend.service.impl;
 import com.aliyuncs.exceptions.ClientException;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.kezhang.aliyunossoperator.AliyunOssUtil;
 import com.kezhang.tliasbackend.common.PageResult;
 import com.kezhang.tliasbackend.constant.ErrorCodeEnum;
 import com.kezhang.tliasbackend.dto.*;
 import com.kezhang.tliasbackend.entity.Employee;
 import com.kezhang.tliasbackend.entity.EmployeeHistory;
 import com.kezhang.tliasbackend.exception.EmployeeNotFoundException;
-import com.kezhang.tliasbackend.mapper.DepartmentMapper;
 import com.kezhang.tliasbackend.mapper.EmployeeHistoryMapper;
 import com.kezhang.tliasbackend.mapper.EmployeeMapper;
-import com.kezhang.tliasbackend.mapper.PositionMapper;
 import com.kezhang.tliasbackend.service.EmployeeService;
-import com.kezhang.tliasbackend.utils.AliyunOssUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,15 +28,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeMapper employeeMapper;
     private final EmployeeHistoryMapper employeeHistoryMapper;
     private final AliyunOssUtil aliyunOssUtil;
-    private final DepartmentMapper departmentMapper;
-    private final PositionMapper positionMapper;
     @Autowired
-    public EmployeeServiceImpl(EmployeeMapper employeeMapper, EmployeeHistoryMapper employeeHistoryMapper, AliyunOssUtil aliyunOssUtil, DepartmentMapper departmentMapper, PositionMapper positionMapper) {
+    public EmployeeServiceImpl(EmployeeMapper employeeMapper, EmployeeHistoryMapper employeeHistoryMapper, AliyunOssUtil aliyunOssUtil) {
         this.employeeMapper = employeeMapper;
         this.employeeHistoryMapper = employeeHistoryMapper;
         this.aliyunOssUtil = aliyunOssUtil;
-        this.departmentMapper = departmentMapper;
-        this.positionMapper = positionMapper;
     }
 
     /*

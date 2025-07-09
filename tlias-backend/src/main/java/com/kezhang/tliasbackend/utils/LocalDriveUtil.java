@@ -9,7 +9,6 @@ import java.io.File;
 import java.io.IOException;
 
 @Slf4j
-@Component
 public class LocalDriveUtil {
     // 配置文件注入
 //    @Value("${uploads.path}")
@@ -18,7 +17,6 @@ public class LocalDriveUtil {
 //    @Value("${uploads.url-prefix}")
 //    private String uploadsUrlPrefix;
     private final LocalDriveUtilProperties localDriveUtilProperties;
-    @Autowired
     public LocalDriveUtil(LocalDriveUtilProperties localDriveUtilProperties) {
         this.localDriveUtilProperties = localDriveUtilProperties;
     }

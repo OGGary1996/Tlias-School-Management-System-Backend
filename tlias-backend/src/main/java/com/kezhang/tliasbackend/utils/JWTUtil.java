@@ -11,11 +11,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-@Component
 @Slf4j
 public class JWTUtil {
     private final JWTUtilProperties jwtUtilProperties;
-    @Autowired
     public JWTUtil(JWTUtilProperties jwtUtilProperties) {
         this.jwtUtilProperties = jwtUtilProperties;
     }

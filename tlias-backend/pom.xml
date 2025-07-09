@@ -2,15 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<!-- 子模块的parent必须指定为父pom -->
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.6</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>com.kezhang</groupId>
+		<artifactId>tlias-school-management-system</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<groupId>com.kezhang</groupId>
 	<artifactId>tlias-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!-- 子模块的打包方式必须指定为jar -->
+	<packaging>jar</packaging>
 	<name>tlias-backend</name>
 	<description>tlias-backend</description>
 	<url/>
@@ -65,27 +68,34 @@
 		</dependency>
 
 		<!-- 阿里云OSS-->
+		<!-- 转为使用aliyun-oss-operator 自定义包 -->
+<!--		<dependency>-->
+<!--			<groupId>com.aliyun.oss</groupId>-->
+<!--			<artifactId>aliyun-sdk-oss</artifactId>-->
+<!--			<version>3.17.4</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>javax.xml.bind</groupId>-->
+<!--			<artifactId>jaxb-api</artifactId>-->
+<!--			<version>2.3.1</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>javax.activation</groupId>-->
+<!--			<artifactId>activation</artifactId>-->
+<!--			<version>1.1.1</version>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash; no more than 2.3.3&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.glassfish.jaxb</groupId>-->
+<!--			<artifactId>jaxb-runtime</artifactId>-->
+<!--			<version>2.3.3</version>-->
+<!--		</dependency>-->
 		<dependency>
-			<groupId>com.aliyun.oss</groupId>
-			<artifactId>aliyun-sdk-oss</artifactId>
-			<version>3.17.4</version>
+			<groupId>com.kezhang</groupId>
+    		<artifactId>aliyun-oss-operator-spring-boot-starter</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.3.1</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.activation</groupId>
-			<artifactId>activation</artifactId>
-			<version>1.1.1</version>
-		</dependency>
-		<!-- no more than 2.3.3-->
-		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-runtime</artifactId>
-			<version>2.3.3</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

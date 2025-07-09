@@ -1,0 +1,294 @@
+2025-07-06 16:15:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 76681 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-07-06 16:15:09 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-06 16:15:09 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-06 16:15:09 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-06 16:15:09 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-06 16:15:09 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-06 16:15:09 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-06 16:15:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 453 ms
+2025-07-06 16:15:10 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-06 16:15:10 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-06 16:15:10 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-06 16:15:10 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 1.067 seconds (process running for 1.325)
+2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Parsed JWT token claims: {sub=KeZhang, id=58, name=Ke Zhang, iat=1751500568, exp=1752105368}
+2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-06 16:15:46 [http-nio-8080-exec-2] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: Required request parameter 'operationLogQueryParam' for method parameter type OperationLogQueryParam is not present
+org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'operationLogQueryParam' for method parameter type OperationLogQueryParam is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:196)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-06 16:16:55 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-06 16:16:55 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-06 16:16:55 [http-nio-8080-exec-4] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Parsed JWT token claims: {sub=KeZhang, id=58, name=Ke Zhang, iat=1751500568, exp=1752105368}
+2025-07-06 16:16:55 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-06 16:16:55 [http-nio-8080-exec-4] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: Required request parameter 'operationLogQueryParam' for method parameter type OperationLogQueryParam is not present
+org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'operationLogQueryParam' for method parameter type OperationLogQueryParam is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:196)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-06 16:16:55 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-06 16:17:25 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-06 16:17:25 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-06 16:17:25 [http-nio-8080-exec-6] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Parsed JWT token claims: {sub=KeZhang, id=58, name=Ke Zhang, iat=1751500568, exp=1752105368}
+2025-07-06 16:17:25 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-06 16:17:25 [http-nio-8080-exec-6] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: Required request parameter 'operationLogQueryParam' for method parameter type OperationLogQueryParam is not present
+org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'operationLogQueryParam' for method parameter type OperationLogQueryParam is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:196)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-06 16:17:25 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-06 16:18:01 [http-nio-8080-exec-8] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-06 16:18:01 [http-nio-8080-exec-8] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-06 16:18:01 [http-nio-8080-exec-8] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Parsed JWT token claims: {sub=KeZhang, id=58, name=Ke Zhang, iat=1751500568, exp=1752105368}
+2025-07-06 16:18:01 [http-nio-8080-exec-8] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-06 16:18:01 [http-nio-8080-exec-8] ERROR c.k.tliasbackend.controller.GlobalExceptionHandler - An unknown error occurred: Required request parameter 'operationLogQueryParam' for method parameter type OperationLogQueryParam is not present
+org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'operationLogQueryParam' for method parameter type OperationLogQueryParam is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValueInternal(RequestParamMethodArgumentResolver.java:220)
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:196)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-06 16:18:01 [http-nio-8080-exec-8] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-06 16:19:38 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06 16:19:40 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-06 16:19:41 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Starting TliasBackendApplication using Java 21.0.7 with PID 76746 (/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/tlias-backend/target/classes started by zhangke in /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem)
+2025-07-06 16:19:41 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-06 16:19:42 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-06 16:19:42 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-06 16:19:42 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-06 16:19:42 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-06 16:19:42 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-06 16:19:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 484 ms
+2025-07-06 16:19:42 [main] INFO  o.s.v.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-06 16:19:42 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-06 16:19:42 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-06 16:19:42 [main] INFO  com.kezhang.tliasbackend.TliasBackendApplication - Started TliasBackendApplication in 1.112 seconds (process running for 1.329)
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Parsed JWT token claims: {sub=KeZhang, id=58, name=Ke Zhang, iat=1751500568, exp=1752105368}
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.OperationLogController - Fetching operation logs with query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=null)
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=null)
+2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-06 16:19:45 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b2a58a9
+2025-07-06 16:19:45 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-06 16:19:45 [http-nio-8080-exec-1] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 3 operation logs
+2025-07-06 16:19:45 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.OperationLogController - Fetched 3 operation logs
+2025-07-06 16:19:45 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Parsed JWT token claims: {sub=KeZhang, id=58, name=Ke Zhang, iat=1751500568, exp=1752105368}
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.OperationLogController - Fetching operation logs with query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=0)
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=0)
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 3 operation logs
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.tliasbackend.controller.OperationLogController - Fetched 3 operation logs
+2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  com.kezhang.tliasbackend.utils.JWTUtil - Parsed JWT token claims: {sub=KeZhang, id=58, name=Ke Zhang, iat=1751500568, exp=1752105368}
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.controller.OperationLogController - Fetching operation logs with query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=1)
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=1)
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 0 operation logs
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.controller.OperationLogController - Fetched 0 operation logs
+2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-06 16:20:19 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06 16:20:21 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-06 16:20:21 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-06 16:20:21 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

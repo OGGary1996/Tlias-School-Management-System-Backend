@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.kezhang</groupId>
+		<artifactId>tlias-school-management-system</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<groupId>com.kezhang</groupId>
+	<artifactId>aliyun-oss-operator-spring-boot-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- 打包方式必须显式指定为pom -->
+	<packaging>pom</packaging>
+	<name>aliyun-oss-operator-spring-boot-parent</name>
+	<description>aliyun-oss-operator-spring-boot-parent</description>
+
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<!-- 必须指定子模块信息 -->
+	<modules>
+		<module>aliyun-oss-operator-spring-boot-autoconfigure</module>
+		<module>aliyun-oss-operator-spring-boot-starter</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

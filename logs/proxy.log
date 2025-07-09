@@ -1,28 +1,48 @@
-2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
-2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
-2025-07-06 16:15:46 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
-2025-07-06 16:16:55 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-07-06 16:16:55 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
-2025-07-06 16:16:55 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
-2025-07-06 16:16:55 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
-2025-07-06 16:17:25 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-07-06 16:17:25 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
-2025-07-06 16:17:25 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
-2025-07-06 16:17:25 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
-2025-07-06 16:18:01 [http-nio-8080-exec-8] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-07-06 16:18:01 [http-nio-8080-exec-8] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
-2025-07-06 16:18:01 [http-nio-8080-exec-8] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
-2025-07-06 16:18:01 [http-nio-8080-exec-8] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
-2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
-2025-07-06 16:19:44 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
-2025-07-06 16:19:45 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
-2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
-2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
-2025-07-06 16:20:03 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
-2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
-2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
-2025-07-06 16:20:12 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-08 17:10:53 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:10:53 [http-nio-8080-exec-1] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:10:53 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:10:53 [http-nio-8080-exec-2] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:10:59 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:10:59 [http-nio-8080-exec-3] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:10:59 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:10:59 [http-nio-8080-exec-4] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:05 [http-nio-8080-exec-5] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:05 [http-nio-8080-exec-5] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:05 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:05 [http-nio-8080-exec-6] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:21 [http-nio-8080-exec-7] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:21 [http-nio-8080-exec-7] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:21 [http-nio-8080-exec-8] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:21 [http-nio-8080-exec-8] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:25 [http-nio-8080-exec-9] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:25 [http-nio-8080-exec-9] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:25 [http-nio-8080-exec-10] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:25 [http-nio-8080-exec-10] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:31 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:31 [http-nio-8080-exec-1] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:39 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:39 [http-nio-8080-exec-2] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:39 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:39 [http-nio-8080-exec-3] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:39 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:39 [http-nio-8080-exec-4] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:41 [http-nio-8080-exec-5] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:41 [http-nio-8080-exec-5] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:11:41 [http-nio-8080-exec-6] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:11:41 [http-nio-8080-exec-6] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-08 17:13:11 [http-nio-8080-exec-9] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:13:11 [http-nio-8080-exec-9] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-08 17:13:11 [http-nio-8080-exec-9] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-08 17:13:11 [http-nio-8080-exec-9] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-08 17:17:12 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:17:12 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-08 17:17:12 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-08 17:17:12 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-08 17:17:40 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-08 17:17:40 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTE1MDA1NjgsImV4cCI6MTc1MjEwNTM2OH0._g0O0BDnwiHyxsjz15PnoQpeo5CfPrWTozpmU5VSVE0
+2025-07-08 17:17:40 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-08 17:17:40 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Operation started at: 2025-07-08 17:17:40
+2025-07-08 17:17:40 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Operation performed by user ID: 58, Name: Ke Zhang
+2025-07-08 17:17:41 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Method executed: com.kezhang.tliasbackend.controller.FileManageController.employeeImageUpload with parameters: [org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@703e1068], return value: Result(code=1, message=Success, data=https://tlias-school-management-system.oss-us-west-1.aliyuncs.com/tlias/employee/image/2025/07/12586ab1-81d9-42ed-bec4-6a36dbb6a5ea.jpeg)
+2025-07-08 17:17:41 [http-nio-8080-exec-4] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Operation completed in 609 ms
+2025-07-08 17:17:41 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
