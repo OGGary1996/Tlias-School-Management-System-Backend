@@ -1,4 +1,4 @@
-//package com.kezhang.tliasbackend.proxy.factory;
+package com.kezhang.tliasbackend.proxy.factory;//package com.kezhang.tliasbackend.proxy.factory;
 //
 //import com.kezhang.tliasbackend.proxy.invocationHandler.TimeInvocationHandler;
 //import org.springframework.stereotype.Component;

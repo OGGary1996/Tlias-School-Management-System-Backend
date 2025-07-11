@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+       <groupId>com.kezhang</groupId>
+	    <artifactId>tlias-school-management-system</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>tlias-common</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>tlias-common</name>
+    <packaging>jar</packaging>
+    <description>tlias-common</description>
+
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+    <dependencies>
+		<!-- JWT -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.11.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.11.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId> <!-- 支持 JSON 序列化 -->
+			<version>0.11.5</version>
+			<scope>runtime</scope>
+		</dependency>
+        <dependency>
+            <groupId>com.kezhang</groupId>
+            <artifactId>tlias-pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

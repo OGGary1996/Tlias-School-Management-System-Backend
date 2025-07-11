@@ -9,9 +9,7 @@
 	    <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>   <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.kezhang</groupId>
     <artifactId>aliyun-oss-operator-spring-boot-autoconfigure</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <!-- 子模块打包方式必须显示指定为jar -->
     <packaging>jar</packaging>
     <name>aliyun-oss-operator-spring-boot-autoconfigure</name>

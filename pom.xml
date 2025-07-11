@@ -35,8 +35,36 @@
     <modules>
         <module>tlias-backend</module>
         <module>aliyun-oss-operator-spring-boot-parent</module>
+		<module>tlias-pojo</module>
+		<module>tlias-common</module>
     </modules>
+	<!-- 管理公用依赖 -->
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- OpenAPI 3.0 (Swagger UI) -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+
 
 	</dependencies>
 

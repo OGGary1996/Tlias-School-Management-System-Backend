@@ -4,25 +4,21 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- 子模块的parent必须指定为父pom -->
     <parent>
-	    <groupId>com.kezhang</groupId>
-	    <artifactId>aliyun-oss-operator-spring-boot-parent</artifactId>
+       <groupId>com.kezhang</groupId>
+    	<artifactId>tlias-school-management-system</artifactId>
 	    <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>   <!-- lookup parent from repository -->
+        <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>aliyun-oss-operator-spring-boot-starter</artifactId>
-    <name>aliyun-oss-operator-spring-boot-starter</name>
-    <description>aliyun-oss-operator-spring-boot-starter</description>
+    <artifactId>tlias-pojo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>tlias-pojo</name>
+    <description>tlias-pojo</description>
 
     <properties>
         <java.version>21</java.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.kezhang</groupId>
-            <artifactId>aliyun-oss-operator-spring-boot-autoconfigure</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
 
     </dependencies>
 

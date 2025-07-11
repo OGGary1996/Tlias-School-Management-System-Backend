@@ -1,12 +1,5 @@
 //package com.kezhang.tliasbackend.config;
 //
-//import com.kezhang.tliasbackend.proxy.factory.ProxyFactory;
-//import com.kezhang.tliasbackend.service.EmployeeService;
-//import com.kezhang.tliasbackend.service.impl.EmployeeServiceImpl;
-//import org.springframework.context.annotation.Bean;
-//import org.springframework.context.annotation.Primary;
-//import org.springframework.stereotype.Component;
-//
 //@Component
 //public class ProxyConfig {
 //    /*
