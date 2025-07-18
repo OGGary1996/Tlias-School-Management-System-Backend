@@ -8,7 +8,7 @@ spring:
       name: tlias-backend
     # Database configuration
     datasource:
-      url: jdbc:mysql://localhost:3306/tlias_db?serverTimezone=UTC&useSSL=false
+      url: jdbc:mysql://localhost:3306/tlias_db?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
       username: root
       password: Zk48658345@1996
       driver-class-name: com.mysql.cj.jdbc.Driver

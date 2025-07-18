@@ -9,12 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kezhang</groupId>
-	<artifactId>tlias-school-management-system</artifactId>
+	<artifactId>tlias-school-management-system-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<!-- 父模块的打包方式必须指定为pom -->
 	<packaging>pom</packaging>
-	<name>tlias-school-management-system</name>
-	<description>tlias-school-management-system</description>
+	<name>tlias-school-management-system-backend</name>
+	<description>tlias-school-management-system-backend</description>
 	<url/>
 	<licenses>
 		<license/>

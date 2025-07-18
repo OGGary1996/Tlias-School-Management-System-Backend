@@ -1,2 +1,3 @@
-2025-07-08 17:13:11 [http-nio-8080-exec-9] INFO  c.k.t.service.impl.OperationLogServiceImpl - Received operation log query: OperationLogQueryParam(page=1, pageSize=10, operateEmpId=null, operateEmpName=null, operateTime=null, javaClassName=, javaMethodName=, isSuccess=1)
-2025-07-08 17:13:11 [http-nio-8080-exec-9] INFO  c.k.t.service.impl.OperationLogServiceImpl - Fetched 0 operation logs
+2025-07-18 13:18:57 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: zhangke
+2025-07-18 13:19:06 [http-nio-8080-exec-10] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: zhangke
+2025-07-18 13:20:01 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: zhangke

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.kezhang</groupId>
-		<artifactId>tlias-school-management-system</artifactId>
+		<artifactId>tlias-school-management-system-backend</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>

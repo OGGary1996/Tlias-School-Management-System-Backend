@@ -1,4 +1,0 @@
-2025-06-12 19:23:10 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. Name: ,Gender: null, StartDate: null, EndDate: null, Page: 1, PageSize: 10
-2025-06-12 19:23:11 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 10, Records size: 10
-2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employees by condition started. DTO: EmployeeQueryDTO(name=, gender=null, startDate=null, endDate=null, page=1, pageSize=10)
-2025-06-12 22:10:14 [http-nio-8080-exec-1] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employees by condition completed. Total records: 10, Records size: 10

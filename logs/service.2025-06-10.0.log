@@ -1,2 +1,0 @@
-2025-06-10 22:28:37 [http-nio-8080-exec-1] INFO  c.k.t.service.impl.DepartmentServiceImpl - Fetching all departments from the database started.
-2025-06-10 22:28:38 [http-nio-8080-exec-1] INFO  c.k.t.service.impl.DepartmentServiceImpl - Fetching all departments from the database completed. Total departments size: 11
