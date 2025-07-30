@@ -4,6 +4,23 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.kezhang.tliasbackend.mapper.ClazzMapper">
+    <!-- 查询所有班级信息（包括已结束，进行中，未开始） -->
+    <select id="selectAllClazzes" resultType="com.kezhang.tliasbackend.dto.ClazzResponseDTO">
+        SELECT
+            c.id,
+            c.name,
+            c.room,
+            c.master_id,
+            e.name AS masterName,
+            c.begin_date,
+            c.end_date,
+            c.create_time,
+            c.update_time
+        FROM clazz c
+        LEFT JOIN employee e ON c.master_id = e.id
+        ORDER BY c.update_time DESC
+    </select>
+
     <!-- 查询所有的Ongoing & Upcoming状态的Clazz信息，提供给前端下拉菜单选项 -->
     <select id="selectAllOngoingAndUpcomingClazzes" resultType="com.kezhang.tliasbackend.dto.ClazzResponseDTO">
         SELECT

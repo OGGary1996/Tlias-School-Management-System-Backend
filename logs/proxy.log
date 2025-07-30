@@ -5,3 +5,15 @@
 2025-07-18 13:16:58 [http-nio-8080-exec-3] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Token validation failed: JWT expired at 2025-07-09T23:56:08Z. Current time: 2025-07-18T19:16:58Z, a difference of 760850414 milliseconds.  Allowed clock skew: 0 milliseconds.
 2025-07-18 13:18:43 [http-nio-8080-exec-7] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
 2025-07-18 13:18:43 [http-nio-8080-exec-7] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
+2025-07-18 13:34:40 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
+2025-07-18 13:34:40 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTI4NjcyNTQsImV4cCI6MTc1MzQ3MjA1NH0.gfdjaQIthTOplBjaeMthk0O-eAx-TtneaVRwiWGJ-FU
+2025-07-18 13:34:40 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
+2025-07-18 13:34:40 [http-nio-8080-exec-4] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: afterCompletion method called, clearing ThreadLocal.
+2025-07-18 19:15:33 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Operation started at: 2025-07-18 19:15:33
+2025-07-18 19:15:33 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Operation performed by user ID: null, Name: null
+2025-07-18 19:15:34 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Method executed: com.kezhang.tliasbackend.controller.DepartmentController.createDepartment with parameters: [DepartmentInsertDTO(name=Test1)], return value: No return value
+2025-07-18 19:15:34 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Operation completed in 347 ms
+2025-07-18 19:15:46 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Operation started at: 2025-07-18 19:15:46
+2025-07-18 19:15:46 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Operation performed by user ID: null, Name: null
+2025-07-18 19:15:46 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Method executed: com.kezhang.tliasbackend.controller.DepartmentController.createDepartment with parameters: [DepartmentInsertDTO(name=Test1)], return value: No return value
+2025-07-18 19:15:46 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.proxy.aspect.OperationLogAspect - Operation completed in 9 ms

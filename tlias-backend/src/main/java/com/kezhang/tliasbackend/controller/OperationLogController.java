@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("operation-log")
+@RequestMapping("/operation-log")
 @Slf4j
 @Tag(name = "Operation Log Management", description = "APIs for managing operation logs")
 public class OperationLogController {

@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 @Builder
 @Schema(name = "EmployeeResponseDTO", description = "Response DTO for Employee")
 public class EmployeeResponseDTO {
+    @Schema(description = "ID of employee", example = "1")
+    private Integer id;              // 来自 e.id
     @Schema(description = "Name of employee", example = "John Doe")
     private String name;         // 来自 e.username
     @Schema(description = "Gender of employee", example = "1/0")

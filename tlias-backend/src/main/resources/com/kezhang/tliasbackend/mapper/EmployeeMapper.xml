@@ -7,7 +7,8 @@
     <!-- 因为涉及到多表查询，所以将返回类型指定为DTO而不是entity，entity中的单表字段覆盖不了多表查询的结果-->
     <select id="selectAllEmployees" resultType="com.kezhang.tliasbackend.dto.EmployeeResponseDTO">
         SELECT
-            e.username,
+            e.id,
+            e.name,
             e.gender,
             e.image,
             d.name AS departmentName,
@@ -66,6 +67,7 @@
     <!-- 因为涉及到多表查询，所以将返回类型指定为DTO而不是entity，entity中的单表字段覆盖不了多表查询的结果-->
     <select id="selectEmployeesByCondition" resultType="com.kezhang.tliasbackend.dto.EmployeeResponseDTO">
         SELECT
+            e.id,
             e.name,
             e.gender,
             e.image,
@@ -84,7 +86,7 @@
                 AND e.gender = #{gender}
             </if>
             <if test="startDate != null and endDate != null">
-                AND e.entry_data BETWEEN #{startDate} AND #{endDate}
+                AND e.entry_date BETWEEN #{startDate} AND #{endDate}
             </if>
         </where>
         ORDER BY e.update_time DESC

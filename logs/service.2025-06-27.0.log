@@ -1,6 +1,0 @@
-2025-06-27 20:13:19 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
-2025-06-27 20:13:19 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login successful for employee: KeZhang
-2025-06-27 20:13:19 [http-nio-8080-exec-7] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Returning login response for employee: KeZhang
-2025-06-27 20:14:01 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login request received, processing login for employee: KeZhang
-2025-06-27 20:14:01 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Login successful for employee: KeZhang
-2025-06-27 20:14:01 [http-nio-8080-exec-8] INFO  c.k.tliasbackend.service.impl.LoginServiceImpl - Returning login response for employee: KeZhang

@@ -27,6 +27,19 @@ public class ClazzController {
         this.clazzService = clazzService;
     }
     /*
+    * Select all classes(Ended, Ongoing, Upcoming), used for dropdown display
+    * @return Result containing List of ClazzResponseDTO
+    * */
+    @Operation(summary = "Select all classes(Ended, Ongoing, Upcoming)", description = "Select all classes(Ended, Ongoing, Upcoming), used for dropdown display")
+    @GetMapping("/all")
+    public Result<?> getAllClazzes(){
+        log.info("getAllClazzes called.");
+        List<ClazzResponseDTO> clazzResponseDTOS = clazzService.getAllClazzes();
+        log.info("getAllClazzes: {}", clazzResponseDTOS);
+        return Result.success(clazzResponseDTOS);
+    };
+
+    /*
     * Select all classes that are ongoing or upcoming, used for dropdown display
     * @return Result containing List of ClazzResponseDTO
     * */
@@ -38,6 +51,7 @@ public class ClazzController {
         log.info("getAllOngoingAndUpcomingClazzes: {}", clazzResponseDTOS);
         return Result.success(clazzResponseDTOS);
     }
+
 
     /*
     * Select all classes by condition, used for pagination display

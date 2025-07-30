@@ -8,6 +8,11 @@ import java.util.List;
 
 public interface ClazzMapper {
     /*
+    * 查询所有的班级信息（包括已结束、进行中、即将开始），用于前端下拉菜单展示
+    * */
+    List<ClazzResponseDTO> selectAllClazzes();
+
+    /*
     * 查询所有Ongoing & Upcoming状态的班级信息，用于前端下拉菜单展示
     * */
     List<ClazzResponseDTO> selectAllOngoingAndUpcomingClazzes();

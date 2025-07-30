@@ -44,6 +44,21 @@ public class FileManageController {
         log.info("Image uploaded successfully, URL: {}", url);
         return Result.success(url);
     }
+    /*
+    * 处理图片本地删除的接口（前端直接调用）
+    * 解释：
+    *  1. 前端在添加员工的dialog中，选择上传头像之后，立即上传到阿里云OSS，
+    *  2. 如果此时放弃添加员工，则需要删除阿里云OSS上已经上传的头像，
+    * */
+    @DeleteMapping("/delete/employee/image/local")
+    @Operation(description = "Delete employee image from local storage")
+    @OperationLog
+    public Result<?> employeeImageLocalDelete(@RequestBody String fileURL){
+        // 直接调用本地存储方法的删除方法
+        localDriveUtil.deleteFile(fileURL);
+        log.info("Image deleted successfully from local storage, URL: {}", fileURL);
+        return Result.success(null);
+    }
 
     // 阿里云OSS存储方法
     /*
@@ -61,5 +76,19 @@ public class FileManageController {
         String url = aliyunOssUtil.uploadFile(file, servicePath);
         log.info("Employee image uploaded successfully, URL: {}", url);
         return Result.success(url);
+    }
+    /*
+    * 处理图片阿里云OSS删除的接口（前端直接调用）
+    * 解释：
+    *  1. 前端在添加员工的dialog中，选择上传头像之后，立即上传到阿里云OSS，
+    *  2. 如果此时放弃添加员工，则需要删除阿里云OSS上已经上传的头像，
+    * */
+    @DeleteMapping("/delete/employee/image/oss")
+    @Operation(description = "Delete employee image from Aliyun OSS")
+    @OperationLog
+    public Result<?> employeeImageDelete(@RequestParam("fileURL") String fileURL) throws ClientException {
+        aliyunOssUtil.deleteFile(fileURL);
+        log.info("Employee image deleted successfully from Aliyun OSS, URL: {}", fileURL);
+        return Result.success(null);
     }
 }

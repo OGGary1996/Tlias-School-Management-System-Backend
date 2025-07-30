@@ -29,6 +29,20 @@ public class ClazzServiceImpl implements ClazzService {
         this.clazzMapper = clazzMapper;
     }
 
+    /*
+    * 流程：
+    * */
+    @Override
+    public List<ClazzResponseDTO> getAllClazzes() {
+        log.info("getAllClazzes called.");
+        List<ClazzResponseDTO> clazzResponseDTOS = clazzMapper.selectAllClazzes();
+        if (clazzResponseDTOS.isEmpty()) {
+            log.warn("No classes found.");
+        } else {
+            log.info("Found {} classes.", clazzResponseDTOS.size());
+        }
+        return clazzResponseDTOS;
+    };
 
     /*
     * 流程：
