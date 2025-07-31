@@ -8,9 +8,9 @@ spring:
       name: tlias-backend
     # Database configuration
     datasource:
-      url: jdbc:mysql://localhost:3306/tlias_db?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
-      username: root
-      password: Zk48658345@1996
+      url: your_database_url_here
+      username: your_username_here
+      password: your_password_here
       driver-class-name: com.mysql.cj.jdbc.Driver
       # HikariCP connection pool settings
       hikari:
@@ -24,7 +24,7 @@ spring:
       resources:
         # 这个配置会使uploads/目录下的所有文件 和 /static/下的所有文件 可以从根URL路径直接访问
         # 例如，如果该目录下的 根目录 有一个名为abc.png的文件，它可以通过`http://localhost:8080/abc.png`访问。
-        static-locations: classpath:/static/,file:/Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/
+        static-locations: classpath:/static/,file:uploads/
         add-mappings: true  # 添加静态资源映射
     # 文件上传配置
     servlet:
@@ -35,7 +35,7 @@ spring:
 # 定义文件上传到 ！服务器本地！的相关变量
 uploads:
   # 文件全局上传路径，需要在实际的Controller层代码中指定各个业务逻辑中不同的子路径作为拼接
-  path: /Users/zhangke/Documents/Projects/Tlias_SchoolManagementSystem/uploads/
+  path: uploads/
   # 文件访问路径前缀，根据上面的static-locations配置而定，以下配置表示在static-locations中的根目录下
   # 需要在需要在实际的Controller层代码中指定各个业务逻辑中不同的子路径作为拼接
   url-prefix: http://localhost:8080/
