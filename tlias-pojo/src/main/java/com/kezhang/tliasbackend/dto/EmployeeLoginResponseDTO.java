@@ -16,6 +16,8 @@ public class EmployeeLoginResponseDTO {
     private String name;
     @Schema(description = "Employee's username", example = "johnDoe")
     private String username;
+    @Schema(description = "Employee's profile image", example = "https://example.com/images/john_doe.jpg")
+    private String image; // Employee's profile image, can be null
     @Schema(description = "Login token for the employee", example = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...")
     private String token;
 }

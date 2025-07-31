@@ -205,7 +205,8 @@
         SELECT
             id,
             name,
-            username
+            username,
+            image
         FROM employee
         WHERE username = #{username} AND password = #{password};
     </select>
