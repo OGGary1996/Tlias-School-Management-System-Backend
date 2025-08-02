@@ -9,8 +9,8 @@ spring:
     # Database configuration
     datasource:
       url: jdbc:mysql://localhost:3306/tlias_db?serverTimezone=UTC&useSSL=false
-      username: root
-      password: 050715
+      username: dev
+      password: dev123
       driver-class-name: com.mysql.cj.jdbc.Driver
       # HikariCP connection pool settings
       hikari:
