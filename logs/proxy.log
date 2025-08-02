@@ -1,6 +1,0 @@
-2025-08-01 17:53:07 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-08-01 17:53:07 [http-nio-8080-exec-1] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-08-01 17:53:07 [http-nio-8080-exec-3] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-08-01 17:53:07 [http-nio-8080-exec-2] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
-2025-08-01 17:53:07 [http-nio-8080-exec-1] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
-2025-08-01 17:53:07 [http-nio-8080-exec-3] ERROR c.k.t.proxy.interceptor.LoginInterceptor - Authorization header is missing, throwing LoginRequiredException.
