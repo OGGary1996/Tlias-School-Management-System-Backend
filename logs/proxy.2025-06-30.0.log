@@ -1,4 +1,0 @@
-2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - LoginInterceptor: preHandle method called.
-2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Authorization header found, token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLZVpoYW5nIiwiaWQiOjU4LCJuYW1lIjoiS2UgWmhhbmciLCJpYXQiOjE3NTEyMzY3NTksImV4cCI6MTc1MTg0MTU1OX0.heXqCxmrGyWGb65MooRIX3s22heq7uZ14bOWlJIFNpQ
-2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.t.proxy.interceptor.LoginInterceptor - Token validation successful, allowing access.
-2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.t.p.invocationHandler.TimeInvocationHandler - Method selectEmployeeById executed in 96 ms

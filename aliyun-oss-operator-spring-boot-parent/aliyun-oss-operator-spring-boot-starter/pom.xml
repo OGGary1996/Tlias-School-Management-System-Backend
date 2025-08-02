@@ -10,29 +10,20 @@
         <relativePath>../pom.xml</relativePath>   <!-- lookup parent from repository -->
     </parent>
     <artifactId>aliyun-oss-operator-spring-boot-starter</artifactId>
+    <packaging>jar</packaging>
     <name>aliyun-oss-operator-spring-boot-starter</name>
     <description>aliyun-oss-operator-spring-boot-starter</description>
 
     <properties>
         <java.version>21</java.version>
     </properties>
+    
     <dependencies>
         <dependency>
             <groupId>com.kezhang</groupId>
             <artifactId>aliyun-oss-operator-spring-boot-autoconfigure</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

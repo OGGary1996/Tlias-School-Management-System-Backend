@@ -15,22 +15,11 @@
 	<packaging>pom</packaging>
 	<name>tlias-school-management-system-backend</name>
 	<description>tlias-school-management-system-backend</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+	
 	<!-- 必须指定子模块 -->
     <modules>
         <module>tlias-backend</module>
@@ -38,6 +27,7 @@
 		<module>tlias-pojo</module>
 		<module>tlias-common</module>
     </modules>
+    
 	<!-- 管理公用依赖 -->
 	<dependencies>
 		<dependency>
@@ -64,8 +54,6 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.5.0</version>
 		</dependency>
-
-
 	</dependencies>
 
 	<build>
@@ -80,18 +68,6 @@
 							<artifactId>lombok</artifactId>
 						</path>
 					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>

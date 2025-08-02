@@ -1,2 +1,0 @@
-2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetching employee by ID: 20
-2025-06-30 14:24:06 [http-nio-8080-exec-2] INFO  c.k.tliasbackend.controller.EmployeeController - Fetched employee by ID completed. Employee details: EmployeeUpdateDTO(id=20, username=KarenAllen, name=Karen Allen, gender=0, phone=9783524985, jobTitle=4, departmentId=4, salary=54113.27, entryDate=2017-09-20, image=https://i.pravatar.cc/250?u=KarenAllen, employeeHistoryUpdateDTOList=[])
